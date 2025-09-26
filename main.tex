@@ -1,0 +1,504 @@
+\documentclass[12pt, twoside, a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}        % For spacing
+\usepackage{geometry}        % Page margins
+\usepackage{graphicx}
+\usepackage{float}           % Add this line for [H] specifier
+\usepackage[english]{babel}
+\usepackage{epigraph}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{titlesec}        % Title formatting
+\usepackage{ragged2e}        % Justify or left align
+\graphicspath{ {./graphics/} }
+\selectlanguage{english}
+\setlength{\parskip}{0.9em} % or your preferred value
+\setlength{\parindent}{0pt}  % No indentation
+
+
+\renewcommand{\epigraphsize}{\small}
+
+\setlength{\epigraphwidth}{0.8\textwidth}
+
+\renewcommand{\textflush}{flushright} \renewcommand{\sourceflush}{flushright}
+
+\renewcommand{\thesection}{\Roman{section}}
+
+% use Arabic numerals for subsections
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\let\originalepigraph\epigraph\renewcommand\epigraph[2]{\originalepigraph{\textit{#1}}{\textsc{#2}}}
+
+\geometry{
+  top=2.5cm,
+  bottom=2.5cm,
+  left=3cm,
+  right=3cm
+}
+
+\pagenumbering{gobble}
+
+\begin{document}
+
+% Left page: Full-page graphic
+%\begin{titlepage}
+%  \includepdf[pages=-,fitpaper=true]{cover-image.pdf} % Replace with your actual image file name
+%\end{titlepage}
+
+\begin{center}
+  \Large
+  \textbf{Universit\"at f\"ur k\"unstlerische und industrielle Gestaltung Kunstuniversit\"at Linz} \\
+  Institut f\"ur Medien - Interface Cultures \\
+
+  \vspace{1.5cm}
+
+  \large
+  Masterarbeit zur Erlangung des akademischen Grades Master of Arts \\
+
+  \vspace{2.5cm}
+
+  \Huge
+  \textbf{Live coding as a performative act} \\
+  \large
+  \textit{What is really alive?} \\
+
+  \vspace{2cm}
+
+  \Large
+  Sule Suarez Leguizamon \\
+
+  \vspace{2.5cm}
+
+  \normalsize
+  Betreut von: \\
+  Univ. Prof. Dr. Manuela Naveau \\
+
+  \vspace{1.5cm}
+
+  Datum der Masterpr\"ufung: \\
+  \vspace{0.8cm} \rule{6cm}{0.4pt} \\
+
+  \vspace{1.5cm}
+
+  Unterschrift des Betreuers/der Betreuerin: \\
+  \vspace{0.8cm} \rule{6cm}{0.4pt} \\
+
+  \vfill
+
+  Linz, 2025
+\end{center}
+
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+\newpage
+
+\tableofcontents
+\newpage
+
+%despues
+
+\epigraph{"The machine makes the music, but I created the machine I don't know where responsability lies in that situation"}{Autechre's Sean Booth}
+\epigraph{"Algorithms Are Thoughts, Chainsaws Are Tools"}{Toplap Manifesto}
+
+\newpage
+
+
+
+
+\section{Abstract}
+
+Live coding is a practice of constructing and
+interacting with algorithmic processes to create art.  live
+coding tries to communicate algorithmic thinking, real
+time composition, and networked collaborations to the
+audience. 
+[I still have to add things here, maybe finding new definitions]~\cite{GenerativeaRT}
+
+\subparagraph{Key words} Algorithmic thinking, performance,
+conversational methodologies, real-time composition, writing, community.
+
+\newpage
+
+\section{Acknowledgements}
+
+
+\newpage
+
+\section{Introduction}
+\vspace{1cm}
+
+My interest in programming was a coincidence. I had finished my bachelor's 
+degree in fine arts and had mostly worked with "analog" techniques (which it means that computer art was something foreign to me).
+ After my time at the art academy, I found myself with the terrifying freedom of no longer being in an institution. 
+ It was at that moment that I began working with Juana Prieto, and the two of us started 
+ this journey into the field of creative coding.
+
+We had done our undergraduate studies together and had formed a friendship since then.
+ Juana had the idea to make a GIF movie for the web — the text would lead to new places, 
+ a linear narrative that ultimately became a labyrinth of moving images and blinking text. 
+ Neither of us had extensive knowledge of programming, but I joined the project because the idea presented itself as a challenge that combined things that intrigued me, like the relationship between image and text, where both are equally important.
+
+We spent months working with the image and text archives we each had, merging narratives and creating labyrinths together. Those were months of discovery for both of us. We had received support from the Cinemateca of Bogotá and were working in the institution’s labs. For that project, we used Twine, which is a mix of HTML and its own CSS-like style. As the weeks went by and we read the documentation, we began using JavaScript within the program to add some logic and elements that made sense within the web aesthetic — like decision boxes or having the audience answer questions.
+
+From that moment on, programming stopped being an unattainable mystery reserved for engineers and computer scientists. I began to explore the potential of this language used to communicate with machines. While we were at the Cinemateca in Bogotá, we came across Toplap Bogotá, a live coding community. RafroBeat (who is also a member of Toplap) was giving a workshop on Tidal Cycles at the time, which marked the beginning of my journey with code as a performative act.
+
+The week after that workshop, Malitzin Cortés and Iván Abreu, two Mexican artists who work with code, architecture,
+ and expanded cinema, gave a workshop where we used film archives as a 
+ base to create live coding performances. 
+ That was my first experience performing in front of an audience, and the first time Juana and I performed together.
+
+Together, we created the collective “Vestidas y Alborotadas” and became active members of the Toplap community. We performed numerous times in Bogotá, Medellín, and Manizales. Together, we questioned the presence of the body on stage. And from that question, we decided to become monstrous beings and embark on this path of learning and experimentation.
+
+In each performance, we embodied a different monster — and different rhythms too — and our intention was always to make people dance with fast-paced sounds, sampling our own voices and surroundings. We used our archive of photos and videos to create visuals. With each performance, we wanted to offer the audience a glimpse into the world of each monster — their own sounds and images — creating a narrative around these fictional beings.
+
+When I arrived at the Kunstuniversität Linz, 
+I found an exciting musical and artistic scene in the city. 
+The art scene, both inside and outside the university, 
+thrilled me with its openness — the spaces and the community are 
+genuinely willing to see and listen to what you do. Over time, 
+together with Gorka Egino (also a student at Kunstuniversität Linz and a livecoder), and with the support of the Noise Meetup Lab, 
+we decided to create a live coding platform in Linz called Toplap Linz. 
+Through a series of workshops and jam sessions, 
+we aimed to build a space for sharing knowledge and fostering community.
+
+The creative or inventive capacity of this language resides in its  more human side \cite{GenerativeaRT},
+ in contrast to the process-optimization mindset we usually associate with code. 
+  Here writing code is not about debugging but about expression and performativity of algorithmic thought.
+ While it is a language that requires precision to be executed, its potential to expand the written word is unique.
+
+Live coding is a practice in which the programmer writes their own writing machine. These are open machines, supported by a community.
+ There are always collaborations, rewritings, updates, and improvements.
+ A program is not programmed to be used later,
+ but is used by programming it\cite{meaningLife}.
+
+  But going back to the basics, What is live coding? One of the most common definitions is that it is a practice of programming in front of an audience, where the code is executed in real time, 
+  and the performer interacts with the code as part of the performance.\cite{cats}
+  This definition, however, does not encompass all the nuances and possibilities of this practice.
+  We would have to go deeper into the unfolding of the code within the performative act,
+  the characterization of some Domain Specific Languages (DSLs), the playfulness within the scene,
+  and the community that has been built around this practice, and its open source philosophy.
+
+  This thesis is an attempt to explore the liveness on live coding, whether in a solo or collaborative performance,
+  on site or online, and the way in which the code is written and executed in real time. How does time or timeliness exist in this on the fly programming?
+  How does invention and intervention lead to playfulness? 
+
+
+
+\newpage
+
+
+
+
+\section{Show your Screen}
+\vspace{.5cm}
+
+In live coding performances, one of the basic 
+principles is live improvisation: creating what you hear and see from scratch. 
+Algorithms are written and operated on in real time\cite{blackwell2022live}. Another key element is demonstrating to the audience that what they are witnessing is being created live, which is why the performer's screen is typically projected, revealing everything, including mistakes.
+
+However, not all live coders start from a 'blank page', 
+demonstrating exceptional skill and speed; some use prepared code. 
+I have chosen to do this on many occasions during solo performances as it makes it easier to control the sounds and images,
+ and prevents the programmes from becoming overloaded, crashing or producing poor sound quality. 
+ Although I don't entirely agree with purist live coders who disapprove of prepared code in live performances, 
+ I would argue that 'from scratch' performances have a special quality in terms of time, disposition towards the live coding tool (DSL), and interaction with the audience and other artists, particularly when there is more than one on stage.
+
+Before a performance, I spend time rehearsing and planning what I want to do, the sounds I am going to use and the images or textures that will be on stage. This process is similar to painting: you prepare a canvas, select a colour palette and choose a motif. However, other experiences within the practice escape this type of prior ideation and are subject to the moment itself and the unpredictability of the people and elements involved in the performance. Examples include jam sessions, collective performances and 'from scratch' performances.
+
+I will talk about some of my own performances and those I have taken part in. I will identify the different working methods and discoveries that appeared during the process. I would also like to explore the different qualities of time in various performance modes and address the live aspect of live coding, considering its potential for experimentation. I would also like to talk about the importance of community in live coding and how this can lead to new approaches to time and performance.
+\newpage
+
+\subsection{Dusk of an electric forest}
+\vspace{.5cm}
+
+'Dusk of an Electric Forest' was a performance piece that I created for the 'Sound Fever' event at the Ars Electronica Campus in 2024.  The call for submissions for that edition invited reflection on questions such as:
+
+\begin{itemize}
+  \renewcommand{\labelitemi}{--}
+  \item What is the sound of the Anthropocene? How do we listen to the Anthropocene?
+  \item How do we listen to ourselves in the Anthropocene?
+  \item How does the past resonate in the future? What are the future sounds of our digital and physical selves?
+  \item How can music alter narratives and adapt to the constantly shifting ecosystem in which it is created? Is it possible to change the listener's attention into a shared space and an imaginative space? 
+  \item Can we decentralize the human realm, amplifying the voices of non-human agents?
+\end{itemize}
+
+When conceptualising the performance, I used the sounds of a hyper-technological society as my starting point: noise, the incessant hum of construction, machines that shake the ground, the saturation of cities and silence — the decline or absence of other species.
+
+The Anthropocene has impacted numerous ecosystems, and the concept of human expansion and growth has led to a constant state of emergency. We are suffering the consequences of our own actions, and paradoxically, our surroundings become quieter amid our own noise in these environments that we have modified.
+
+I would like to mention the work of Bernie Krause on biophony and soundscapes. 
+In the late 1960s, he began researching and documenting the sounds of natural ecosystems around the world. 
+His archive includes ecosystems that have since been wiped out by human activity. 
+He has collected over 5,000 hours of recordings from natural environments, 
+including at least 15,000 terrestrial and marine species from around the world \cite{ribac2016bernie}.
+
+He took his orchestra idea to a fellow scientist, the late Stuart Gage. 
+Together, they developed the acoustic niche hypothesis, which posits that living beings that share an ecosystem
+ evolve to produce sounds with different rhythms and tones so as not to interfere with each other \cite{krause2016wild}. 
+ This is important for finding mates, food and water.
+  It is a harmonious system in which different species coexist alongside their diverse sounds, which are astonishingly beautiful. 
+
+Listening to Bernie's early recordings from the 1970s instantly evokes a sense of nostalgia for a distant,
+  highly diverse world that is far removed from city life. Although many ecosystems remain intact, many are under threat.  The sound of cars or air traffic makes it difficult for many species to hear each other, leaving them vulnerable to predators or making it difficult for them to mate. And as for us, our noise pollution is often unbearable. While cities may have an interesting soundscape, rapid growth or change leads to noise becoming predominant.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{rain.jpg}
+  \caption{Dzanga Rainforest, Central African Republic. Bernie Krause. Spectrogram showing different species of animals.}
+\end{figure}
+
+Krause made his first sound recording of Sugarloaf State Park in Sonoma Valley, California, 
+with the intention of documenting the environment near his home. From then on, he regularly 
+recorded that park. In 2011, the area suffered a severe drought that lasted for years.
+ As can be seen in Figure 2, the spectrogram shows how the soundscape gradually falls silent: 
+ birds no longer sing as they once did because they have to conserve energy due to food shortages,
+  while the insect population declines and the vegetation dries up. Finally, in 2017, 
+  the forest fire broke out, affecting much of the area.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{specto.png}
+  \caption{Spectrogram of the soundscape of Sugarloaf State Park, California, from 2011 to 2017. Bernie Krause.}
+\end{figure}
+
+Silence is also a homogeneous mass of noise. In Dusk of an Electric Forest, I explored the idea that silence is not an absence of sound or a pause, but an overlapping mass of noise. To achieve this, I recorded sounds from construction sites in the city, such as the noise of drills, the movement of heavy machinery across asphalt, and car alarms. I also recorded the Traun River flowing and insects singing, for example.
+
+During the performance, moments of unintelligible, 
+grainy murmurs can be heard, which then become more rhythmic and repetitive. The performance begins with the sounds of insects moving from one source to another in stereo. Samples of drills and hammers are mixed with the continuous murmur of water.
+
+The visuals feature a glitch grid that resembles landscapes or neon cartographies. 
+As the performance progresses, these small squares change position and colour, and the textures rotate and become increasingly grainy, 
+in line with the sound.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{unnamed.png}
+  \caption{Hydra visual from Dusk of an Electric Forest.}
+\end{figure}
+
+Drawing inspiration from the mythical figure of the snake woman or the goddess Coatlicue, 
+as described by Gloria Anzaldúa in Borderlands: The Frontier, the new mestiza is a being that bridges destruction and fertility \cite{anzaldua2021borderlands}, and is resistance itself. A writhing snake moves through these hyper-glitched landscapes, falling and approaching the audience with its mouth open and fangs exposed.
+
+In pre-Hispanic cosmogony, the snake symbolises fertility and acts as a guide between life and death. For instance, there is the legend of Bachué, the woman who founded the villages of the Bogotá savannah. Once her children were ready for her departure, she plunged into the river, transformed into a snake, and disappeared forever.
+
+Just as snakes shed their skin, we are constantly changing and leaving behind the ruins of our past selves. However, it is interesting to consider where we are going each time we shed our old skin. While we are capable of chaos, we are also capable of achieving balance. This female figure also symbolises rebellion and care.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{snake.jpeg}
+  \caption{Picture from Dusk of an Electric Forest performance. Photo by Flavia Somarriba}
+\end{figure}
+
+For me, Anzaldua has been a key figure in feminism and philosophy. In her writing, she reimagines Mexican and Chicano spirituality from the perspective of historical and political violence and domination. She is also a key figure when it comes to issues of identity related to mestizaje and borders. Gloria Anzaldua explores forms of resistance by critically and constantly reconfiguring our identity formations and ontological categories, with the aim of achieving positive social change and global justice.
+
+For this performance, I aimed to transform the chaotic sounds of the Anthropocene into repetitive, rhythmic noise by turning them into grainy, elongated and distorted sounds. I selected sounds that typically accompany urban growth, such as construction work, alarms, and machinery. These sounds are very prevalent today, as megaprojects often take precedence over architectural and landscape conservation. Despite all this noise, other small animals, such as insects and birds, can still be heard, finding a place in our fast-paced way of life.
+
+But how can we think about the silence of the Anthropocene when it is spreading and dominating other species and natural cycles? Perhaps one day our species will no longer have this desire to spread without limits, and our sounds will once again become diverse.
+
+Another key aspect of this performance was considering those symbols that resist Western homogenisation and colonial processes. We should ask ourselves what we can learn from cosmogonies that seem so distant to us, how identity can be built from miscegenation, mixtures, and exchanges, and how we can update our own worldviews.
+
+Although we are aware of the environmental emergency we are living in, it seems that our relationship with accelerated change remains unchanged. Perhaps in the future, we will either become a homogeneous mass of noise or make room for other elements to emerge more organically.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{codigo.png}
+  \caption{visual code from Dusk of an Electric Forest.}
+\end{figure}
+
+I chose the order of the sounds to create the atmosphere I wanted and had some effects and parameters I wanted to implement in the code. As for the visuals, I had three analog photographs that I had taken some time ago and modified with methylene blue, so they had become colored spots, and a public domain animation of a snake. My intention with the visuals was to create several layers that would gradually become saturated and grainy, until finally the snake appeared on top of them all.
+
+On stage, I sought order once again, rediscovered the sounds I had planned, modified the code I had already written, ran it, commented on the sections I wanted to mute or might need later, changed parameters, and also gave myself the freedom to improvise with the palette I had selected.
+
+Finally, to mention some technical information, in this performance I used two live coding environments: Hydra for the visuals and Tidal Cycles for the sound. Hydra is a tool inspired by analog image synthesizers, and Tidal Cycles mainly uses samples and synthesizers as its main resources.  In chapter 2, I will discuss these two environments in more detail, including some technical specifics and a little about their history.
+
+
+\subsection{Empty Beginning}
+\vspace{.5cm}
+
+The 'from scratch' approach is playful and embraces error. 
+There is no pre-established order, and a musical composition is created in real time. Starting with a 'blank sheet', the performance itself then develops.
+
+At the same time, the audience participates and witnesses the performer developing their ideas, 
+with algorithms serving as the primary notation. Audience members do not need to be familiar with programming to enjoy the performance. 
+The visible code reveals artistic thought 'in action', embedded in the materiality and mediality of the performance itself \cite{melete}.
+
+For me, the first few minutes of a performance 'from scratch' can be overwhelming, with that initial silence and an audience that is both expectant and sometimes confused. Then movement appears on the screen: the performer begins to write, and from that moment on, the performance starts in earnest. The live coder continues to write, and as the text transforms, so do the sounds and images.
+
+During my live coding practice, the presence of a collective and a community that organises events, innovates in the field, experiments and teaches has been crucial. Toplap is a collective founded in Hamburg in 2004 that has been dedicated to promoting and practising live coding ever since. Toplap has expanded worldwide in the form of local nodes that organise events, workshops, concerts and meetings. Anyone can start a new Toplap node.
+
+This global live coding community organises events that seek to connect artists from different parts of the world. Numerous online events are broadcast live, including Livecodera, Toplap Solstice and SuperCollider meetups. The most important event is the International Conference of Live Coding, which is organised every year in a different location, bringing together performers and academics to share their research and artistic projects.
+
+When Gorka Egino and I participated in the Toplap Solstice in December 2024, we were in different locations. For this performance, we decided not to have any prior ideas or plans for our session. I was in charge of the sound, while Gorka was in charge of the visuals. We used Flok, a collaborative, web-based live coding editor that allows several people to connect to a session via the same link.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png}
+  \caption{Screenshot of the YouTube recording of the performance by Sule and Gorka at Toplap Solstice, December 2024.}
+\end{figure}
+
+In the YouTube recording of the performance (see footnote), you can clearly see how the code develops. In it, the cursor embodies the artist's body in a certain way, travelling across the screen and writing, hesitating, correcting, pausing, modifying and activating the code.
+
+This type of event is an interesting format for those who are new to or curious about the practice, as it provides an opportunity to see in detail how different artists use the tools, offering new ideas and introducing lesser-known live coding platforms.
+
+A variety of musical genres are also showcased, ranging from the most experimental (noise and ambient) to the more conventional (techno, jazz and cumbia). Toplap Solstice events last 40 hours continuously in winter, enabling people in different time zones to connect and watch performances.
+
+Another performance I would like to mention is my participation in the AMRO Festival in 2024. For this set,
+ I used the Algorave format, which has also brought live coding to more mainstream venues such as clubs and discos. 
+ While the sounds may be diverse, the ultimate goal is to dance and have fun.
+
+AMRO (Art Meets Radical Openness) is a festival,
+ platform and community that celebrates art, hacktivism and open cultures. 
+ Since 2008, it has been organised by servus.at in collaboration with the 
+ Department of Time Based Media at the University of Art in Linz \cite{AMRO}.
+  The event brings together artists, activists, developers, researchers and hacktivists. 
+  Workshops, talks, performances and an exhibition covered topics such as community building in digital and physical spaces, 
+  ethical uses and critical AI analysis, open tools, free and open-source software, and the environmental impact of nowadays technology.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Amro-2024-DayThree-sule-MART_DSF7282-small (1).png}
+  \caption{Performance at AMRO Festival 2024. City Landscapes by Sule Suarez Leguizamon. Photo by Martin Bruner}
+\end{figure}
+
+
+I titled my performance 'City Landscapes', for which I planned to perform a live-coded techno set using my visual archive of different cities, recorded with my Samsung PL20 compact digital camera. I have had this camera since the early 2000s and its resolution is lower than that of many current digital devices. When recording video, it produces noticeable texture and pixelation, and the colours can appear pastel depending on the lighting conditions. I created a sequence using some clips I took with this camera, which I then used for the visuals during the performance. Within the Hydra environment, I modified this sequence using code, which allowed me to create modulations and experiment with time, textures and colours.
+
+For this performance, I primarily used samples from the SuperCollider Tidal Cycles sample library. This library contains sounds from iconic drum machines, such as the Roland TR-808 and TR-909, which I used in City Landscapes. I created a sequence of drum rhythms, a fast bass line and kicks with reverb, as well as claps and snare. I recorded myself saying short phrases, divided them into small parts, sped them up and randomised them to fit the composition.
+It was minimalist techno, retaining the essential elements to make people dance and creating some polyrhythms so that it wasn't monotonous.
+
+Figure 8 shows the code I used for Tidal Cycles and Hydra. I used these two environments locally in the Pulsar code editor. In the image, you can see how the previous frame freezes in the visuals and remains on the screen for a few seconds, scrolling sideways, and also how the image blurs in diferent directions.
+
+In this performance, improvisation did not start from scratch: sounds and images had been curated in advance, and the potential course of the performance had been planned and rehearsed. However, there was room for error, and I did not intend to be entirely governed by a strict plan and schedule. Although we can consider the computer and live coding to be contemporary musical instruments, the concept of a musical score becomes blurred in this context.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{amCode.png}
+  \caption{Visual and sound code from AMRO Festival performance.}
+\end{figure}
+
+
+During the festival, I had the opportunity to meet other live coders, including Timo Hoogland (NL) and Lina Bautista (CO) (also known as Linalab). They performed together with Flok and Mercury, and also led a collaborative music workshop. I also met Rémi Georges (FR), whose performance incorporated family archives and live coding, and Martin Gius (AT), who ran a Networked Improvisation workshop in TidalCycles and led a live coding improvisation session, connecting people in Linz on the day of the event with members of Toplap Vienna. This session provided me with ideas on how to create a live coding session with lots of participants, bearing in mind that this can often descend into chaos, but there are still ways to mediate the participants' experience.
+
+\subsection{Toplap Linz}
+
+In June last year, I had the opportunity to teach a workshop on Tidal Cycles with the NoiseMeetup collective. 
+This was my first time teaching a workshop on this tool, and I invited Gorka Egino to collaborate with me. 
+We used Flok.cc to connect all the participants to the same platform. First, we provided an introduction, covering how the tool works, how to create initial sounds and how to generate compositions using code. The second part consisted of playing together using Flok.
+
+From that first experience, we learned that in order to start a jam, certain rules must be established, as having more than 15 people play together on the same interface can quickly lead to chaos. This workshop also led to the creation of Toplap Linz (Transnational Organisation for the Parsimony of Live Art Programming). Founded in 2004, TOPLAP is an organisation that explores and promotes live coding. This collective functions like a rhizome: anyone with the necessary motivation and knowledge can start a Toplap group and establish a community spread all over the world.
+
+After this, we also started organising meetings to answer questions, share knowledge and try new things. However, these meetings were not as well received, so after a few attempts, we began to wonder if our reach was limited, or if the invitations were ambiguous or unappealing.
+
+Some time later, in collaboration with Noise Meetup, we held a second two-day workshop. We repeated the workshop and jam format, and this time, as well as teaching Tidal Cycles, we included Hydra. This event was held at DH5. We dedicated the first day to workshops and the second to a computer jam. We had more participants this time, and overall it was a successful event — we were all writing code and having fun by the end!
+
+This time, we made sure to install Tidal Cycles on the computers of those attending for the first time, despite knowing it would be time-consuming and potentially cumbersome. We felt it was important for people to have the tool ready to use outside the workshop, in other contexts. We also wanted to provide a space for group installation, as this process can be confusing if you don't have experience with operating system command applications. Our goal was to make the experience as enjoyable as possible from the outset.
+
+Then, we got down to business and shared a Flok.cc session where everyone could connect at the same time and review the code.
+ We also created a cheat sheet for Tidal Cycles and Hydra with guidelines to help participants start exploring the tool. 
+ It's a simple guide offering an overview of the possibilities of these two environments 
+ for experimenting with sound and visuals respectively (see fig. 9).
+From my experience of learning to use different software,
+ I have personally found it quite useful to be able to follow the process on my own computer. 
+ This allows you to interact more effectively with the tools when someone explains something in a masterclass.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\textwidth]{HYDRA.png}
+  \caption{Flyer for workshop on Tidal Cycles and Hydra by Toplap Linz, March 2025, Linz.}
+\end{figure}
+
+On the second day of the workshop, we devoted ourselves solely to computer jam sessions. We timed each session, starting with five minutes, then moving on to ten, twenty and thirty minutes. In the longer sessions, we worked with themes. For instance, in one session, we used the symbol '520', which is used in China to say 'I love you'. The visuals and sound were often humorous and corny. In another session, someone suggested using horses. Interesting things happened in this dynamic and we were all able to collaborate. Sometimes, after a jam, questions arose about how to create a particular rhythm or apply an effect to the visuals. We realised that, in the jam dynamic, people dared to try more complex things.
+ 
+As a general rule, we decided not to copy code from sources outside our Flok page, such as the official website or online tutorials. There were two main reasons for this. The first is that it is difficult to predict the result of mixing pieces of code that are not understood — it may not work at all. The second is that if you join someone else's code to yours, it will most likely break and stop working. Therefore, we focused on the process of crafting the code, adopting a slower but more deliberate approach to ideation and elaboration. We always started from scratch and developed the jam together.
+
+Another important principle that applies to any type of jam session is the importance of active listening. This involves understanding each other while doing something together and knowing when to try a sound from the library and how to introduce it. When you are unsure of the sound you want to introduce, it is often better not to go in at full volume. You could also choose to play divisions and rhythms similar to those of others, or simpler divisions, before moving on to polyrhythms.
+
+In a group of more than six people improvising simultaneously, 
+it is important to understand that there are times when it is better to give others space and remain silent. 
+These pauses are useful for taking a step back and observing what is happening without the pressure of having to keep programming. They also give you a moment to think about how you can contribute something new to the jam, such as another sound, rhythm, modification of the existing code, image or effect. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\textwidth]{TOPLAP.jpeg}
+  \caption{Picture from Toplap Linz meeting, March 2025. Photo by Mascha Ilish}
+\end{figure}
+
+This experience makes the idea of starting from scratch and programming on the fly feel even more real. Jam sessions with others greatly increase the level of spontaneity, as it's impossible to predict what each person will contribute to the performance. This is enjoyable and enables you to connect with others by creating a shared audiovisual experience. The absence of control enables you to achieve the unexpected.
+
+\newpage
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{sheet.jpeg}
+  \caption{Picture from Toplap Linz meeting, March 2025. Photo by Mascha Ilish}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{cheatsheet (1)_page-0001.jpg}
+  \caption{Picture from Toplap Linz meeting, March 2025. Photo by Mascha Ilish}
+\end{figure}
+
+
+\subsection{Laptop Jamming}
+
+
+Laptop jamming is a practice that combines live coding with collaborative improvisation, 
+where multiple performers use their laptops to create music or visual art in real time.
+This section is a collection of my own experiences and learnings as a live coder, 
+focusing on the practical aspects of live coding, including techniques, tools, 
+and strategies that I have found useful in my practice.
+
+Toplap experience, 
+Pastagang Coming soon
+
+\newpage
+
+
+\subsection{Liveness and DSLs}
+The concept of liveness in live coding is closely tied to the use of Domain Specific Languages (DSLs). 
+These languages are designed to facilitate specific tasks and often come with their own set of rules and structures.
+ In the context of live coding, DSLs can enhance the performative aspect by allowing for more intuitive and expressive 
+ coding practices. The liveness of the code is not just about its execution in real time, 
+ but also about how it can be manipulated and transformed on the fly,
+  creating a dynamic interplay between the performer and the code.
+
+
+struggles and learnings
+\subsection{Algorithm thought}
+what is algorithms and why is interesting to think about it.
+Process as main point.
+Debugging and optimization vs Live coding, errors and experimentation
+(displaying algorithmic thoughts)
+\newpage
+
+\section{Some History of Live Coding}
+
+The first livecoding performances and practices can be traced back to the early 21st century, particularly
+ in the context of electronic music and digital arts. Livecoding, at its core, is a form of real-time improvisation that uses programming as a creative medium.
+
+Among the most significant milestones in the development of livecoding as an artistic practice, we can mention ChucK, developed by Ge Wang in 2002. ChucK is a real-time audio programming language that allows precise manipulation of sound and time. Besides the tool itself, it is important to highlight the performances that began to be carried out around its use, such as "On-the-fly Counterpoint: A piece for two laptops and two laptop projectors" by Ge Wang and Perry Cook in 2003\cite{history}\relax. 
+
+
+In 2004, Toplap (Temporary Organisation for the Promotion of Live Algorithm Programming) was founded in London, marking a significant step in the livecoding community. Toplap's mission is to promote live coding as a performance practice and to create a space for collaboration and knowledge sharing among artists and programmers. The community has since grown globally, with local chapters forming in various cities, including Toplap Linz, which I co-founded in 2024
+
+\newpage
+
+
+\section{livecoding horizons}
+This is a conclusion and a draft of thing that from this precise moment in 
+the history  could be important in the future 
+
+
+
+%bibliogrphy
+\bibliographystyle{unsrt}
+\bibliography{bibli}
+
+\end{document}

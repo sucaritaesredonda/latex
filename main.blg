@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: unsrt.bst
+Database file #1: bibli.bib
+Warning--entry type for "AMRO" isn't style-file defined
+--line 403 of file bibli.bib
+You've used 10 entries,
+            1791 wiz_defined-function locations,
+            504 strings with 4667 characters,
+and the built_in function-call counts, 1789 in all, are:
+= -- 153
+> -- 60
+< -- 0
++ -- 26
+- -- 16
+* -- 99
+:= -- 288
+add.period$ -- 28
+call.type$ -- 10
+change.case$ -- 6
+chr.to.int$ -- 0
+cite$ -- 10
+duplicate$ -- 86
+empty$ -- 206
+format.name$ -- 16
+if$ -- 400
+int.to.chr$ -- 0
+int.to.str$ -- 10
+missing$ -- 12
+newline$ -- 51
+num.names$ -- 10
+pop$ -- 45
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 27
+stack$ -- 0
+substring$ -- 87
+swap$ -- 10
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 17
+width$ -- 12
+write$ -- 103
+(There was 1 warning)
