@@ -113,7 +113,7 @@
 
 Live coding is the practice of constructing and
 interacting with algorithms during a performance. It aims to convey algorithmic thinking, real-time composition and networked collaborations to the
-audience.\cite{blackwell2022live} A distinctive quality of improvisation is the temporal element, which involves interacting with tools and the capacity to rethink rules and conditions. There is no concern with optimisation and efficiency, which characterise the technology industry, and instead there is a focus on embracing error, experimentation and open processes rather than specific outcomes.
+audience.\cite{usermanual} A distinctive quality of improvisation is the temporal element, which involves interacting with tools and the capacity to rethink rules and conditions. There is no concern with optimisation and efficiency, which characterise the technology industry, and instead there is a focus on embracing error, experimentation and open processes rather than specific outcomes.
 
 In this thesis, I will review different experiences I have had in relation to my own live coding practice. I want to share the methodologies I have learned and discovered along my journey as a live coder. I will delve into my research on time in live coding, its playful nature, and how the community plays a fundamental role in consolidating an open source and diverse practice that aims to explore the computer as an expressive interface.
 
@@ -122,7 +122,6 @@ In the first part, I will talk about different performances and conceptual and t
 Then, in the second part, I will go into more depth on certain technical and theoretical aspects of live coding, as well as a brief overview of the history of live coding and the most recent contributions made by the community in terms of developing new tools, experiments, and connections between different disciplines such as cinema.
 
 Finally, I would like to share the documentation of the performances, photographs, and videos, as well as an interactive page that includes the code for some of the performances, where you can experience an excerpt of what happened and also access the code, allowing visitors to the website to copy, use, modify, and perhaps understand it.
-
 
 \subparagraph{Key words} Algorithmic thinking, performance,
 artistic methodologies, process art, real-time composition, livecoding community.
@@ -204,7 +203,7 @@ Live coding is a practice in which the programmer writes their own writing machi
 
 In live coding performances, one of the basic 
 principles is live improvisation: creating what you hear and see from scratch. 
-Algorithms are written and operated on in real time\cite{blackwell2022live}. Another key element is demonstrating to the audience that what they are witnessing is being created live, which is why the performer's screen is typically projected, revealing everything, including mistakes.
+Algorithms are written and operated on in real time\cite{levin2021code}. Another key element is demonstrating to the audience that what they are witnessing is being created live, which is why the performer's screen is typically projected, revealing everything, including mistakes.
 
 However, not all live coders start from a 'blank page', 
 demonstrating exceptional skill and speed; some use prepared code. 
@@ -235,6 +234,8 @@ I will talk about some of my own performances and those I have taken part in. I 
 When conceptualising the performance, I used the sounds of a hyper-technological society as my starting point: noise, the incessant hum of construction, machines that shake the ground, the saturation of cities and silence — the decline or absence of other species.
 
 The Anthropocene has impacted numerous ecosystems, and the concept of human expansion and growth has led to a constant state of emergency. We are suffering the consequences of our own actions, and paradoxically, our surroundings become quieter amid our own noise in these environments that we have modified.
+\footnote{You can see the video documentation of the performance here:
+  \includegraphics[height=30mm]{frame.png}}
 
 I would like to mention the work of Bernie Krause on biophony and soundscapes. 
 In the late 1960s, he began researching and documenting the sounds of natural ecosystems around the world. 
@@ -251,7 +252,7 @@ Together, they developed the acoustic niche hypothesis, which posits that living
 Listening to Bernie's early recordings from the 1970s instantly evokes a sense of nostalgia for a distant,
   highly diverse world that is far removed from city life. Although many ecosystems remain intact, many are under threat.  The sound of cars or air traffic makes it difficult for many species to hear each other, leaving them vulnerable to predators or making it difficult for them to mate. And as for us, our noise pollution is often unbearable. While cities may have an interesting soundscape, rapid growth or change leads to noise becoming predominant.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{rain.jpg}
   \caption{Dzanga Rainforest, Central African Republic. Bernie Krause. Spectrogram showing different species of animals.}
@@ -265,7 +266,7 @@ recorded that park. In 2011, the area suffered a severe drought that lasted for 
   while the insect population declines and the vegetation dries up. Finally, in 2017, 
   the forest fire broke out, affecting much of the area.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{specto.png}
   \caption{Spectrogram of the soundscape of Sugarloaf State Park, California, from 2011 to 2017. Bernie Krause.}
@@ -280,7 +281,7 @@ The visuals feature a glitch grid that resembles landscapes or neon cartographie
 As the performance progresses, these small squares change position and colour, and the textures rotate and become increasingly grainy, 
 in line with the sound.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{unnamed.png}
   \caption{Hydra visual from Dusk of an Electric Forest.}
@@ -293,8 +294,7 @@ In pre-Hispanic cosmogony, the snake symbolises fertility and acts as a guide be
 
 Just as snakes shed their skin, we are constantly changing and leaving behind the ruins of our past selves. However, it is interesting to consider where we are going each time we shed our old skin. While we are capable of chaos, we are also capable of achieving balance. This female figure also symbolises rebellion and care.
 
-
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{snake.jpeg}
   \caption{Picture from Dusk of an Electric Forest performance. Photo by Flavia Somarriba}
@@ -310,7 +310,7 @@ Another key aspect of this performance was considering those symbols that resist
 
 Although we are aware of the environmental emergency we are living in, it seems that our relationship with accelerated change remains unchanged. Perhaps in the future, we will either become a homogeneous mass of noise or make room for other elements to emerge more organically.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{codigo.png}
   \caption{visual code from Dusk of an Electric Forest.}
@@ -322,9 +322,7 @@ On stage, I sought order once again, rediscovered the sounds I had planned, modi
 
 Finally, to mention some technical information, in this performance I used two live coding environments: Hydra for the visuals and Tidal Cycles for the sound. Hydra is a tool inspired by analog image synthesizers, and Tidal Cycles mainly uses samples and synthesizers as its main resources.  In chapter 2, I will discuss these two environments in more detail, including some technical specifics and a little about their history.
 
-
 \subsection{Empty Beginning}
-\vspace{.5cm}
 
 The 'from scratch' approach is playful and embraces error. 
 There is no pre-established order, and a musical composition is created in real time. Starting with a 'blank sheet', the performance itself then develops.
@@ -342,7 +340,7 @@ This global live coding community organises events that seek to connect artists 
 When Gorka Egino and I participated in the Toplap Solstice in December 2024, we were in different locations. For this performance, we decided not to have any prior ideas or plans for our session. I was in charge of the sound, while Gorka was in charge of the visuals. We used Flok, a collaborative, web-based live coding editor that allows several people to connect to a session via the same link.
 
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png}
   \caption{Screenshot of the YouTube recording of the performance by Sule and Gorka at Toplap Solstice, December 2024.}
@@ -366,7 +364,7 @@ AMRO (Art Meets Radical Openness) is a festival,
   Workshops, talks, performances and an exhibition covered topics such as community building in digital and physical spaces, 
   ethical uses and critical AI analysis, open tools, free and open-source software, and the environmental impact of nowadays technology.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{Amro-2024-DayThree-sule-MART_DSF7282-small (1).png}
   \caption{Performance at AMRO Festival 2024. City Landscapes by Sule Suarez Leguizamon. Photo by Martin Bruner}
@@ -382,7 +380,7 @@ Figure 8 shows the code I used for Tidal Cycles and Hydra. I used these two envi
 
 In this performance, improvisation did not start from scratch: sounds and images had been curated in advance, and the potential course of the performance had been planned and rehearsed. However, there was room for error, and I did not intend to be entirely governed by a strict plan and schedule. Although we can consider the computer and live coding to be contemporary musical instruments, the concept of a musical score becomes blurred in this context.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{amCode.png}
   \caption{Visual and sound code from AMRO Festival performance.}
@@ -393,13 +391,21 @@ During the festival, I had the opportunity to meet other live coders, including 
 
 \subsection{Toplap Linz}
 
-In June last year, I had the opportunity to teach a workshop on Tidal Cycles with the NoiseMeetup collective. 
+In June 2024, I had the opportunity to teach a workshop on Tidal Cycles with the NoiseMeetup collective. 
 This was my first time teaching a workshop on this tool, and I invited Gorka Egino to collaborate with me. 
 We used Flok.cc to connect all the participants to the same platform. First, we provided an introduction, covering how the tool works, how to create initial sounds and how to generate compositions using code. The second part consisted of playing together using Flok.
 
-From that first experience, we learned that in order to start a jam, certain rules must be established, as having more than 15 people play together on the same interface can quickly lead to chaos. This workshop also led to the creation of Toplap Linz (Transnational Organisation for the Parsimony of Live Art Programming). Founded in 2004, TOPLAP is an organisation that explores and promotes live coding. This collective functions like a rhizome: anyone with the necessary motivation and knowledge can start a Toplap group and establish a community spread all over the world.
+From that first experience, we learned that in order to start a jam, certain rules must
+ be established, as having more than 15 people play together on the same interface 
+ can quickly lead to chaos. This workshop also led to the creation of Toplap Linz.
+  Founded in 2004 in the UK, TOPLAP  (Transnational Organisation for the Parsimony of Live Art Programming)
+  is an organisation that explores and promotes live coding.
+   This collective functions like a rhizome: anyone with the necessary motivation 
+   and knowledge can start a Toplap group and establish a community spread all over the world.
 
-After this, we also started organising meetings to answer questions, share knowledge and try new things. However, these meetings were not as well received, so after a few attempts, we began to wonder if our reach was limited, or if the invitations were ambiguous or unappealing.
+TOPLAP Linz is a TOPLAP node located in Linz, Austria. It was founded on 2024 as part of the broader international TOPLAP community to explore and promote live coding practices. It is aligned with the open-source philosophy and one of its core pillars are being inclusive and accessible.
+
+As a result of the creation of Toplap Linz, we also started organising meetings to answer questions, share knowledge and try new things. However, these meetings were not as well received, so after a few attempts, we began to wonder if our reach was limited, or if the invitations were ambiguous or unappealing.
 
 Some time later, in collaboration with Noise Meetup, we held a second two-day workshop. We repeated the workshop and jam format, and this time, as well as teaching Tidal Cycles, we included Hydra. This event was held at DH5. We dedicated the first day to workshops and the second to a computer jam. We had more participants this time, and overall it was a successful event — we were all writing code and having fun by the end!
 
@@ -413,7 +419,7 @@ From my experience of learning to use different software,
  I have personally found it quite useful to be able to follow the process on my own computer. 
  This allows you to interact more effectively with the tools when someone explains something in a masterclass.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.4\textwidth]{HYDRA.png}
   \caption{Flyer for workshop on Tidal Cycles and Hydra by Toplap Linz, March 2025, Linz.}
@@ -429,7 +435,7 @@ In a group of more than six people improvising simultaneously,
 it is important to understand that there are times when it is better to give others space and remain silent. 
 These pauses are useful for taking a step back and observing what is happening without the pressure of having to keep programming. They also give you a moment to think about how you can contribute something new to the jam, such as another sound, rhythm, modification of the existing code, image or effect. 
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.4\textwidth]{TOPLAP.jpeg}
   \caption{Picture from Toplap Linz meeting, March 2025. Photo by Mascha Ilish}
@@ -442,12 +448,12 @@ Some time after this workshop, we collaborated with Servus.at, Stadtwerkstatt Li
 
 \newpage
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.9\textwidth]{sheet.jpeg}
-  \caption{Hydra Cheatsheet, Toplap Linz. 2025}
-\end{figure}
-\begin{figure}[H]
+%\begin{figure}[H]
+ % \centering
+  %\includegraphics[width=0.9\textwidth]{sheet.jpeg}
+  %\caption{Hydra Cheatsheet, Toplap Linz. 2025}
+%\end{figure}
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{cheatsheet (1)_page-0001.jpg}
   \caption{Tidal Cheatsheet, Toplap Linz. 2025}
@@ -459,27 +465,80 @@ It was a night full of a variety of rhythms and tools. Everyone was using differ
 
 Each artist has a specific background and different approaches to the same medium. When you are a spectator at a live coding performance, a whole particular construction of thought is revealed. A meticulous construction of algorithms that create sounds and images and are displayed to the public. It is a work of technological crafting, it takes time to develop, and the changes are gradual and depend on the direction decided by the artist and the temporal space of the performance.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{rave.jpg}
   \caption{Algorave, Toplap Linz. 2025. Photo by Lina Pulido}
 \end{figure}
-
 People from the audience approached us after the performance to ask if we were doing everything with code, if the visuals and sound corresponded to the text that was seen in the projection, changing, becoming longer, or being eliminated. In live coding, there is a need to state that what is happening is processual, that we are not working with fixed technology, and that the process is the protagonist of the performance. There is also a desire to engage in participatory practices, making it clear that there is an element of improvisation and that both the audience and the performer can be equally surprised by the paths the performance may take.
+
+\subsection{Art as a series of steps}
+
+In this chapter, I have taken a journey through different experiences within the practice of live coding, 
+trying to cover different methodologies of conceptualization and realization. 
+There have been different degrees of improvisation, planning, and execution. 
+This has also been a journey of my own to understand what brings a practice such as programming 
+to “life” and what happens when it collides with the living arts.
+
+For me, the performative practice of live coding is a field of experimentation
+ in which I invite the audience to observe how I construct what they are hearing and seeing, 
+ in which the audience's gaze is active, they are witnesses to constant decision-making, 
+ they can see when there is doubt, errors, skill, audacity, etc. The computer contains the body. 
+ The body extends the computer. In this exercise of response and interaction, the body is not passive towards the interface; it is the body that activates it dynamically.
 \newpage
 
+\subsection{Alternative archive: Not dead but not live}
 
-\section{ Live Coding and liveness}
+I have talked about my own methodologies and a few experiences within live coding performance. 
+I have also been thinking lately about how to create an archive of something that is so difficult to archive, 
+such as performance. So I did an archaeology of my own files and coding sessions and found sound recordings 
+and excerpts of visual codes.
+
+I created a brief documentation on a web page to help you visualise some of the performances I have mentioned. 
+In the process of excavating my files, I also found a lovely composition 
+I was creating using samples of electromagnetic field recordings I took in the countryside. 
+This now exists as a bonus track on this page a sketch of a performance that hasn't happened yet.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{miau.png}
+  \caption{Screenshot of the web page archive "Not dead but not live".}
+\end{figure}
+
+On the right, you can click to visit the archive from Dusk of an electric forest, 
+In the middle you can find City Landscapes. On the the left is the electromagnetic field composition Bonus track.
+
+There is a button in the top right corner for finding more information. In the middle, you can activate the sound. In the top left corner, there is a button that shows the code for the visual. My idea is that you will understand this text better, and you will also have the opportunity to experiment with the code that I am sharing with you. In the best-case scenario, it may also inspire you to see how it works and give you the opportunity to modify it.
+
+
+\section{Live Coding and liveness}
 
 \subsection{Crafting through the time}
 
-Now I would like to start with Ursula Franklin's concepts of Holistic Technologies and Prescriptive Technologies. Holistic technologies can be directly associated with artisanal processes in which the artisan has mastery of the material from start to finish and leaves a personal mark on the final result. Prescriptive technologies, on the other hand, are technologies that break the process down into well-structured, hierarchical steps, making the results predictable and scalable.
+Now I would like to start with Ursula Franklin's concepts of Holistic Technologies and Prescriptive Technologies. Holistic technologies can be directly associated with artisanal processes in which the artisan has mastery of the material from start to finish and leaves a personal mark on the final result. Prescriptive technologies, on the other hand, are technologies that break the process down into well-structured, hierarchical steps, 
+making the results predictable and scalable.\cite{usermanual}
+
+When talking about technology, we should not limit ourselves to devices, machines, and gears. Technology is, above all, a way of doing things that encompasses ideas, mindsets, and procedures. And within these technologies, we can find groups of people who identify themselves by a common practice and are defined by it. Technology is linked to culture in that it establishes 
+values and defines ways of doing things.\cite{franklin1999real}
+
+So, what can we say about live coding as a practice and technology? Since its inception, it has been characterized by being open source, by using the computer as an expressive interface, and it has been sustained over time by a community that has decided to take care of the software and expand its practice to different disciplines.
+The first live coding performances and practices can be traced back to the early 21st century, particularly in the context of electronic music and digital arts. Live coding, at its core, is a form of real-time improvisation that uses programming as a creative medium.
 
 
 \newpage
 
+\subsection{The grammatic of performative coding}
 
-\subsection{Liveness and DSLs}
+Some Manifiestos to understand the live coding practice, where does it come this idea of liveness
+ Philosphy behind live coding
+
+Generative code Manifiesto
+
+Toplap manifiesto
+
+NEOKHIPUKAMAYOQ Manifiesto
+
+\subsection{Liveness and DSLs: Domain Specific Languages for performing live}
 The concept of liveness in live coding is closely tied to the use of Domain Specific Languages (DSLs). 
 These languages are designed to facilitate specific tasks and often come with their own set of rules and structures.
  In the context of live coding, DSLs can enhance the performative aspect by allowing for more intuitive and expressive 
@@ -498,10 +557,8 @@ and strategies that I have found useful in my practice.
 Toplap experience,
 Pastagang Coming soon
 \subsection{Algorithm thought}
-what is algorithms and why is interesting to think about it.
-Process as main point.
-Debugging and optimization vs Live coding, errors and experimentation
-(displaying algorithmic thoughts)
+
+
 \newpage
 
 
@@ -517,9 +574,9 @@ In 2004, Toplap (Temporary Organisation for the Promotion of Live Algorithm Prog
 \newpage
 
 
-\section{livecoding horizons}
-This is a conclusion and a draft of thing that from this precise moment in 
-the history  could be important in the future 
+
+
+
 
 
 
