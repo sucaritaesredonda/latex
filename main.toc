@@ -4,14 +4,14 @@
 \contentsline {subparagraph}{Key words}{3}{}%
 \contentsline {section}{\numberline {II}Acknowledgements}{4}{}%
 \contentsline {section}{\numberline {III}Introduction}{5}{}%
-\contentsline {section}{\numberline {IV}Show your Screen}{7}{}%
-\contentsline {subsection}{\numberline {1}Dusk of an electric forest}{8}{}%
-\contentsline {subsection}{\numberline {2}Empty Beginning}{12}{}%
-\contentsline {subsection}{\numberline {3}Toplap Linz}{16}{}%
-\contentsline {subsection}{\numberline {4}Art as a series of steps}{20}{}%
-\contentsline {subsection}{\numberline {5}Alternative archive: Not dead but not live}{21}{}%
-\contentsline {section}{\numberline {V}Live Coding and liveness}{21}{}%
-\contentsline {subsection}{\numberline {1}Crafting through the time}{21}{}%
-\contentsline {subsection}{\numberline {2}The grammatic of performative coding}{23}{}%
-\contentsline {subsection}{\numberline {3}Liveness and DSLs: Domain Specific Languages for performing live}{23}{}%
-\contentsline {subsection}{\numberline {4}Algorithm thought}{23}{}%
+\contentsline {section}{\numberline {IV}Live Coding and liveness}{7}{}%
+\contentsline {subsection}{\numberline {1}Crafting through the time}{7}{}%
+\contentsline {subsection}{\numberline {2}The grammatic of performative coding}{8}{}%
+\contentsline {subsection}{\numberline {3}Liveness and DSLs: Domain Specific Languages for performing live}{8}{}%
+\contentsline {subsection}{\numberline {4}Algorithm thought}{8}{}%
+\contentsline {section}{\numberline {V}Show your Screen}{10}{}%
+\contentsline {subsection}{\numberline {1}Dusk of an electric forest}{11}{}%
+\contentsline {subsection}{\numberline {2}Empty Beginning}{15}{}%
+\contentsline {subsection}{\numberline {3}Toplap Linz}{19}{}%
+\contentsline {subsection}{\numberline {4}Art as a series of steps}{23}{}%
+\contentsline {subsection}{\numberline {5}Alternative archive: Not dead but not alive}{24}{}%

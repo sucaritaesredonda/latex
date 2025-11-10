@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1761550255.28522 "main.aux" "main.bbl" "main" 1761648844.70637 0
-  "./bibli.bib" 1760556058.06412 21076 b67b653352e4f988f57334449f51770a ""
+["bibtex main"] 1762810629.1718 "main.aux" "main.bbl" "main" 1762810632.37052 0
+  "./bibli.bib" 1762336674.00209 21515 9f481236b217c85449526056e75e2dc1 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1761648844.06923 4751 15ae32623decd3c568355aec0fa3f9cf "pdflatex"
+  "main.aux" 1762810631.85526 4867 b7758d8d9f66e76c44ee20ca5f8eec27 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1761648840.30262 "/home/mint/Documents/latex/main.tex" "main.pdf" "main" 1761648844.70682 0
+["pdflatex"] 1762810629.23008 "/home/mint/Documents/latex/main.tex" "main.pdf" "main" 1762810632.37124 0
   "/etc/texmf/web2c/texmf.cnf" 1759138591.33531 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1759256894.00519 31928 53243d3d86f7c9140eec97b6042d1755 ""
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1759256892.94423 40112 88ec4a057c61ae9a7281be40516183e7 ""
@@ -23,7 +23,7 @@
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk" 1759256896.20513 35180 41c9029129ff5bad347f208cce7f7008 ""
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk" 1759256891.81426 39096 9b3ec9c7e6b78e0d2fe2f59e949e1838 ""
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1440.600pk" 1759256898.40406 47440 359cad43e980ebd51786e3ceb97560c5 ""
-  "/home/mint/Documents/latex/main.tex" 1761648839.64727 46459 fbaebc2078f83f9b27c8c80e89db9d8e ""
+  "/home/mint/Documents/latex/main.tex" 1762810618.9855 49253 a95064a1bc913a0dc19a610110147033 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -99,10 +99,10 @@
   "graphics/snake.jpeg" 1759155717.50653 303662 2dc817ac96cf03fdd2119a105b85c7c6 ""
   "graphics/specto.png" 1759155717.50953 1166732 922970885437dc1557a9209b2762850f ""
   "graphics/unnamed.png" 1759155717.51253 2300102 93ec066f271431d4b7483712631f74de ""
-  "main.aux" 1761648844.06923 4751 15ae32623decd3c568355aec0fa3f9cf "pdflatex"
-  "main.bbl" 1761550255.3895 1885 3d8885dfc931469975f9a986b92021f2 "bibtex main"
-  "main.tex" 1761648839.64727 46459 fbaebc2078f83f9b27c8c80e89db9d8e ""
-  "main.toc" 1761648844.07823 1140 669b90b533c07cd4a0c4b9659eae1f4e "pdflatex"
+  "main.aux" 1762810631.85526 4867 b7758d8d9f66e76c44ee20ca5f8eec27 "pdflatex"
+  "main.bbl" 1762810629.22231 2230 67eb5c7751a85972df83ad88a77cb30d "bibtex main"
+  "main.tex" 1762810618.9855 49253 a95064a1bc913a0dc19a610110147033 ""
+  "main.toc" 1762810631.85726 1138 9f40abb5d5650c009993a7b1f22f4b5a "pdflatex"
   "miau.png" 1761504770.97237 1739515 fe9e199bf0599c8579a7d4f662c72268 ""
   (generated)
   "main.aux"

@@ -19,6 +19,16 @@ Thor Magnusson.
 \newblock Herding cats: Observing live coding in the wild.
 \newblock {\em Computer Music Journal}, 38(1):8--16, 2014.
 
+\bibitem{franklin1999real}
+Ursula Franklin.
+\newblock {\em The real world of technology}.
+\newblock House of Anansi, 1999.
+
+\bibitem{history}
+Nick Collins.
+\newblock Live coding of consequence.
+\newblock {\em Leonardo}, 44(3):207--211, 06 2011.
+
 \bibitem{levin2021code}
 Golan Levin and Tega Brain.
 \newblock {\em Code as creative medium: a handbook for computational art and design}.
@@ -48,14 +58,14 @@ Emma Cocker.
 AMRO Art Meets~Radical Openness.
 \newblock Amro festival dedicated to art, hacktivism and open culture, 2024.
 
-\bibitem{franklin1999real}
-Ursula Franklin.
-\newblock {\em The real world of technology}.
-\newblock House of Anansi, 1999.
+\bibitem{bamford2014working}
+Kiff Bamford.
+\newblock Working with fragments: A performance art’s archive.
+\newblock {\em Journal of Writing in Creative Practice}, 7(3):557--567, 2014.
 
-\bibitem{history}
-Nick Collins.
-\newblock Live coding of consequence.
-\newblock {\em Leonardo}, 44(3):207--211, 06 2011.
+\bibitem{performrepeat}
+Amelia Jones and Adrian Heathfield.
+\newblock {\em Perform, repeat, record: Live art in history}.
+\newblock Intellect Bristol, 2012.
 
 \end{thebibliography}
