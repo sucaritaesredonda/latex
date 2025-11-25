@@ -24,10 +24,35 @@ Ursula Franklin.
 \newblock {\em The real world of technology}.
 \newblock House of Anansi, 1999.
 
-\bibitem{history}
-Nick Collins.
-\newblock Live coding of consequence.
-\newblock {\em Leonardo}, 44(3):207--211, 06 2011.
+\bibitem{Embed}
+Sam Kouteili, Hiren Madhu, George Typaldos, and Mark Santolucito.
+\newblock Embedding alignment in code generation for audio.
+\newblock {\em arXiv preprint arXiv:2508.05473}, 2025.
+
+\bibitem{pattern}
+Alex McLean.
+\newblock Algorithmic pattern.
+\newblock In {\em Proceedings of the International Conference on New Interfaces for Musical Expression}, pages 265--270, 2020.
+
+\bibitem{jack2019hydra}
+Olivia Jack.
+\newblock Hydra: live coding networked visuals.
+\newblock In {\em Proceedings of the Fourth International Conference on Live Coding}, pages 353--354, 2019.
+
+\bibitem{dreher2014history}
+Thomas Dreher.
+\newblock History of computer art.
+\newblock 2014.
+
+\bibitem{tidal2022}
+Alex McLean.
+\newblock Alternate timelines for tidalcycles.
+\newblock {\em arXiv preprint arXiv:2209.04289}, 2022.
+
+\bibitem{tidal}
+Alex McLean and Geraint Wiggins.
+\newblock Tidal--pattern language for the live coding of music.
+\newblock In {\em Proceedings of the 7th sound and music computing conference}, pages 331--334, 2010.
 
 \bibitem{levin2021code}
 Golan Levin and Tega Brain.

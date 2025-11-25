@@ -11,6 +11,9 @@
 \usepackage{graphicx}
 \usepackage{titlesec}        % Title formatting
 \usepackage{ragged2e}        % Justify or left align
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=blue,breaklinks=true]{hyperref}
+\hypersetup{pdfborder={0 0 0}} % ensure no boxed borders
+\urlstyle{same} % keep URLs in the surrounding text font   % Provide \href and other link commands
 \graphicspath{ {./graphics/} }
 \selectlanguage{english}
 \setlength{\parskip}{0.9em} % or your preferred value
@@ -117,9 +120,9 @@ audience.\cite{usermanual} A distinctive quality of improvisation is the tempora
 
 In this thesis, I will review different experiences I have had in relation to my own live coding practice. I want to share the methodologies I have learned and discovered along my journey as a live coder. I will delve into my research on time in live coding, its playful nature, and how the community plays a fundamental role in consolidating an open source and diverse practice that aims to explore the computer as an expressive interface.
 
-In the first part, I will talk about different performances and conceptual and technical concepts, as well as my experience co-organizing Toplap Linz, a community dedicated to the exchange of knowledge and experimentation in live coding.
+In the first part, I will go into more depth on certain technical and theoretical aspects of live coding, as well as a brief overview of the history of live coding and the most recent contributions made by the community in terms of developing new tools, experiments, and connections between different disciplines such as cinema.
 
-Then, in the second part, I will go into more depth on certain technical and theoretical aspects of live coding, as well as a brief overview of the history of live coding and the most recent contributions made by the community in terms of developing new tools, experiments, and connections between different disciplines such as cinema.
+Then, in the second part, I will talk about different performances and conceptual and technical concepts, as well as my experience co-organizing Toplap Linz, a community dedicated to the exchange of knowledge and experimentation in live coding.
 
 Finally, I would like to share the documentation of the performances, photographs, and videos, as well as an interactive page that includes the code for some of the performances, where you can experience an excerpt of what happened and also access the code, allowing visitors to the website to copy, use, modify, and perhaps understand it.
 
@@ -134,7 +137,7 @@ artistic methodologies, process art, real-time composition, livecoding community
 \newpage
 
 \section{Introduction}
-\vspace{1cm}
+
 
 My interest in programming was a coincidence. I had finished my bachelor's 
 degree in fine arts and had mostly worked with "analog" techniques (which it means that computer art was something foreign to me).
@@ -163,7 +166,7 @@ In each performance, we embodied a different monster — and different rhythms t
 When I arrived at the Kunstuniversität Linz, 
 I found an exciting musical and artistic scene in the city. 
 The art scene, both inside and outside the university, 
-thrilled me with its openness — the spaces and the community are 
+thrilled me with its openness the spaces and the community are 
 genuinely willing to see and listen to what you do. Over time, 
 together with Gorka Egino (also a student at Kunstuniversität Linz and a livecoder), and with the support of the Noise Meetup Lab, 
 we decided to create a live coding platform in Linz called Toplap Linz. 
@@ -183,21 +186,27 @@ Live coding is a practice in which the programmer writes their own writing machi
   But going back to the basics, What is live coding? One of the most common definitions is that it is a practice of programming in front of an audience, where the code is executed in real time, 
   and the performer interacts with the code as part of the performance.\cite{cats}
   This definition, however, does not encompass all the nuances and possibilities of this practice.
+  
   We would have to go deeper into the unfolding of the code within the performative act,
   the characterization of some Domain Specific Languages (DSLs), the playfulness within the scene,
-  and the community that has been built around this practice, and its open source philosophy.
+  and the community that has been built around this practice, 
+  and its open source philosophy. Liveness has more to do with making a political statement than with meeting a technical requirement.
 
   This thesis is an attempt to explore the liveness on live coding, whether in a solo or collaborative performance,
   on site or online, and the way in which the code is written and executed in real time. How does time exist in this on the fly programming?
-  How does invention and intervention lead to playfulness? 
-
-
+  How does invention and intervention lead to playfulness? Why is it important to keep the code alive, and how does this approach become a political statement?
 
 \newpage
 
-\section{Live Coding and liveness}
+\section{Considerations about liveness}
 
-\subsection{Crafting through the time}
+This chapter focuses on providing an overview of live coding and what it
+ means to keep code "alive" from technical and theoretical perspectives. 
+ The first section introduces some technological concepts, 
+ such as the presence of technology in our daily lives, technologies of control,
+and holistic technologies and their political implications. The second section will explore theoretical approaches to live coding that have shaped the practice, such as manifestos. Finally, the third section will introduce the most relevant DSLs (domain-specific languages) within my practice and the Linz community of live coding and computer music.  
+
+\subsection{Crafting through time}
 
 Now I would like to start with Ursula Franklin's concepts of Holistic Technologies and Prescriptive Technologies. Holistic technologies can be directly associated with artisanal processes in which the artisan has mastery of the material from start to finish and leaves a personal mark on the final result. Prescriptive technologies, on the other hand, are technologies that break the process down into well-structured, hierarchical steps, 
 making the results predictable and scalable.\cite{usermanual}
@@ -205,16 +214,38 @@ making the results predictable and scalable.\cite{usermanual}
 When talking about technology, we should not limit ourselves to devices, machines, and gears. Technology is, above all, a way of doing things that encompasses ideas, mindsets, and procedures. And within these technologies, we can find groups of people who identify themselves by a common practice and are defined by it. Technology is linked to culture in that it establishes 
 values and defines ways of doing things.\cite{franklin1999real}
 
-So, what can we say about live coding as a practice and technology? Since its inception, it has been characterized by being open source, by using the computer as an expressive interface, and it has been sustained over time by a community that has decided to take care of the software and expand its practice to different disciplines.
-The first live coding performances and practices can be traced back to the early 21st century, particularly in the context of electronic music and digital arts. Live coding, at its core, is a form of real-time improvisation that uses programming as a creative medium.
+Ursula K. Le Guin describes technology as a way in which society copes with the material world and carries out daily actions such as keeping warm and cooking food. Le Guin also highlights that the term 'technology' should not be misused to describe only massive, complex technologies that are so often linked with the exploitation of natural and human resources. 
+
+We have some agency over the technologies we use; we can shape them, and they can shape us. 
+In times when we are faced with technology monopolies that thirst for power, expansion and wealth. 
+I would say, we should pay more attention to our technology choices, opting for more transparent technologies and supporting the communities around them. 
+
+In some workplaces, we often see a model of digital Taylorism, where technologies of control are used to measure workers' performance and behaviors. There is a clear structure of steps within the process, where people don't have to master complex tasks, but instead carry out single, simpler ones. Above all, there is a system where performance is linked to payment.
+One of the most notable scandals in terms of violations of workers' rights is that of Amazon, which was fined €32 million (£27 million) in France in 2024 for 'excessive' surveillance of its workers, where every movement is tracked in the name of efficiency.
+
+Franklin described this kind of technology as prescriptive. The results of these technologies are highly standardized and increasingly automated. This situation leaves no room for a personal touch or singularity. 
+
+These technologies have been useful in the industrial and contemporary worlds. For better or worse, a large part of our physical reality is the result of these procedures. However, in the field of art, we should abandon control technologies in favor of holistic ones. There is an intrinsic relationship between singularity and creation that should not be compromised for the sake of efficacy, volume of work, or profitability.
+
+Live coding embraces a philosophy in which processes are the protagonists of the performative act.  Here, being able to see the process unfold, with a set of instructions executed simultaneously, is also a way to see the artist's ideas and singularities. There is a communication process between the interfaces, the performer, and the public. 
+
+The concept of liveness involves exploring the expressivity of coding while avoiding a mechanical approach. Due to its openness, this concept has become political, allowing one to modify the software and inviting new collectives to form. This practice operates at the intersection of the technical and artistic domains. Software development has been an essential element in the evolution of this practice, and it has enabled all the artistic experimentation and theorization.
+
+In live coding, the concept of users disappears. The practitioners are involved in the creation, maintenance, and conceptualization of the software. The division between the final product and the user cannot apply. This is the key point for diversity of approaches within the practice. It allows for different kinds of disciplinary intersections.
+
+Nowadays, coding tends to be less prevalent and more automated. 
+The use of AI tools has made coding much easier and faster. 
+What does it mean for a practice to maintain this type of coding when coding 
+is being replaced by prompting? For me as audience and practitioner, 
+I can say that there is always an intention to preserve transparency and keep 
+the crafting of the process while performing. And on top of that uncertainty Is
+embraced, where mistakes and unexpected outcomes are welcomed as part of the
+creative process.
 
 
 \newpage
 
 \subsection{The grammatic of performative coding}
-
-Some Manifiestos to understand the live coding practice, where does it come this idea of liveness
- Philosphy behind live coding
 
 Generative code Manifiesto
 
@@ -223,6 +254,7 @@ Toplap manifiesto
 NEOKHIPUKAMAYOQ Manifiesto
 
 \subsection{Liveness and DSLs: Domain Specific Languages for performing live}
+
 The concept of liveness in live coding is closely tied to the use of Domain Specific Languages (DSLs). 
 These languages are designed to facilitate specific tasks and often come with their own set of rules and structures.
  In the context of live coding, DSLs can enhance the performative aspect by allowing for more intuitive and expressive 
@@ -230,32 +262,87 @@ These languages are designed to facilitate specific tasks and often come with th
  but also about how it can be manipulated and transformed on the fly,
   creating a dynamic interplay between the performer and the code.
 
+The first live coding performances and practices emerged in the early 21st century, primarily within the contexts of electronic music and digital arts. At its core, live coding is a form of real-time improvisation that uses programming as a creative medium.
+Programming languages focused on real-time audio processing were
+ a key element in the development of the practice. Softwares such as Miller Puckette’s 
+ Pure Data, developed in the 1990s, and James McCartney’s SuperCollider, 
+ originally released in 1996, could directly synthesize sound from algorithms.\cite{usermanual}
+ 
+These languages can also filter and combine incoming audio streams and/or stored samples. Pure Data's sound engine was later incorporated into Max, a software program written by Puckette years earlier. This combination became Max/MSP, with "MSP" standing for Miller S. Puckette.
 
-struggles and learnings
-Laptop jamming is a practice that combines live coding with collaborative improvisation,
-where multiple performers use their laptops to create music or visual art in real time.
-This section is a collection of my own experiences and learnings as a live coder,
-focusing on the practical aspects of live coding, including techniques, tools,
-and strategies that I have found useful in my practice.
+Another important factor that made live coding possible as we know it today was that laptops with powerful processors (CPUs), adequate memory (RAM), and capable graphics chips became more affordable for individuals. This made it possible for performers to start using laptops as creative tools in clubs and cultural venues.
 
-Toplap experience,
-Pastagang Coming soon
-\subsection{Algorithm thought}
+Since then, new software has emerged with a philosophy of contribution and sharing. It's no surprise that new environments based on previous ones have emerged.  In live coding, a Domain-Specific Language (DSL) is designed to make it easier for artists and musicians to create and modify performances in real time. Unlike general-purpose programming, this DSL focuses on specific domains, such as audio or visual patterns.
+\cite{Embed}
+
+These live coding environments address specific demands. For example, they need to be clear and concise so that you don't panic when writing complicated functions on stage. 
+
+The notation in each environment is different, depending on the concepts and languages used. For example, Hydra is a live coding environment for visuals inspired by analog modular synthesizers. You can use textures and geometries as sources for different modifications. Then there's Tidal Cycles, a live coding environment for sound based on the idea of rhythm through metrical cycles. This environment allows you to create repetitive rhythms that can be modified at any time. 
+
+Nowadays, there are more than 50 live coding environments
+ that focus on different concepts or specific projects. 
+\footnote{Here you can check a full list of the diferent livecoding languages: \href{https://github.com/toplap/awesome-livecoding/?tab=readme-ov-file\#languages}{https://github.com/toplap/awesome-livecoding} }
+During my time living in Linz, I have witnessed and used some of these environments. I created a map showing the connections between the live coding environments present in the art community from Linz. I was inspired by the ``Map of Livecoding Languages Used in Toplap Barcelona Performances'' at the 2025 International Conference on Live Coding (ICLC) during the "Live Coding: codi\_en\_viu++" exhibition at the UOC (Universitat Oberta de Catalunya).
+
+\vspace{0.5cm}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{nuevo.png}
+  \caption{Graphic of the presence of different live coding environments in the art scene in Linz}
+\end{figure}
+
+In the "Map of Livecoding Environments Used in Some Linz Festivals and Events" (Figure 1), I drew on my personal experiences in the city as a performer and audience member. I have seen these environments at festivals such as Ars Electronica, AMRO Festival, and Bruckner University concerts, among other venues and events. Of course, this map is a limited point of view, but I still want to illustrate how these environments relate to each other, draw connections, and show which programming languages they are based on. 
+
+I have used different live coding environments and explored their possibilities. For me, text-based notations are easier to understand and perform. I found this kind of notation easier to manipulate live. In any case, patcher languages like Max/MSP, which is a visual language, have been useful to me when I want to use long tracks or audio in a performance. This is something that is really hard to do in Strudel or Tidal Cycles because they are based on really tiny repetitions to create rhythms.
+
+Each notation defines the possibilities and experiments we could carry out. The limitations and specificities of each environment determine our creative approach.\cite{pattern} For instance, consider the visibility of each notation. If you are combining visual elements with wires or rewriting several lines of code, the intuitiveness of the notation is also important. This affects how we remember and bring together our thoughts on the stage.
+
+For me, Hydra has been one of the most fascinating environments in my practice. It's intuitive, and you can do a lot with simple things, but it can also get really complex if you want. You can embed Hydra in other environments, such as Strudel, P5.js, and Mercury, among others. This can be useful and practical for performative practices. Furthermore, it can be used for web design because it is easy to implement on web pages.  
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{synth.jpg}
+  \caption{Modules of the Visual Synth from Kunstuniversität, picture by: Tina Frank.}
+\end{figure}
+
+As I mentioned before, Hydra is a DSL whose main outcome is video synthesis. 
+Olivia Jack created it and realeased it in 2019 as a collaborrative networked livecoding visual tool.\cite{jack2019hydra}
+It runs in a web browser, but it can also be used locally as an extension in some code editor programs, like Pulsar, and it is inspired by analog synthesizers. In the summer of 2025, Tina Frank started a class on analog synthesizers at Kunstuniversität. I took the class to experiment with the university's new acquisition, the video synthesizer, which arrived that semester. The synthetsizer grew over the semester with new modules to experiment with. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{screensynth.png}
+  \caption{Screenshot of a patch I made in the Visual Synth class.}
+\end{figure}
+
+A visual synthesizer features oscillators with different shapes to produce colours and shapes at certain frequencies. You can patch and modulate these frequencies with envelopes, LFOs, and effects using MIDI or Control Voltage (CV) such as waveshapers, ramps and amplifiers.\cite{dreher2014history} When patching with your analog synthesizer, you have to plug in a source, which can be a shape, oscillation, or an external video source. Then, you can go for effects and RGB signals. One technique that can take you to unexpected places is creating feedback using your output as a source. This feature is also found in Hydra.
+
+I would like to explain how this feedback would work in Hydra notation. Take the following piece of code, for example:
+\[osc(10).thresh().invert(() => Math.sin(time)).out(o0)\]  
+osc() stands for oscillation that is the source. In the middle are thresh() and invert(), which affect the source. The last thing is the output, out().\footnote{You can try out this code in the hydra web \href{https://hydra.ojack.xyz}https://hydra.ojack.xyz}
+
+Now, I will take a modulation. Here, you must select a source again. It can be a shape or an oscillator. Here, however, we will use our output o0 to create feedback and we placed it as modulate(o0).
+\[osc(10).thresh().modulate(o0).invert(() => Math.sin(time)).out(o0)\]
+
+If you try out the code on the Hydra website, you will notice that this small change creates a nice movement effect. During Tina Frank’s class, I also tried creating feedback patches in the analog synthesizer, which was a nice experience that helped me understand the operations I've been performing with Hydra in a more tactile way.\footnote{You can see a video of a patch I made in the Visual Synth class here:
+  \includegraphics[height=20mm]{synthcode.png}}
+
+Another live coding environment that I would like to mention is Tidal Cycles. This was developed by Alex McLean during his PhD at Goldsmiths, University of London, between 2007 and 2011. The idea behind this environment is based on patterns within sound. It uses SuperDirt as a framework to function as a sampler, and SuperCollider to provide backup functionality and audio processing.\cite{tidal2022}   
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{ciclo.png}
+  \caption{This is a representation of a cyclical rhythm in Tidal Cycles. Here, the cycle is divided by the number of times the sample is multiplied. }
+\end{figure}
+
+When you create a rhythm in Tidal Cycles, it repeats. You can divide the patterns into smaller sections of time, but the structure is cyclical, not linear: one cycle follows another. This concept lends itself particularly well to music genres such as electronic music, which are based on constant repetition. The library of the programme contains several samples of drum machines, synths and bass, which form the basis of this genre. It is not surprising that the Algorave events, a term originally coined by Alex McLean and Nick Collins in 2011, have become so popular. Nowadays, these events, which combine dance and algorithms, are spreading around the world.\cite{tidal}
+
+\subsection{Algorithm thought// Intersections}
 
 
 \newpage
 
 
-
-The first livecoding performances and practices can be traced back to the early 21st century, particularly
- in the context of electronic music and digital arts. Livecoding, at its core, is a form of real-time improvisation that uses programming as a creative medium.
-
-Among the most significant milestones in the development of livecoding as an artistic practice, we can mention ChucK, developed by Ge Wang in 2002. ChucK is a real-time audio programming language that allows precise manipulation of sound and time. Besides the tool itself, it is important to highlight the performances that began to be carried out around its use, such as "On-the-fly Counterpoint: A piece for two laptops and two laptop projectors" by Ge Wang and Perry Cook in 2003\cite{history}\relax. 
-
-
-In 2004, Toplap (Temporary Organisation for the Promotion of Live Algorithm Programming) was founded in London, marking a significant step in the livecoding community. Toplap's mission is to promote live coding as a performance practice and to create a space for collaboration and knowledge sharing among artists and programmers. The community has since grown globally, with local chapters forming in various cities, including Toplap Linz, which I co-founded in 2024
-
-\newpage
 
 
 
@@ -270,7 +357,11 @@ In 2004, Toplap (Temporary Organisation for the Promotion of Live Algorithm Prog
 
 In live coding performances, one of the basic 
 principles is live improvisation: creating what you hear and see from scratch. 
-Algorithms are written and operated on in real time\cite{levin2021code}. Another key element is demonstrating to the audience that what they are witnessing is being created live, which is why the performer's screen is typically projected, revealing everything, including mistakes.
+Algorithms are written and operated on in real time\cite{levin2021code}.
+ Another key element is demonstrating to the audience 
+ that what they are witnessing is being created live,
+  which is why the performer's screen is typically projected, revealing everything, 
+  including mistakes.
 
 However, not all live coders start from a 'blank page', 
 demonstrating exceptional skill and speed; some use prepared code. 
@@ -282,7 +373,7 @@ I have chosen to do this on many occasions during solo performances as it makes 
 Before a performance, I spend time rehearsing and planning what I want to do, the sounds I am going to use and the images or textures that will be on stage. This process is similar to painting: you prepare a canvas, select a colour palette and choose a motif. However, other experiences within the practice escape this type of prior ideation and are subject to the moment itself and the unpredictability of the people and elements involved in the performance. Examples include jam sessions, collective performances and 'from scratch' performances.
 
 I will talk about some of my own performances and those I have taken part in. I will identify the different working methods and discoveries that appeared during the process. I would also like to explore the different qualities of time in various performance modes and address the live aspect of live coding, considering its potential for experimentation. I would also like to talk about the importance of community in live coding and how this can lead to new approaches to time and performance.
-\newpage
+
 
 \subsection{Dusk of an electric forest}
 \vspace{.5cm}
@@ -302,7 +393,7 @@ When conceptualising the performance, I used the sounds of a hyper-technological
 
 The Anthropocene has impacted numerous ecosystems, and the concept of human expansion and growth has led to a constant state of emergency. We are suffering the consequences of our own actions, and paradoxically, our surroundings become quieter amid our own noise in these environments that we have modified.
 \footnote{You can see the video documentation of the performance here:
-  \includegraphics[height=30mm]{frame.png}}
+  \includegraphics[height=20mm]{frame.png}}
 
 I would like to mention the work of Bernie Krause on biophony and soundscapes. 
 In the late 1960s, he began researching and documenting the sounds of natural ecosystems around the world. 
@@ -413,7 +504,9 @@ When Gorka Egino and I participated in the Toplap Solstice in December 2024, we 
   \caption{Screenshot of the YouTube recording of the performance by Sule and Gorka at Toplap Solstice, December 2024.}
 \end{figure}
 
-In the YouTube recording of the performance (see footnote), you can clearly see how the code develops. In it, the cursor embodies the artist's body in a certain way, travelling across the screen and writing, hesitating, correcting, pausing, modifying and activating the code.
+In the YouTube recording of the performance, you can clearly see how the code develops. In it, the cursor embodies the artist's body in a certain way, travelling across the screen and writing, hesitating, correcting, pausing, modifying and activating the code.
+\footnote{  You can see the youtube video of the streaming here:
+      \includegraphics[height=20mm]{youtube.jpeg}}
 
 This type of event is an interesting format for those who are new to or curious about the practice, as it provides an opportunity to see in detail how different artists use the tools, offering new ideas and introducing lesser-known live coding platforms.
 
@@ -512,9 +605,6 @@ This experience makes the idea of starting from scratch and programming on the f
 
 Some time after this workshop, we collaborated with Servus.at, Stadtwerkstatt Linz, and Ljudmila (Ljubljana) to organize a satellite event taking place in Linz for the ICLC International Conference of Live Coding, which was held in Barcelona from May 27 to 30, 2025. We invited live coders who were traveling to the ICLC event and making some stops along the way to give concerts. Some members of Toplap participated: Te-En Chen, map(h) collective (Sule Suarez and Gorka Egino), Confirm Humanity (Cecilia Bojanik), and incredible live coders visited us: c-robo(EU), Blaz Pavlica (SVL), and Shelly Knotts (AR)
 
-
-\newpage
-
 %\begin{figure}[H]
  % \centering
   %\includegraphics[width=0.9\textwidth]{sheet.jpeg}
@@ -555,8 +645,7 @@ For me, the performative practice of live coding is a field of experimentation
 
 In my own practice, there has been ambivalence in terms of score, choreography, and improvisation. In some cases, such as my performance Dusk of an Electric Forest, there is a concept and a prior curation of images and sounds, the code is constructed from an established frame, and there is more or less an idea of different moments in the performance. 
 
-However, even i
-n this type of experience, the performance is not limited to the mechanical act of activating and deactivating lines of code. It involves working with a limited color palette, but with several parameters that remain open and escape any planning. Although in Dusk of an Electric Forest, I had tried different effects, rhythms, and patterns. When the moment of the performance arrived, things were different. Things that I thought would work suddenly didn't sound as I expected. Adrift, I had to find new ways to construct the sensations I wanted to convey and discard some pre-established ideas. A space of uncertainty opens up, and being flexible is the key to enjoying and constructing the performance.
+However, even in this type of experience, the performance is not limited to the mechanical act of activating and deactivating lines of code. It involves working with a limited color palette, but with several parameters that remain open and escape any planning. Although in Dusk of an Electric Forest, I had tried different effects, rhythms, and patterns. When the moment of the performance arrived, things were different. Things that I thought would work suddenly didn't sound as I expected. Adrift, I had to find new ways to construct the sensations I wanted to convey and discard some pre-established ideas. A space of uncertainty opens up, and being flexible is the key to enjoying and constructing the performance.
 
 Conditions change radically when you try or practice something alone, without an audience, and when you face the stage. Things look and sound different on speakers than on headphones, or on a computer screen and a projector. The acoustic and visual conditions are totally different, which means you have to be able to adapt.
 
@@ -599,10 +688,13 @@ Understanding of performance lives in two instances:
  one where the event unfolds and brings different senses and meanings to everyone present, and another where a sense of knowing is built through revision. This understanding can only be grasped by inhabiting the specific qualities of duration and time. The second instance is the after-moment, where revision occurs and a sense of knowing and reflection is built.\cite{performrepeat}
 
 So, think of this section as a small journal of processes. Here, the grammar is a fragment of code running inside this page. 
+\footnote{You can visit the archive here: \href{https://sucaritaesredonda.github.io/alternativeArchive/}{Web link} 
+\includegraphics[height=20mm]{archivo.png}}
 
 
 
-%bibliogrphy
+
+
 \bibliographystyle{unsrt}
 \bibliography{bibli}
 
