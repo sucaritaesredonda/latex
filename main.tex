@@ -1,4 +1,26 @@
 \documentclass[12pt, twoside, a4paper]{report}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{setspace}        % For spacing
@@ -11,13 +33,15 @@
 \usepackage{graphicx}
 \usepackage{titlesec}        % Title formatting
 \usepackage{ragged2e}        % Justify or left align
-\usepackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=blue,breaklinks=true]{hyperref}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black,breaklinks=true]{hyperref}
 \hypersetup{pdfborder={0 0 0}} % ensure no boxed borders
 \urlstyle{same} % keep URLs in the surrounding text font   % Provide \href and other link commands
 \graphicspath{ {./graphics/} }
 \selectlanguage{english}
 \setlength{\parskip}{0.9em} % or your preferred value
 \setlength{\parindent}{0pt}  % No indentation
+
+
 
 
 \renewcommand{\epigraphsize}{\small}
@@ -214,14 +238,14 @@ making the results predictable and scalable.\cite{usermanual}
 When talking about technology, we should not limit ourselves to devices, machines, and gears. Technology is, above all, a way of doing things that encompasses ideas, mindsets, and procedures. And within these technologies, we can find groups of people who identify themselves by a common practice and are defined by it. Technology is linked to culture in that it establishes 
 values and defines ways of doing things.\cite{franklin1999real}
 
-Ursula K. Le Guin describes technology as a way in which society copes with the material world and carries out daily actions such as keeping warm and cooking food. Le Guin also highlights that the term 'technology' should not be misused to describe only massive, complex technologies that are so often linked with the exploitation of natural and human resources. 
+Ursula K. Le Guin describes technology as a way in which society copes with the material world and carries out daily actions such as keeping warm and cooking food. Le Guin also highlights that the term 'technology' should not be misused to describe only massive, complex technologies that are so often linked with the exploitation of natural and human resources. \cite{ursulakleguin2024}
 
 We have some agency over the technologies we use; we can shape them, and they can shape us. 
 In times when we are faced with technology monopolies that thirst for power, expansion and wealth. 
 I would say, we should pay more attention to our technology choices, opting for more transparent technologies and supporting the communities around them. 
 
 In some workplaces, we often see a model of digital Taylorism, where technologies of control are used to measure workers' performance and behaviors. There is a clear structure of steps within the process, where people don't have to master complex tasks, but instead carry out single, simpler ones. Above all, there is a system where performance is linked to payment.
-One of the most notable scandals in terms of violations of workers' rights is that of Amazon, which was fined €32 million (£27 million) in France in 2024 for 'excessive' surveillance of its workers, where every movement is tracked in the name of efficiency.
+One of the most notable scandals in terms of violations of workers' rights is that of Amazon, which was fined €32 million (£27 million) in France in 2024 for 'excessive' surveillance of its workers, where every movement is tracked in the name of efficiency. \cite{bbc2023}
 
 Franklin described this kind of technology as prescriptive. The results of these technologies are highly standardized and increasingly automated. This situation leaves no room for a personal touch or singularity. 
 
@@ -234,7 +258,7 @@ The concept of liveness involves exploring the expressivity of coding while avoi
 In live coding, the concept of users disappears. The practitioners are involved in the creation, maintenance, and conceptualization of the software. The division between the final product and the user cannot apply. This is the key point for diversity of approaches within the practice. It allows for different kinds of disciplinary intersections.
 
 Nowadays, coding tends to be less prevalent and more automated. 
-The use of AI tools has made coding much easier and faster. 
+The use of AI tools have made coding much easier and faster. 
 What does it mean for a practice to maintain this type of coding when coding 
 is being replaced by prompting? For me as audience and practitioner, 
 I can say that there is always an intention to preserve transparency and keep 
@@ -247,11 +271,46 @@ creative process.
 
 \subsection{The grammatic of performative coding}
 
-Generative code Manifiesto
+Now, I would like to mention some key points in consolidating the philosophy of live coding. How is it that there is a practice around the action of programming on stage?  
 
-Toplap manifiesto
+Adrian Ward and Alex McLean became collaborators in the early 2000s while studying at the University of Plymouth in the UK. Ward was pursuing a hybrid arts-computing degree, while McLean was pursuing a bachelor's degree in applied computing. Together, they explored the relationship between packaged and improvised software in The Generative Manifesto and in their collective Slub.  They presented the manifesto at a Perl community event at the Institute of Contemporary Arts (ICA) in London in September 2000. During the presentation, Ward shouted the manifesto over a soundtrack of rhythms synthesized by McLean.\cite{history}
 
-NEOKHIPUKAMAYOQ Manifiesto
+The main points from the Generative Manifesto\cite{generativeManifesto} were as follows: 
+\begin{itemize}
+   \renewcommand{\labelitemi}{--}
+  \item  Attention to detail—that only hand-made generative music can allow (code allows you to go deeper into creative structures);
+ \item Realtime output and compositional control—we hate to wait (it is inconceivable to expect non-realtime systems to exhibit signs of life);
+  \item  Construct and explore new sonic environments with echoes from our own. (art reflects human narrative, code reflects human activity);
+\item Open process, open minds—we have nothing to hide (code is unambiguous, it can never hide behind obscurity. We seek to abolish obscurity in the arts);
+\item  Only use software applications written by ourselves—software dictates output, we dictate software (authorship cannot be granted to those who have not authored!)
+\end{itemize}
+
+This generative manifesto was the seed of later explorations. During those years, the development of environments that allow real-time output increased, and the idea of the laptop as an expressive interface was embraced. For example, McLean would develop Tidal Cycles five years later, following some of the points of this early manifesto. 
+
+A key event in terms of the conceptual groundwork from the collective was the Changing 
+Grammars symposium, which was convened by Renate Wieser and Julian Rohrhuber at the HfbK in February 2004.
+ Changing Grammars was a politically engaged festival of code-as-art and a "live audio programming symposium." It was at this symposium that TOPLAP was formed, and the TOPLAP manifesto was first drafted immediately after. The Temporary Organization for the Promotion of Live Algorithm Programming was formed and continues to operate as an online wiki and email discussion list, including software artists and live coders from outside Europe.\cite{usermanual}
+
+Nowadays, Toplap is an umbrella organization that brings together several artists and collectives. This organization connects projects from around the world. There are numerous nodes in different countries that are connected with each other but have developed their own approaches to live coding. The community has grown and taken on major initiatives like the International Conference on Live Coding (ICLC), which first started in 2015 at the University of Leeds in the UK. Since then, it has been an annual or biennial event, depending on the needs of the organization in each location (each edition is in a different place). 
+
+I would like to mention some points that then become mantras within the Toplap Manifesto\cite{toplapManifesto} community:
+
+\begin{itemize}
+   \renewcommand{\labelitemi}{--}
+  \item Obscurantism is dangerous. Show us your screens
+  \item  Live coding is not about tools. Algorithms are thoughts. Chainsaws are tools. That’s why algorithms are sometimes harder to notice than chainsaws.
+   \item Give us access to the performer’s mind, to the whole human instrument 
+  \item insight into algorithms
+   \item  The skillful extemporisation of algorithm as an expressive/impressive display of mental dexterity
+\end{itemize} 
+
+In this manifesto, we see how the process has a privileged place in the practice and how the call for transparency is also political. From here, the idea of starting from scratch became more prevalent as 
+a practice of expressiveness.
+
+These two texts brought new horizons to the practice and sparked further experimentation and the development of different live coding environments. Since then, live coding has maintained its openness and focus on real-time output.The main subject of performative practice is the ideas and how the performer unfolds them on stage. The audience participates and is complicit in the actions revealed.
+
+The most important aspect of mentioning those texts and events is that a community begins to grow and work in a similar creative territory. The history of live coding is rooted in the commons, knowledge sharing, and open-source principles. 
+
 
 \subsection{Liveness and DSLs: Domain Specific Languages for performing live}
 
@@ -262,13 +321,17 @@ These languages are designed to facilitate specific tasks and often come with th
  but also about how it can be manipulated and transformed on the fly,
   creating a dynamic interplay between the performer and the code.
 
-The first live coding performances and practices emerged in the early 21st century, primarily within the contexts of electronic music and digital arts. At its core, live coding is a form of real-time improvisation that uses programming as a creative medium.
+The first live coding performances and practices emerged in the early 
+21st century, primarily within the contexts of electronic music and digital arts. 
+At its core, live coding is a form of real-time improvisation that uses programming 
+as a creative medium.
 Programming languages focused on real-time audio processing were
  a key element in the development of the practice. Softwares such as Miller Puckette’s 
  Pure Data, developed in the 1990s, and James McCartney’s SuperCollider, 
  originally released in 1996, could directly synthesize sound from algorithms.\cite{usermanual}
  
-These languages can also filter and combine incoming audio streams and/or stored samples. Pure Data's sound engine was later incorporated into Max, a software program written by Puckette years earlier. This combination became Max/MSP, with "MSP" standing for Miller S. Puckette.
+These languages can also filter and combine incoming audio streams and/or stored samples.
+ Pure Data's sound engine was later incorporated into Max, a software program written by Puckette years earlier. This combination became Max/MSP, with "MSP" standing for Miller S. Puckette.\cite{puckette2007theory}
 
 Another important factor that made live coding possible as we know it today was that laptops with powerful processors (CPUs), adequate memory (RAM), and capable graphics chips became more affordable for individuals. This made it possible for performers to start using laptops as creative tools in clubs and cultural venues.
 
@@ -337,21 +400,61 @@ Another live coding environment that I would like to mention is Tidal Cycles. Th
 
 When you create a rhythm in Tidal Cycles, it repeats. You can divide the patterns into smaller sections of time, but the structure is cyclical, not linear: one cycle follows another. This concept lends itself particularly well to music genres such as electronic music, which are based on constant repetition. The library of the programme contains several samples of drum machines, synths and bass, which form the basis of this genre. It is not surprising that the Algorave events, a term originally coined by Alex McLean and Nick Collins in 2011, have become so popular. Nowadays, these events, which combine dance and algorithms, are spreading around the world.\cite{tidal}
 
-\subsection{Algorithm thought// Intersections}
+I recently started learning about and incorporating Strudel into my performative practice. Strudel is a JavaScript port of TidalCycles. Although it is based on the same idea of patterns and cycles, its notation is slightly different. Alex McLean began working on this port in 2022 and shared an open-source version of it on GitHub. Two weeks after the port was published, Alex Roos found the repository and contributed a "REPL" user interface and a scheduler the following day, enabling Strudel to produce sound. After a year of development, Roos and McLean released the first version ready for wider public use.\cite{strudel}
 
+Since Strudel was released, I've seen it become popular on social media platforms like Twitch, YouTube, Instagram, and even TikTok. Some artists with a strong social media presence, like Dj Dave and Switch Angel, have turned their attention to this environment to reach a broader audience. At the International Conference on Live Coding (ICLC 2024) in Shanghai, China, Sarah Davis (Dj Dave) gave a presentation titled "Pop Live Coding Encounters: Reflections on Practice,” co-authored with Jack Armitage (Lil Data) and Gus Lobban (Kero Kero Bonito). In it, they reflect on working with the expectations of non-live coders and what happens when a practice encounters pop. They also discuss their experiences communicating to the audience that the code they are seeing is not just an aesthetic choice, but actually what produces the audiovisual experience.\cite{davis}
+Anyway, social media is a volatile place. 
+
+I'm curious to see how this less niche approach to live coding will evolve. For now, all I can say is that this has really encouraged me to try out more vocals or melodic structures in my performances. In a sense, I'm thinking maybe more pop.
+
+\subsection{Livecoding Intersections}
+
+I had the opportunity to visit the 2025 International Conference of Live Coding in Barcelona, one of whose main venues was the UOC Universidad Abierta de Catalunya. Other venues included concert halls such as Sala Beckett and Laut. This year's theme was liveness, and the main topics were Specialized Tools and DSLs, Live Coding Beyond Computers and Interfaces, Audio-Visual Live Coding, Speculative Futures, Communities and Artistic Practices, and Collaborative Live Coding.
+
+It was a really nice event where I learned about interesting research and projects. I also enjoyed a diverse program of performances and concerts every night during the conference. In this section, I would like to mention three projects that I came across at the conference. They were inspiring because of how they bring together various ideas and disciplines, in an intersectional way.
+
+The first project I want to talk about is Algorithmic Artscape, a work-in-progress web platform developed by Joana Chicau, a designer and researcher with a background in dance, and Celeste Betancur Gutiérrez, an audiovisual software inventor, composer, and live coder. The project was developed as part of the Tekhnē residency program in collaboration with TRAFO in Poland and Q-O2 in Belgium in 2024. \footnote{You can visit the web of Algorithmic Artscape here: \href{https://algorithmic-scape.art/}https://algorithmic-scape.art/}
+
+This website offers a variety of programming languages and tools for live coding of audio and visuals.There are buttons in the Navigator section that open pop-up windows with a dialog box for writing code in environments like Hydra, ChucK, and Cqenze. Cqenze is a mini-language designed by Celeste Betancur for creating musical or color patterns that use implicit cyclic timing. There are also some AI features for generating sound. These tools include a machine learning model and a set of scores to inspire artistic creation, whether through the use of these tools or external sources, such as video and audio recordings, writing, dance, and photography.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{algoscape.png}
+  \caption{Screenshot of the Algorithmic Artscape web platform.}
+\end{figure}
+
+What I like about this project is the intention to evolve the body in the creative process while using the web. When you start the Hydra pop-up window, the webcam is activated by default. You appear on the web, and therefore, you become an object that can be modified through code. Then, different scores appear in the center of the screen, such as "turn," "take a different direction," "reverse," "shift the attention towards something else," and "move." These scores work as activators between the interface and the performer, who can use this set of instructions to initiate an action.  
+These two artists have used this platform for performances in which the movement of the body and the web interface are directly related. The movement, visual, and sound scores are in constant change. Expanding the relationship between the laptop interface and the performer.
+
+Another project from the conference that caught my attention was the performance "Afrontación => (f.)  Copings, Narrativas de la Memoria y la Violencia del Habitar" by Jessica A. Rodríguez. In it, she used Transmit, a live coding environment she designed for live video performances.
+
+Jessica A. Rodríguez is a Mexico-Canadian artist and researcher who works with topics such as migration, memory, and violence through different media, such as coding, video, and poetry. She developed TransMit, a programming language for live video, influenced by Spanglish syntax. This live coding environment reimagines TV broadcasting and news outlets, such as newspapers and TV news, in digital, live-coded, 3D environments. It has a playful approach that fully integrates code into artistic narratives, 
+enabling digital (generative and interactive) storytelling.\cite{transmit}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Transmit.png}
+  \caption{Screenshot of the performance documentation "afrontaciones => (f.) copings Narrativas de la Memoria y la Violencia del habitar" by Jessica A. Rodriguez}
+\end{figure}
+
+The syntax of Transmit allows for the use of Spanglish or broken English as a means of embodying language and bridging multiple idiomatic identities that only make sense through hybrid syntactic structures. This linguistic hybridization is primarily present during migration.\cite{rodriguez2003queer}
+That is an act of resistance in an industry where codes have mainly been developed with English syntax in mind, is a way to reclaim the existence of other cultures.
+
+"Afrontación => (f.)  Copings, Narrativas de la Memoria y la Violencia del Habitar" 
+is an autoethnographic performance in which the artist creates testimonies (as a memory artifact) about life in a violent Mexican city. The artist uses mixed-media collages, typed testimonies, recorded videos from her hometown, and TV broadcasts.\cite{afrontaciones}
+During the performance, different layers of video appear, overlap, and disappear. These videos are individual cubes that come together to create a landscape showing the complexity of certain territories and their daily lives and news media narratives. 
+
+ \begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{alexandra.png}
+  \caption{Screenshot of the performance documentation "Godshatter" by Gábor Ugray, Alexandra Cárdenas}
+\end{figure}
+
+Finally, I would like to present another performance: Godshatter by Gábor Ugray and Alexandra Cárdenas. It is an expedition into the mind of a Mesoamerican god. In it, you experience the different states and demands of this entity. Gábor's visuals map the deity's supernatural mind using a particle system based on a 3D scan of the god's effigy. Alexandra Cárdenas created an ambient composition in which a foundation of drones supports a superstructure of experimental beats.\cite{godshatter}
+
+During the performance, this deity takes us on a journey of furious demands and desires. For instance, this god said, "Nanahuatzin leapt into the fire", "To play is to pray. To code is to conjure" or "Each beat is a repair. Each glitch is a sacrifice." This entity is capable of destroying everything and demands that the live coders keep feeding the code and bringing more beats to the performance so that the world does not tear apart. This playful approach used inline chat comments so the audience could read what the god wanted to communicate. The performance brings together Mesoamerican cosmology and contemporary live coding in a narrative and audiovisual way.
 
 \newpage
-
-
-
-
-
-
-
-
-
-
-
 \section{Show your Screen}
 \vspace{.5cm}
 
@@ -661,6 +764,8 @@ I created a brief documentation on a web page to help you visualise some of the 
 In the process of excavating my files, I also found a lovely composition 
 I was creating using samples of electromagnetic field recordings I took in the countryside. 
 This now exists as a bonus track on this page a sketch of a performance that hasn't happened yet.
+\footnote{You can visit the archive here: \href{https://sucaritaesredonda.github.io/alternativeArchive/}{Web link} 
+\includegraphics[height=20mm]{archivo.png}}
 
 \begin{figure}[htbp]
   \centering
@@ -688,14 +793,75 @@ Understanding of performance lives in two instances:
  one where the event unfolds and brings different senses and meanings to everyone present, and another where a sense of knowing is built through revision. This understanding can only be grasped by inhabiting the specific qualities of duration and time. The second instance is the after-moment, where revision occurs and a sense of knowing and reflection is built.\cite{performrepeat}
 
 So, think of this section as a small journal of processes. Here, the grammar is a fragment of code running inside this page. 
-\footnote{You can visit the archive here: \href{https://sucaritaesredonda.github.io/alternativeArchive/}{Web link} 
-\includegraphics[height=20mm]{archivo.png}}
+
+\newpage
+
+\section{Appendices}
+
+\subsection{Vanishing photographs }
+
+In my participation of Sankt interface 2024, I did a camera in which the image is never stable and with even little movements will start to blur and vanish, in every click you freeze a different moment but it will tend to disappear.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Camila_Scholz_Sankt2024 (17).JPG}
+  \caption{Picture of Vanishing photographs, Sankt Interface Festival 2024, Linz. Photo by Camila Scholz}
+\end{figure}
+
+I thought for this work on the difficulties of archiving and how memory is alsomething that we can not rely entirely. In a era where images are hyper abundant, we value thien less, somethings the photos that we take re forgotten in  a cloud or even worse just existing in pur celphone with the threaten of disappear if something happen to that device.
+
+I would like to reference Susan Sontag's famous take on photography and its relationship with mortality and ephemerality. “All photographs are memento mori. To take a photograph is to participate in 
+another person’s (or thing’s) mortality, vulnerability, mutability. Precisely by slicing out this moment and freezing it, all photographs testify to time’s relentless melt.”\cite{sontag2021photography}
+
+For this project, I worked with a toy camera that I found on the street. It's a nostalgic object that was transformed into a mouse and regained its symbolic function of capturing images. This artifact is capable of freezing time and then also allows you to see how time resists being captured and the image finally vanish.
+
+The computer is another element that acts as a mirror; one can only capture an image through their reflection. This narrows the possibilities of the artifact; the audience can only take self-portraits, which makes it more intimate. You don't just see how an image crumbles; you actually see yourself melting away.
+
+On the computer, a JavaScript code is running within the Hydra web. There are two mouse interactions: the first freezes the image when clicked, and the second modulates the image when the mouse moves from side to side, producing the vanishing effect. Here you can take a look of the code:
+\footnote{You can visit the code sketch here: \href{https://hydra.ojack.xyz/?sketch_id=WhNSNFruQ8Uy11d8}{Web link} 
+\includegraphics[height=20mm]{camara.png}}
+
+
+\begin{lstlisting}
+// Camera source
+s3.initCam()
+
+// Shutter buffer
+src(s3).out(o3)
+
+// Click to capture a frame
+
+function openShutter() {
+
+src(s3).out(o3)     // write current camera frame into o3
+
+}
+
+// Hold a frozen frame when mouse up
+function closeShutter() {
+
+src(o3).out(o3)     // keep last frame in o3 (freeze)
+
+}
+
+document.addEventListener("pointerdown", openShutter)
+
+document.addEventListener("pointerup", closeShutter)
+
+src(o3).modulate(src(o3), () => mouse.x / 1000).out(o0)
+
+\end{lstlisting}
 
 
 
 
 
-\bibliographystyle{unsrt}
+\newpage
+
+\bibliographystyle{apalike}
 \bibliography{bibli}
+
+%\nocite{*}
+%\printbibliography
 
 \end{document}

@@ -1,96 +1,162 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{}
 
-\bibitem{usermanual}
-Alan~F Blackwell, Emma Cocker, Geoff Cox, Alex McLean, and Thor Magnusson.
-\newblock {\em Live coding: a user's manual}.
-\newblock MIT Press, 2022.
+\bibitem[top, 2004]{toplapManifesto}
+ (2004).
+\newblock Toplap manifesto.
+\newblock \url{https://toplap.org/wiki/ManifestoDraft}.
 
-\bibitem{GenerativeaRT}
-Matt Pearson.
-\newblock {\em Generative Art}.
-\newblock Manning Publications Co., USA, 2011.
+\bibitem[Alex~McLean, 2000]{generativeManifesto}
+Alex~McLean, A.~w. (2000).
+\newblock Generative manifesto.
+\newblock \url{https://slab.org/2015/07/28/the-generative-manifesto-august-2000/}.
 
-\bibitem{meaningLife}
-Alex McLean, Julian Rohrhuber, and Renate Wieser.
-\newblock The meaning of live: From art without audience to programs without users, April 2023.
+\bibitem[Alexandra~Cardenas, 2025]{godshatter}
+Alexandra~Cardenas, G.~U. (2025).
+\newblock Godshatter: live coding a generative sound and light ritual.
+\newblock \url{https://iclc.toplap.org/2025/catalogue/performance/godshatter.html}.
 
-\bibitem{cats}
-Thor Magnusson.
-\newblock Herding cats: Observing live coding in the wild.
-\newblock {\em Computer Music Journal}, 38(1):8--16, 2014.
-
-\bibitem{franklin1999real}
-Ursula Franklin.
-\newblock {\em The real world of technology}.
-\newblock House of Anansi, 1999.
-
-\bibitem{Embed}
-Sam Kouteili, Hiren Madhu, George Typaldos, and Mark Santolucito.
-\newblock Embedding alignment in code generation for audio.
-\newblock {\em arXiv preprint arXiv:2508.05473}, 2025.
-
-\bibitem{pattern}
-Alex McLean.
-\newblock Algorithmic pattern.
-\newblock In {\em Proceedings of the International Conference on New Interfaces for Musical Expression}, pages 265--270, 2020.
-
-\bibitem{jack2019hydra}
-Olivia Jack.
-\newblock Hydra: live coding networked visuals.
-\newblock In {\em Proceedings of the Fourth International Conference on Live Coding}, pages 353--354, 2019.
-
-\bibitem{dreher2014history}
-Thomas Dreher.
-\newblock History of computer art.
-\newblock 2014.
-
-\bibitem{tidal2022}
-Alex McLean.
-\newblock Alternate timelines for tidalcycles.
-\newblock {\em arXiv preprint arXiv:2209.04289}, 2022.
-
-\bibitem{tidal}
-Alex McLean and Geraint Wiggins.
-\newblock Tidal--pattern language for the live coding of music.
-\newblock In {\em Proceedings of the 7th sound and music computing conference}, pages 331--334, 2010.
-
-\bibitem{levin2021code}
-Golan Levin and Tega Brain.
-\newblock {\em Code as creative medium: a handbook for computational art and design}.
-\newblock MIT Press, 2021.
-
-\bibitem{ribac2016bernie}
-Fran{\c{c}}ois Ribac.
-\newblock Bernie krause’s the great animal orchestra--an exhibition.
-\newblock {\em Sound Studies}, 2(2):201--204, 2016.
-
-\bibitem{krause2016wild}
-Bernie Krause.
-\newblock {\em Wild soundscapes: discovering the voice of the natural world}.
-\newblock Yale University Press, 2016.
-
-\bibitem{anzaldua2021borderlands}
-Gloria Anzald{\'u}a.
+\bibitem[Anzald{\'u}a, 2021]{anzaldua2021borderlands}
+Anzald{\'u}a, G. (2021).
 \newblock {\em Borderlands/La frontera: la nueva mestiza}.
-\newblock Capit{\'a}n Swing Libros, 2021.
+\newblock Capit{\'a}n Swing Libros.
 
-\bibitem{melete}
-Emma Cocker.
-\newblock Performing thinking in action: the melet{\=e} of live coding.
-\newblock {\em International Journal of Performance Arts and Digital Media}, 12(2):102--116, 2016.
-
-\bibitem{AMRO}
-AMRO Art Meets~Radical Openness.
-\newblock Amro festival dedicated to art, hacktivism and open culture, 2024.
-
-\bibitem{bamford2014working}
-Kiff Bamford.
+\bibitem[Bamford, 2014]{bamford2014working}
+Bamford, K. (2014).
 \newblock Working with fragments: A performance art’s archive.
-\newblock {\em Journal of Writing in Creative Practice}, 7(3):557--567, 2014.
+\newblock {\em Journal of Writing in Creative Practice}, 7(3):557--567.
 
-\bibitem{performrepeat}
-Amelia Jones and Adrian Heathfield.
+\bibitem[Blackwell et~al., 2022]{usermanual}
+Blackwell, A.~F., Cocker, E., Cox, G., McLean, A., and Magnusson, T. (2022).
+\newblock {\em Live coding: a user's manual}.
+\newblock MIT Press.
+
+\bibitem[Cocker, 2016]{melete}
+Cocker, E. (2016).
+\newblock Performing thinking in action: the melet{\=e} of live coding.
+\newblock {\em International Journal of Performance Arts and Digital Media}, 12(2):102--116.
+
+\bibitem[Collins, 2011]{history}
+Collins, N. (2011).
+\newblock Live coding of consequence.
+\newblock {\em Leonardo}, 44(3):207--211.
+
+\bibitem[Davis et~al., 2024]{davis}
+Davis, S., Armitage, J., and Lobban, G. (2024).
+\newblock Pop live coding encounters: Reflections on practice.
+\newblock In {\em Proceedings of the 8th International Conference on Live Coding}.
+
+\bibitem[Dreher, 2014]{dreher2014history}
+Dreher, T. (2014).
+\newblock History of computer art.
+\newblock \url{https://iasl.uni-muenchen.de/links/GCA_Indexe.html}.
+
+\bibitem[Franklin, 1999]{franklin1999real}
+Franklin, U. (1999).
+\newblock {\em The real world of technology}.
+\newblock House of Anansi.
+
+\bibitem[Gruet, 2024]{bbc2023}
+Gruet, S. (2024).
+\newblock Amazon fined for 'excessive' surveillance of workers.
+\newblock \url{https://www.bbc.com/news/business-68067022}.
+
+\bibitem[Jack, 2019]{jack2019hydra}
+Jack, O. (2019).
+\newblock Hydra: live coding networked visuals.
+\newblock In {\em Proceedings of the Fourth International Conference on Live Coding}, pages 353--354.
+
+\bibitem[Jones and Heathfield, 2012]{performrepeat}
+Jones, A. and Heathfield, A. (2012).
 \newblock {\em Perform, repeat, record: Live art in history}.
-\newblock Intellect Bristol, 2012.
+\newblock Intellect Bristol.
+
+\bibitem[Kouteili et~al., 2025]{Embed}
+Kouteili, S., Madhu, H., Typaldos, G., and Santolucito, M. (2025).
+\newblock Embedding alignment in code generation for audio.
+\newblock {\em arXiv preprint arXiv:2508.05473}.
+
+\bibitem[Krause, 2016]{krause2016wild}
+Krause, B. (2016).
+\newblock {\em Wild soundscapes: discovering the voice of the natural world}.
+\newblock Yale University Press.
+
+\bibitem[LeGuin, 2004]{ursulakleguin2024}
+LeGuin, U.~K. (2004).
+\newblock A rant about technology.
+\newblock \url{https://www.ursulakleguin.com/a-rant-about-technology}.
+
+\bibitem[Levin and Brain, 2021]{levin2021code}
+Levin, G. and Brain, T. (2021).
+\newblock {\em Code as creative medium: a handbook for computational art and design}.
+\newblock MIT Press.
+
+\bibitem[Magnusson, 2014]{cats}
+Magnusson, T. (2014).
+\newblock Herding cats: Observing live coding in the wild.
+\newblock {\em Computer Music Journal}, 38(1):8--16.
+
+\bibitem[McLean, 2020]{pattern}
+McLean, A. (2020).
+\newblock Algorithmic pattern.
+\newblock In {\em Proceedings of the International Conference on New Interfaces for Musical Expression}, pages 265--270.
+
+\bibitem[McLean, 2022]{tidal2022}
+McLean, A. (2022).
+\newblock Alternate timelines for tidalcycles.
+\newblock {\em arXiv preprint arXiv:2209.04289}.
+
+\bibitem[McLean et~al., 2023]{meaningLife}
+McLean, A., Rohrhuber, J., and Wieser, R. (2023).
+\newblock The meaning of live: From art without audience to programs without users.
+
+\bibitem[McLean and Wiggins, 2010]{tidal}
+McLean, A. and Wiggins, G. (2010).
+\newblock Tidal--pattern language for the live coding of music.
+\newblock In {\em Proceedings of the 7th sound and music computing conference}, pages 1--4.
+
+\bibitem[Openness, 2024]{AMRO}
+Openness, A. A. M.~R. (2024).
+\newblock Amro festival dedicated to art, hacktivism and open culture.
+\newblock \url{https://art-meets.radical-openness.org/2024/}.
+
+\bibitem[Pearson, 2011]{GenerativeaRT}
+Pearson, M. (2011).
+\newblock {\em Generative Art}.
+\newblock Manning Publications Co., USA.
+
+\bibitem[Puckette, 2007]{puckette2007theory}
+Puckette, M. (2007).
+\newblock {\em The theory and technique of electronic music}.
+\newblock World Scientific.
+
+\bibitem[Ribac, 2016]{ribac2016bernie}
+Ribac, F. (2016).
+\newblock Bernie krause’s the great animal orchestra--an exhibition.
+\newblock {\em Sound Studies}, 2(2):201--204.
+
+\bibitem[Rodriguez, 2025a]{afrontaciones}
+Rodriguez, J.~A. (2025a).
+\newblock afrontaciones => (f.) copings narrativas de la memoria y la violencia del habitar.
+\newblock \url{https://iclc.toplap.org/2025/catalogue/performance/afrontaciones-f-copings-narrativas-de-la-memoria-y-la-violencia.html}.
+
+\bibitem[Rodriguez, 2025b]{transmit}
+Rodriguez, J.~A. (2025b).
+\newblock Transmit; a programming language for live video performance.
+\newblock In {\em Proceedings of the 9th International Conference on Live Coding}.
+
+\bibitem[Rodr{\'\i}guez, 2003]{rodriguez2003queer}
+Rodr{\'\i}guez, J.~M. (2003).
+\newblock {\em Queer Latinidad: Identity practices, discursive spaces}, volume~24.
+\newblock nyu Press.
+
+\bibitem[Roos and McLean, 2023]{strudel}
+Roos, F. and McLean, A. (2023).
+\newblock Strudel: Live coding patterns on the web.
+\newblock In {\em Proceedings of the 7th International Conference on Live Coding}.
+
+\bibitem[Sontag, 1977]{sontag2021photography}
+Sontag, S. (1977).
+\newblock On photography.
+\newblock In {\em Illuminations}, pages 230--234. Routledge.
 
 \end{thebibliography}

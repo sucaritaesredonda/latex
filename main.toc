@@ -7,11 +7,13 @@
 \contentsline {section}{\numberline {IV}Considerations about liveness}{7}{section.0.4}%
 \contentsline {subsection}{\numberline {1}Crafting through time}{7}{subsection.0.4.1}%
 \contentsline {subsection}{\numberline {2}The grammatic of performative coding}{9}{subsection.0.4.2}%
-\contentsline {subsection}{\numberline {3}Liveness and DSLs: Domain Specific Languages for performing live}{9}{subsection.0.4.3}%
-\contentsline {subsection}{\numberline {4}Algorithm thought// Intersections}{13}{subsection.0.4.4}%
-\contentsline {section}{\numberline {V}Show your Screen}{14}{section.0.5}%
-\contentsline {subsection}{\numberline {1}Dusk of an electric forest}{14}{subsection.0.5.1}%
-\contentsline {subsection}{\numberline {2}Empty Beginning}{19}{subsection.0.5.2}%
-\contentsline {subsection}{\numberline {3}Toplap Linz}{22}{subsection.0.5.3}%
-\contentsline {subsection}{\numberline {4}Art as a series of steps}{26}{subsection.0.5.4}%
-\contentsline {subsection}{\numberline {5}Alternative archive: Not dead but not alive}{28}{subsection.0.5.5}%
+\contentsline {subsection}{\numberline {3}Liveness and DSLs: Domain Specific Languages for performing live}{10}{subsection.0.4.3}%
+\contentsline {subsection}{\numberline {4}Livecoding Intersections}{15}{subsection.0.4.4}%
+\contentsline {section}{\numberline {V}Show your Screen}{19}{section.0.5}%
+\contentsline {subsection}{\numberline {1}Dusk of an electric forest}{19}{subsection.0.5.1}%
+\contentsline {subsection}{\numberline {2}Empty Beginning}{24}{subsection.0.5.2}%
+\contentsline {subsection}{\numberline {3}Toplap Linz}{27}{subsection.0.5.3}%
+\contentsline {subsection}{\numberline {4}Art as a series of steps}{31}{subsection.0.5.4}%
+\contentsline {subsection}{\numberline {5}Alternative archive: Not dead but not alive}{33}{subsection.0.5.5}%
+\contentsline {section}{\numberline {VI}Appendices}{35}{section.0.6}%
+\contentsline {subsection}{\numberline {1}Vanishing photographs }{35}{subsection.0.6.1}%

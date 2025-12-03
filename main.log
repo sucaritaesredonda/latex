@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.8)  25 NOV 2025 11:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.8)  3 DEC 2025 00:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -24,36 +24,68 @@ File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+\lst@mode=\count196
+\lst@gtempboxa=\box51
+\lst@token=\toks18
+\lst@length=\count197
+\lst@currlwidth=\dimen141
+\lst@column=\count198
+\lst@pos=\count199
+\lst@lostspace=\dimen142
+\lst@width=\dimen143
+\lst@newlines=\count266
+\lst@lineno=\count267
+\lst@maxwidth=\dimen144
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count268
+\lst@skipnumbers=\count269
+\lst@framebox=\box52
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks17
-\inpenc@posthook=\toks18
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 ) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks19
-) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count196
-\Gm@cntv=\count197
-\c@Gm@tempcnt=\count198
-\Gm@bindingoffset=\dimen141
-\Gm@wd@mp=\dimen142
-\Gm@odd@mp=\dimen143
-\Gm@even@mp=\dimen144
-\Gm@layoutwidth=\dimen145
-\Gm@layoutheight=\dimen146
-\Gm@layouthoffset=\dimen147
-\Gm@layoutvoffset=\dimen148
-\Gm@dimlist=\toks20
+\Gm@cnth=\count270
+\Gm@cntv=\count271
+\c@Gm@tempcnt=\count272
+\Gm@bindingoffset=\dimen145
+\Gm@wd@mp=\dimen146
+\Gm@odd@mp=\dimen147
+\Gm@even@mp=\dimen148
+\Gm@layoutwidth=\dimen149
+\Gm@layoutheight=\dimen150
+\Gm@layouthoffset=\dimen151
+\Gm@layoutvoffset=\dimen152
+\Gm@dimlist=\toks21
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
@@ -64,26 +96,24 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen149
-\Gin@req@width=\dimen150
+)
+\Gin@req@height=\dimen153
+\Gin@req@width=\dimen154
 ) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count199
-\float@exts=\toks21
-\float@box=\box51
-\@float@everytoks=\toks22
-\@floatcapt=\box52
+\c@float@type=\count273
+\float@exts=\toks22
+\float@box=\box53
+\@float@everytoks=\toks23
+\@floatcapt=\box54
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2024/01/07 v24.1 The Babel package
-\babel@savecnt=\count266
-\U@D=\dimen151
+\babel@savecnt=\count274
+\U@D=\dimen155
 \l@unhyphenated=\language39
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count267
+\bbl@dirlevel=\count275
  (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
@@ -109,35 +139,35 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
  (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count268
-\c@Blindtext=\count269
-\c@blind@countparstart=\count270
-\blind@countxx=\count271
-\blindtext@numBlindtext=\count272
-\blind@countyy=\count273
-\c@blindlist=\count274
-\c@blindlistlevel=\count275
-\c@blindlist@level=\count276
-\blind@listitem=\count277
-\c@blind@listcount=\count278
-\c@blind@levelcount=\count279
-\blind@mathformula=\count280
-\blind@Mathformula=\count281
-\c@blind@randomcount=\count282
-\c@blind@randommax=\count283
-\c@blind@pangramcount=\count284
-\c@blind@pangrammax=\count285
+\c@blindtext=\count276
+\c@Blindtext=\count277
+\c@blind@countparstart=\count278
+\blind@countxx=\count279
+\blindtext@numBlindtext=\count280
+\blind@countyy=\count281
+\c@blindlist=\count282
+\c@blindlistlevel=\count283
+\c@blindlist@level=\count284
+\blind@listitem=\count285
+\c@blind@listcount=\count286
+\c@blind@levelcount=\count287
+\blind@mathformula=\count288
+\blind@Mathformula=\count289
+\c@blind@randomcount=\count290
+\c@blind@randommax=\count291
+\c@blind@pangramcount=\count292
+\c@blind@pangrammax=\count293
 ) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
-\ttl@box=\box53
+\ttl@box=\box55
 \beforetitleunit=\skip54
 \aftertitleunit=\skip55
-\ttl@plus=\dimen152
-\ttl@minus=\dimen153
-\ttl@toksa=\toks23
-\titlewidth=\dimen154
-\titlewidthlast=\dimen155
-\titlewidthfirst=\dimen156
+\ttl@plus=\dimen156
+\ttl@minus=\dimen157
+\ttl@toksa=\toks24
+\titlewidth=\dimen158
+\titlewidthlast=\dimen159
+\titlewidthfirst=\dimen160
 ) (/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \CenteringLeftskip=\skip56
@@ -185,14 +215,14 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count286
+\c@section@level=\count294
 ) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count287
+\etb@tempcnta=\count295
 )
-\@linkdim=\dimen157
-\Hy@linkcounter=\count288
-\Hy@pagecounter=\count289
+\@linkdim=\dimen161
+\Hy@linkcounter=\count296
+\Hy@pagecounter=\count297
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -200,7 +230,7 @@ Now handling font encoding PD1 ...
 ) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count290
+\Hy@SavedSpaceFactor=\count298
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -215,21 +245,21 @@ Package hyperref Info: Plain pages OFF on input line 4194.
 Package hyperref Info: Backreferencing OFF on input line 4199.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4446.
-\c@Hy@tempcnt=\count291
+\c@Hy@tempcnt=\count299
  (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4784.
-\XeTeXLinkMargin=\dimen158
+\XeTeXLinkMargin=\dimen162
  (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count292
-\Field@Width=\dimen159
-\Fld@charsize=\dimen160
+\Fld@menulength=\count300
+\Field@Width=\dimen163
+\Fld@charsize=\dimen164
 Package hyperref Info: Hyper figures OFF on input line 6063.
 Package hyperref Info: Link nesting OFF on input line 6068.
 Package hyperref Info: Hyper index ON on input line 6071.
@@ -241,9 +271,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6093.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count293
-\c@Item=\count294
-\c@Hfootnote=\count295
+\Hy@abspage=\count301
+\c@Item=\count302
+\c@Hfootnote=\count303
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -252,8 +282,8 @@ File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count296
-\c@bookmark@seq@number=\count297
+\Fld@listcount=\count304
+\c@bookmark@seq@number=\count305
  (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -264,30 +294,49 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip70
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count298
-\l__pdf_internal_box=\box54
+\l__color_backend_stack_int=\count306
+\l__pdf_internal_box=\box56
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+\c@lstlisting=\count307
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count308
+\scratchdimen=\dimen165
+\scratchbox=\box57
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count311
+\MPscratchDim=\dimen166
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks26
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -322,33 +371,8 @@ LaTeX Font Info:    ... okay on input line 45.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count299
-\scratchdimen=\dimen161
-\scratchbox=\box55
-\nofMPsegments=\count300
-\nofMParguments=\count301
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count302
-\MPscratchDim=\dimen162
-\MPnumerator=\count303
-\makeMPintoPDFobject=\count304
-\everyMPtoPDFconversion=\toks25
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 149.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 45.
- (./main.out) (./main.out)
+Package hyperref Info: Link coloring ON on input line 69.
+(./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -370,191 +394,249 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 107.
+(Font)              <10.95> on input line 131.
  [2] [3] [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5] [6] [7] [8]
-Underfull \vbox (badness 3281) has occurred while \output is active []
+ [5] [6] [7] [8] [9]
+Overfull \hbox (6.64285pt too wide) in paragraph at lines 324--332
+\T1/cmr/m/n/12 leased in 1996, could di-rectly syn-the-size sound from algorithms.[[]] 
+ []
 
- [9]
+[10]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 284.
+(Font)              <7> on input line 347.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 284.
+(Font)              <5> on input line 347.
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
 [][][]\T1/cmr/m/n/10 Here you can check a full list of the difer-ent live-cod-ing lan-guages:
  []
 
-<./graphics/nuevo.png, id=146, 1445.4pt x 813.0375pt>
+<./graphics/nuevo.png, id=172, 1445.4pt x 813.0375pt>
 File: ./graphics/nuevo.png Graphic file (type png)
 <use ./graphics/nuevo.png>
-Package pdftex.def Info: ./graphics/nuevo.png  used on input line 290.
+Package pdftex.def Info: ./graphics/nuevo.png  used on input line 353.
 (pdftex.def)             Requested size: 426.79135pt x 240.06729pt.
-[10 <./graphics/nuevo.png (PNG copy)>]
-<./graphics/synth.jpg, id=157, 1917.05684pt x 1032.70026pt>
+[11]
+Overfull \hbox (40.18346pt too wide) in paragraph at lines 361--362
+\T1/cmr/m/n/12 ta-tions and speci-fici-ties of each en-vi-ron-ment de-ter-mine our cre-ative approach.[[]]
+ []
+
+<./graphics/synth.jpg, id=184, 1917.05684pt x 1032.70026pt>
 File: ./graphics/synth.jpg Graphic file (type jpg)
 <use ./graphics/synth.jpg>
-Package pdftex.def Info: ./graphics/synth.jpg  used on input line 304.
+Package pdftex.def Info: ./graphics/synth.jpg  used on input line 367.
 (pdftex.def)             Requested size: 341.43437pt x 183.92407pt.
-<./graphics/screensynth.png, id=159, 1216.545pt x 680.5425pt>
+[12 <./graphics/nuevo.png (PNG copy)>]
+<./graphics/screensynth.png, id=194, 1216.545pt x 680.5425pt>
 File: ./graphics/screensynth.png Graphic file (type png)
 <use ./graphics/screensynth.png>
-Package pdftex.def Info: ./graphics/screensynth.png  used on input line 314.
+Package pdftex.def Info: ./graphics/screensynth.png  used on input line 377.
 (pdftex.def)             Requested size: 341.43437pt x 190.99712pt.
- [11 <./graphics/synth.jpg>]
-<./graphics/synthcode.png, id=173, 1151.30125pt x 1151.30125pt>
+ [13 <./graphics/synth.jpg> <./graphics/screensynth.png>]
+<./graphics/synthcode.png, id=206, 1151.30125pt x 1151.30125pt>
 File: ./graphics/synthcode.png Graphic file (type png)
 <use ./graphics/synthcode.png>
-Package pdftex.def Info: ./graphics/synthcode.png  used on input line 328.
+Package pdftex.def Info: ./graphics/synthcode.png  used on input line 391.
 (pdftex.def)             Requested size: 56.90086pt x 56.9055pt.
-<./graphics/ciclo.png, id=175, 832.10875pt x 247.92625pt>
+<./graphics/ciclo.png, id=208, 832.10875pt x 247.92625pt>
 File: ./graphics/ciclo.png Graphic file (type png)
 <use ./graphics/ciclo.png>
-Package pdftex.def Info: ./graphics/ciclo.png  used on input line 334.
+Package pdftex.def Info: ./graphics/ciclo.png  used on input line 397.
 (pdftex.def)             Requested size: 341.43437pt x 101.72986pt.
- [12 <./graphics/screensynth.png> <./graphics/synthcode.png>] [13 <./graphics/ciclo.png>] [14]
-<./graphics/frame.png, id=203, 301.125pt x 301.125pt>
+ [14 <./graphics/ciclo.png> <./graphics/synthcode.png>] [15]
+<./graphics/algoscape.png, id=233, 501.875pt x 273.02pt>
+File: ./graphics/algoscape.png Graphic file (type png)
+<use ./graphics/algoscape.png>
+Package pdftex.def Info: ./graphics/algoscape.png  used on input line 422.
+(pdftex.def)             Requested size: 341.43437pt x 185.75113pt.
+ [16 <./graphics/algoscape.png>]
+<./graphics/Transmit.png, id=242, 723.70375pt x 399.4925pt>
+File: ./graphics/Transmit.png Graphic file (type png)
+<use ./graphics/Transmit.png>
+Package pdftex.def Info: ./graphics/Transmit.png  used on input line 436.
+(pdftex.def)             Requested size: 341.43437pt x 188.4747pt.
+<./graphics/alexandra.png, id=245, 720.6925pt x 404.51125pt>
+File: ./graphics/alexandra.png Graphic file (type png)
+<use ./graphics/alexandra.png>
+Package pdftex.def Info: ./graphics/alexandra.png  used on input line 449.
+(pdftex.def)             Requested size: 341.43437pt x 191.6387pt.
+ [17 <./graphics/Transmit.png>] [18 <./graphics/alexandra.png>] [19]
+<./graphics/frame.png, id=269, 301.125pt x 301.125pt>
 File: ./graphics/frame.png Graphic file (type png)
 <use ./graphics/frame.png>
-Package pdftex.def Info: ./graphics/frame.png  used on input line 396.
+Package pdftex.def Info: ./graphics/frame.png  used on input line 499.
 (pdftex.def)             Requested size: 56.90189pt x 56.9055pt.
-<./graphics/rain.jpg, id=206, 511.9125pt x 357.335pt>
+<./graphics/rain.jpg, id=272, 511.9125pt x 357.335pt>
 File: ./graphics/rain.jpg Graphic file (type jpg)
 <use ./graphics/rain.jpg>
-Package pdftex.def Info: ./graphics/rain.jpg  used on input line 415.
+Package pdftex.def Info: ./graphics/rain.jpg  used on input line 518.
 (pdftex.def)             Requested size: 341.43437pt x 238.3336pt.
- [15 <./graphics/frame.png>]
-<./graphics/specto.png, id=215, 1444.39626pt x 580.1675pt>
+ [20 <./graphics/frame.png>]
+<./graphics/specto.png, id=281, 1444.39626pt x 580.1675pt>
 File: ./graphics/specto.png Graphic file (type png)
 <use ./graphics/specto.png>
-Package pdftex.def Info: ./graphics/specto.png  used on input line 429.
+Package pdftex.def Info: ./graphics/specto.png  used on input line 532.
 (pdftex.def)             Requested size: 341.43437pt x 137.13611pt.
- [16 <./graphics/rain.jpg> <./graphics/specto.png>]
-<./graphics/unnamed.png, id=223, 1606.0pt x 903.375pt>
+ [21 <./graphics/rain.jpg> <./graphics/specto.png>]
+<./graphics/unnamed.png, id=289, 1606.0pt x 903.375pt>
 File: ./graphics/unnamed.png Graphic file (type png)
 <use ./graphics/unnamed.png>
-Package pdftex.def Info: ./graphics/unnamed.png  used on input line 444.
+Package pdftex.def Info: ./graphics/unnamed.png  used on input line 547.
 (pdftex.def)             Requested size: 341.43437pt x 192.0577pt.
-<./graphics/snake.jpeg, id=225, 2055.68pt x 1370.11874pt>
+<./graphics/snake.jpeg, id=291, 2055.68pt x 1370.11874pt>
 File: ./graphics/snake.jpeg Graphic file (type jpg)
 <use ./graphics/snake.jpeg>
-Package pdftex.def Info: ./graphics/snake.jpeg  used on input line 457.
+Package pdftex.def Info: ./graphics/snake.jpeg  used on input line 560.
 (pdftex.def)             Requested size: 341.43437pt x 227.5651pt.
- [17 <./graphics/unnamed.png>]
-<./graphics/codigo.png, id=232, 1927.2pt x 1084.05pt>
+ [22 <./graphics/unnamed.png>]
+<./graphics/codigo.png, id=298, 1927.2pt x 1084.05pt>
 File: ./graphics/codigo.png Graphic file (type png)
 <use ./graphics/codigo.png>
-Package pdftex.def Info: ./graphics/codigo.png  used on input line 473.
+Package pdftex.def Info: ./graphics/codigo.png  used on input line 576.
 (pdftex.def)             Requested size: 341.43437pt x 192.0439pt.
- [18 <./graphics/snake.jpeg>]
-Overfull \hbox (3.56697pt too wide) in paragraph at lines 485--487
+ [23 <./graphics/snake.jpeg>]
+Overfull \hbox (3.56697pt too wide) in paragraph at lines 588--590
 \T1/cmr/m/n/12 The 'from scratch' ap-proach is play-ful and em-braces er-ror. There is no pre-established
  []
 
 
 Underfull \vbox (badness 2205) has occurred while \output is active []
 
- [19 <./graphics/codigo.png>]
-<./graphics/TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png, id=247, 1927.2pt x 1084.05pt>
+ [24 <./graphics/codigo.png>]
+<./graphics/TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png, id=313, 1927.2pt x 1084.05pt>
 File: ./graphics/TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png Graphic file (type png)
 <use ./graphics/TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png>
-Package pdftex.def Info: ./graphics/TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png  used on input line 503.
+Package pdftex.def Info: ./graphics/TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png  used on input line 606.
 (pdftex.def)             Requested size: 341.43437pt x 192.0439pt.
-<./graphics/youtube.jpeg, id=249, 301.125pt x 301.125pt>
+<./graphics/youtube.jpeg, id=315, 301.125pt x 301.125pt>
 File: ./graphics/youtube.jpeg Graphic file (type jpg)
 <use ./graphics/youtube.jpeg>
-Package pdftex.def Info: ./graphics/youtube.jpeg  used on input line 509.
+Package pdftex.def Info: ./graphics/youtube.jpeg  used on input line 612.
 (pdftex.def)             Requested size: 56.90189pt x 56.9055pt.
- [20 <./graphics/TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png> <./graphics/youtube.jpeg>]
-<./graphics/Amro-2024-DayThree-sule-MART_DSF7282-small (1).png, id=258, 421.575pt x 280.94963pt>
+ [25 <./graphics/TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png> <./graphics/youtube.jpeg>]
+<./graphics/Amro-2024-DayThree-sule-MART_DSF7282-small (1).png, id=325, 421.575pt x 280.94963pt>
 File: ./graphics/Amro-2024-DayThree-sule-MART_DSF7282-small (1).png Graphic file (type png)
 <use ./graphics/Amro-2024-DayThree-sule-MART_DSF7282-small (1).png>
-Package pdftex.def Info: ./graphics/Amro-2024-DayThree-sule-MART_DSF7282-small (1).png  used on input line 529.
+Package pdftex.def Info: ./graphics/Amro-2024-DayThree-sule-MART_DSF7282-small (1).png  used on input line 632.
 (pdftex.def)             Requested size: 341.43437pt x 227.54652pt.
- [21 <./graphics/Amro-2024-DayThree-sule-MART_DSF7282-small (1).png>]
-<./graphics/amCode.png, id=265, 1927.2pt x 1004.75375pt>
+ [26 <./graphics/Amro-2024-DayThree-sule-MART_DSF7282-small (1).png>]
+<./graphics/amCode.png, id=332, 1927.2pt x 1004.75375pt>
 File: ./graphics/amCode.png Graphic file (type png)
 <use ./graphics/amCode.png>
-Package pdftex.def Info: ./graphics/amCode.png  used on input line 545.
+Package pdftex.def Info: ./graphics/amCode.png  used on input line 648.
 (pdftex.def)             Requested size: 341.43437pt x 177.99625pt.
- [22 <./graphics/amCode.png>]
-<./graphics/HYDRA.png, id=272, 597.60106pt x 845.26315pt>
+ [27 <./graphics/amCode.png>]
+<./graphics/HYDRA.png, id=339, 597.60106pt x 845.26315pt>
 File: ./graphics/HYDRA.png Graphic file (type png)
 <use ./graphics/HYDRA.png>
-Package pdftex.def Info: ./graphics/HYDRA.png  used on input line 584.
+Package pdftex.def Info: ./graphics/HYDRA.png  used on input line 687.
 (pdftex.def)             Requested size: 170.71393pt x 241.45709pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
-<./graphics/TOPLAP.jpeg, id=277, 1204.5pt x 1606.0pt>
+ [28]
+<./graphics/TOPLAP.jpeg, id=344, 1204.5pt x 1606.0pt>
 File: ./graphics/TOPLAP.jpeg Graphic file (type jpg)
 <use ./graphics/TOPLAP.jpeg>
-Package pdftex.def Info: ./graphics/TOPLAP.jpeg  used on input line 600.
+Package pdftex.def Info: ./graphics/TOPLAP.jpeg  used on input line 703.
 (pdftex.def)             Requested size: 170.71393pt x 227.60759pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24 <./graphics/HYDRA.png>]
-<./graphics/cheatsheet (1)_page-0001.jpg, id=285, 845.559pt x 598.3956pt>
+ [29 <./graphics/HYDRA.png>]
+<./graphics/cheatsheet (1)_page-0001.jpg, id=351, 845.559pt x 598.3956pt>
 File: ./graphics/cheatsheet (1)_page-0001.jpg Graphic file (type jpg)
 <use ./graphics/cheatsheet (1)_page-0001.jpg>
-Package pdftex.def Info: ./graphics/cheatsheet (1)_page-0001.jpg  used on input line 615.
+Package pdftex.def Info: ./graphics/cheatsheet (1)_page-0001.jpg  used on input line 718.
 (pdftex.def)             Requested size: 384.1096pt x 271.83214pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25 <./graphics/TOPLAP.jpeg>]
-<./graphics/rave.jpg, id=291, 602.25pt x 401.24907pt>
+ [30 <./graphics/TOPLAP.jpeg>]
+<./graphics/rave.jpg, id=358, 602.25pt x 401.24907pt>
 File: ./graphics/rave.jpg Graphic file (type jpg)
 <use ./graphics/rave.jpg>
-Package pdftex.def Info: ./graphics/rave.jpg  used on input line 627.
+Package pdftex.def Info: ./graphics/rave.jpg  used on input line 730.
 (pdftex.def)             Requested size: 341.43437pt x 227.48982pt.
- [26 <./graphics/cheatsheet (1)_page-0001.jpg>]
+ [31 <./graphics/cheatsheet (1)_page-0001.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27 <./graphics/rave.jpg>]
-<miau.png, id=302, 1440.88312pt x 648.92438pt>
-File: miau.png Graphic file (type png)
-<use miau.png>
-Package pdftex.def Info: miau.png  used on input line 667.
-(pdftex.def)             Requested size: 341.43437pt x 153.76468pt.
- [28 <./miau.png (PNG copy)>]
-<./graphics/archivo.png, id=312, 301.125pt x 301.125pt>
+ [32 <./graphics/rave.jpg>]
+<./graphics/archivo.png, id=371, 301.125pt x 301.125pt>
 File: ./graphics/archivo.png Graphic file (type png)
 <use ./graphics/archivo.png>
-Package pdftex.def Info: ./graphics/archivo.png  used on input line 692.
+Package pdftex.def Info: ./graphics/archivo.png  used on input line 768.
 (pdftex.def)             Requested size: 56.90189pt x 56.9055pt.
- (./main.bbl [29 <./graphics/archivo.png>]
-Underfull \hbox (badness 3590) in paragraph at lines 48--51
-[]\T1/cmr/m/n/12 Alex McLean.  Al-ter-nate time-lines for tidal-cy-cles.  \T1/cmr/m/it/12 arXiv preprint
+<miau.png, id=372, 1440.88312pt x 648.92438pt>
+File: miau.png Graphic file (type png)
+<use miau.png>
+Package pdftex.def Info: miau.png  used on input line 772.
+(pdftex.def)             Requested size: 341.43437pt x 153.76468pt.
+ [33 <./miau.png (PNG copy)> <./graphics/archivo.png>] [34]
+<./graphics/Camila_Scholz_Sankt2024 (17).JPG, id=388, 4459.66125pt x 2973.1075pt>
+File: ./graphics/Camila_Scholz_Sankt2024 (17).JPG Graphic file (type jpg)
+<use ./graphics/Camila_Scholz_Sankt2024 (17).JPG>
+Package pdftex.def Info: ./graphics/Camila_Scholz_Sankt2024 (17).JPG  used on input line 807.
+(pdftex.def)             Requested size: 341.43437pt x 227.60077pt.
+<./graphics/camara.png, id=392, 301.125pt x 301.125pt>
+File: ./graphics/camara.png Graphic file (type png)
+<use ./graphics/camara.png>
+Package pdftex.def Info: ./graphics/camara.png  used on input line 822.
+(pdftex.def)             Requested size: 56.90189pt x 56.9055pt.
+ [35 <./graphics/Camila_Scholz_Sankt2024 (17).JPG>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 825.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+) [36 <./graphics/camara.png>] (./main.bbl
+Underfull \hbox (badness 1253) in paragraph at lines 14--17
+[]\T1/cmr/m/n/12 Alexandra Car-de-nas, G. U. (2025).  God-shat-ter:
  []
 
-[30
 
-]) [31] (./main.aux)
+Underfull \hbox (badness 1742) in paragraph at lines 49--52
+[]\T1/cmr/m/n/12 Dreher, T. (2014).  His-tory of com-puter art.  [][]$https : / / iasl .
+ []
+
+[37
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 138--141
+[]\T1/cmr/m/n/12 Rodriguez, J. A. (2025a).  afronta-ciones =>
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--141
+\T1/cmr/m/n/12 (f.) cop-ings nar-ra-ti-vas de la memo-ria y la vi-o-len-cia del
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--141
+\T1/cmr/m/n/12 habitar.  [][]$https : / / iclc . toplap . org / 2025 / catalogue / performance /
+ []
+
+[38]) [39] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 17FD14F455A7B2B3F0CF5AF762C7B3A9;2660.
+(rerunfilecheck)             Checksum: 328C9260B7FDB85BB825C90B5D115328;2886.
  ) 
 Here is how much of TeX's memory you used:
- 11292 strings out of 475468
- 180964 string characters out of 5775649
- 1932975 words of memory out of 5000000
- 33098 multiletter control sequences out of 15000+600000
- 574032 words of font info for 65 fonts, out of 8000000 for 9000
+ 13133 strings out of 475468
+ 206695 string characters out of 5775649
+ 1963975 words of memory out of 5000000
+ 34867 multiletter control sequences out of 15000+600000
+ 574346 words of font info for 66 fonts, out of 8000000 for 9000
  417 hyphenation exceptions out of 8191
- 75i,8n,79p,820b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1440.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on main.pdf (32 pages, 21219353 bytes).
+ 75i,8n,79p,927b,1188s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1440.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on main.pdf (40 pages, 23561997 bytes).
 PDF statistics:
- 817 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
- 92 named destinations out of 1000 (max. 500000)
- 218 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1011 PDF objects out of 1200 (max. 8388607)
+ 470 compressed objects within 5 object streams
+ 148 named destinations out of 1000 (max. 500000)
+ 259 words of extra memory for PDF output out of 10000 (max. 10000000)
 

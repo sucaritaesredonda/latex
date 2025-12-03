@@ -1,50 +1,48 @@
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-The style file: unsrt.bst
+The style file: apalike.bst
 Database file #1: bibli.bib
-Warning--entry type for "AMRO" isn't style-file defined
---line 202 of file bibli.bib
-Warning--empty journal in dreher2014history
-You've used 19 entries,
-            1791 wiz_defined-function locations,
-            547 strings with 5766 characters,
-and the built_in function-call counts, 3739 in all, are:
-= -- 333
-> -- 118
-< -- 3
-+ -- 50
-- -- 31
-* -- 174
-:= -- 567
-add.period$ -- 55
-call.type$ -- 19
-change.case$ -- 12
-chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 203
-empty$ -- 419
-format.name$ -- 31
-if$ -- 866
-int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 24
-newline$ -- 96
-num.names$ -- 19
-pop$ -- 95
+Warning--to sort, need author or key in toplapManifesto
+You've used 32 entries,
+            1935 wiz_defined-function locations,
+            645 strings with 7798 characters,
+and the built_in function-call counts, 10282 in all, are:
+= -- 1017
+> -- 300
+< -- 32
++ -- 101
+- -- 92
+* -- 720
+:= -- 1822
+add.period$ -- 96
+call.type$ -- 32
+change.case$ -- 197
+chr.to.int$ -- 31
+cite$ -- 34
+duplicate$ -- 470
+empty$ -- 784
+format.name$ -- 131
+if$ -- 2036
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 32
+newline$ -- 162
+num.names$ -- 93
+pop$ -- 208
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 206
 quote$ -- 0
-skip$ -- 93
+skip$ -- 352
 stack$ -- 0
-substring$ -- 187
-swap$ -- 48
-text.length$ -- 3
+substring$ -- 617
+swap$ -- 56
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 174
 warning$ -- 1
-while$ -- 36
-width$ -- 21
-write$ -- 195
-(There were 2 warnings)
+while$ -- 83
+width$ -- 0
+write$ -- 395
+(There was 1 warning)
