@@ -5,30 +5,58 @@
 \newblock Toplap manifesto.
 \newblock \url{https://toplap.org/wiki/ManifestoDraft}.
 
-\bibitem[Alex~McLean, 2000]{generativeManifesto}
-Alex~McLean, A.~w. (2000).
+\bibitem[Alex~McLean, ]{generativeManifesto}
+Alex~McLean, A.~w.
 \newblock Generative manifesto.
-\newblock \url{https://slab.org/2015/07/28/the-generative-manifesto-august-2000/}.
 
 \bibitem[Alexandra~Cardenas, 2025]{godshatter}
 Alexandra~Cardenas, G.~U. (2025).
 \newblock Godshatter: live coding a generative sound and light ritual.
 \newblock \url{https://iclc.toplap.org/2025/catalogue/performance/godshatter.html}.
 
+\bibitem[Andersen, 2004]{andersen2004software}
+Andersen, C.~U. (2004).
+\newblock Software art and cultures-people doin strange things with software.
+\newblock In {\em Read\_Me Software Art and Cultures}, pages 11--15. Center for Digital {\AE}stetik-forskning.
+
 \bibitem[Anzald{\'u}a, 2021]{anzaldua2021borderlands}
 Anzald{\'u}a, G. (2021).
 \newblock {\em Borderlands/La frontera: la nueva mestiza}.
 \newblock Capit{\'a}n Swing Libros.
+
+\bibitem[Auslander, 2005]{auslander2005listening}
+Auslander, P. (2005).
+\newblock At the listening post, or, do machines perform?
+\newblock {\em International Journal of Performance Arts and Digital Media}, 1(1):5--10.
+
+\bibitem[Auslander, 2022]{auslander2022liveness}
+Auslander, P. (2022).
+\newblock {\em Liveness: Performance in a mediatized culture}.
+\newblock Routledge.
 
 \bibitem[Bamford, 2014]{bamford2014working}
 Bamford, K. (2014).
 \newblock Working with fragments: A performance art’s archive.
 \newblock {\em Journal of Writing in Creative Practice}, 7(3):557--567.
 
+\bibitem[Baumg{\"a}rtel, 2001]{baumgartel2001experimentelle}
+Baumg{\"a}rtel, T. (2001).
+\newblock Experimentelle software.
+\newblock {\em Mysteri{\"o}se Korrespondenzen—zu einigen neueren Computerprogrammen von K{\"u}nstlern, URL: http://www. heise. de/tp/deutsch/html/result. xhtml}.
+
+\bibitem[Beiguelman, 2019]{beiguelman2019museums}
+Beiguelman, G. (2019).
+\newblock Museums of losses for clouds of oblivion.
+
 \bibitem[Blackwell et~al., 2022]{usermanual}
 Blackwell, A.~F., Cocker, E., Cox, G., McLean, A., and Magnusson, T. (2022).
 \newblock {\em Live coding: a user's manual}.
 \newblock MIT Press.
+
+\bibitem[Broeckmann, 2006]{broeckmann2006software}
+Broeckmann, A. (2006).
+\newblock Software art aesthetics.
+\newblock {\em Monodisperso.” Special issue, edited by Fernando Jos{\'e} Pereira and Miguel Leal. Mono}, 1:158--67.
 
 \bibitem[Cocker, 2016]{melete}
 Cocker, E. (2016).
@@ -50,15 +78,10 @@ Dreher, T. (2014).
 \newblock History of computer art.
 \newblock \url{https://iasl.uni-muenchen.de/links/GCA_Indexe.html}.
 
-\bibitem[Franklin, 1999]{franklin1999real}
-Franklin, U. (1999).
-\newblock {\em The real world of technology}.
-\newblock House of Anansi.
-
-\bibitem[Gruet, 2024]{bbc2023}
-Gruet, S. (2024).
-\newblock Amazon fined for 'excessive' surveillance of workers.
-\newblock \url{https://www.bbc.com/news/business-68067022}.
+\bibitem[Grau, 2019]{oliver2019digital}
+Grau, O. (2019).
+\newblock {\em DIGITAL ART THROUGH THE LOOKING GLASS: New Strategies for Archiving, Collecting}.
+\newblock EDITION DONAU-UNIVERSITAT.
 
 \bibitem[Jack, 2019]{jack2019hydra}
 Jack, O. (2019).
@@ -70,6 +93,11 @@ Jones, A. and Heathfield, A. (2012).
 \newblock {\em Perform, repeat, record: Live art in history}.
 \newblock Intellect Bristol.
 
+\bibitem[Katz et~al., 1970]{katz1970software}
+Katz, K., Burnham, J., Nelson, T.~H., and Mahoney, J.~A. (1970).
+\newblock {\em Software: Information Technology: Its New Meaning for Art}.
+\newblock The Jewish Museum.
+
 \bibitem[Kouteili et~al., 2025]{Embed}
 Kouteili, S., Madhu, H., Typaldos, G., and Santolucito, M. (2025).
 \newblock Embedding alignment in code generation for audio.
@@ -79,11 +107,6 @@ Kouteili, S., Madhu, H., Typaldos, G., and Santolucito, M. (2025).
 Krause, B. (2016).
 \newblock {\em Wild soundscapes: discovering the voice of the natural world}.
 \newblock Yale University Press.
-
-\bibitem[LeGuin, 2004]{ursulakleguin2024}
-LeGuin, U.~K. (2004).
-\newblock A rant about technology.
-\newblock \url{https://www.ursulakleguin.com/a-rant-about-technology}.
 
 \bibitem[Levin and Brain, 2021]{levin2021code}
 Levin, G. and Brain, T. (2021).
@@ -129,6 +152,11 @@ Puckette, M. (2007).
 \newblock {\em The theory and technique of electronic music}.
 \newblock World Scientific.
 
+\bibitem[Raley, 2009]{raley2009list}
+Raley, R. (2009).
+\newblock List (en) ing post.
+\newblock {\em Literary Art in Digital Performance}, pages 22--34.
+
 \bibitem[Ribac, 2016]{ribac2016bernie}
 Ribac, F. (2016).
 \newblock Bernie krause’s the great animal orchestra--an exhibition.
@@ -158,5 +186,10 @@ Roos, F. and McLean, A. (2023).
 Sontag, S. (1977).
 \newblock On photography.
 \newblock In {\em Illuminations}, pages 230--234. Routledge.
+
+\bibitem[Soon, 2018]{soon2018executing}
+Soon, W. (2018).
+\newblock Executing liveness: An examination of the live dimension of code inter-actions in software (art) practice.
+\newblock {\em Leonardo}, 51(5):530--530.
 
 \end{thebibliography}
