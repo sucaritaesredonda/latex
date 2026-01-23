@@ -1,12 +1,7 @@
 \begin{thebibliography}{}
 
-\bibitem[top, 2004]{toplapManifesto}
- (2004).
-\newblock Toplap manifesto.
-\newblock \url{https://toplap.org/wiki/ManifestoDraft}.
-
-\bibitem[Alex~McLean, ]{generativeManifesto}
-Alex~McLean, A.~w.
+\bibitem[Alex~McLean, 2000]{generativeManifesto}
+Alex~McLean, A.~w. (2000).
 \newblock Generative manifesto.
 
 \bibitem[Alexandra~Cardenas, 2025]{godshatter}
@@ -78,6 +73,16 @@ Dreher, T. (2014).
 \newblock History of computer art.
 \newblock \url{https://iasl.uni-muenchen.de/links/GCA_Indexe.html}.
 
+\bibitem[Ekman et~al., 2016]{ekman2016ubiquitous}
+Ekman, U., Bolter, J.~D., D{\'\i}az, L., S{\o}ndergaard, M., and Engberg, M. (2016).
+\newblock {\em Ubiquitous computing, complexity, and culture}.
+\newblock Routledge New York.
+
+\bibitem[Furlong, 1983]{furlong1983notes}
+Furlong, L. (1983).
+\newblock Notes toward a history of image-processed video.
+\newblock {\em Afterimage}, 11(5):12--19.
+
 \bibitem[Grau, 2019]{oliver2019digital}
 Grau, O. (2019).
 \newblock {\em DIGITAL ART THROUGH THE LOOKING GLASS: New Strategies for Archiving, Collecting}.
@@ -137,6 +142,11 @@ McLean, A. and Wiggins, G. (2010).
 \newblock Tidal--pattern language for the live coding of music.
 \newblock In {\em Proceedings of the 7th sound and music computing conference}, pages 1--4.
 
+\bibitem[McLean, 2011]{mclean2011artist}
+McLean, C.~A. (2011).
+\newblock {\em Artist-programmers and programming languages for the arts}.
+\newblock PhD thesis, Goldsmiths, University of London.
+
 \bibitem[Openness, 2024]{AMRO}
 Openness, A. A. M.~R. (2024).
 \newblock Amro festival dedicated to art, hacktivism and open culture.
@@ -177,6 +187,11 @@ Rodr{\'\i}guez, J.~M. (2003).
 \newblock {\em Queer Latinidad: Identity practices, discursive spaces}, volume~24.
 \newblock nyu Press.
 
+\bibitem[Rohrhuber and de~Campo, 2004]{grammars}
+Rohrhuber, J. and de~Campo, A. (2004).
+\newblock Waiting and uncertainty in computer music networks.
+\newblock In {\em ICMC}.
+
 \bibitem[Roos and McLean, 2023]{strudel}
 Roos, F. and McLean, A. (2023).
 \newblock Strudel: Live coding patterns on the web.
@@ -191,5 +206,10 @@ Sontag, S. (1977).
 Soon, W. (2018).
 \newblock Executing liveness: An examination of the live dimension of code inter-actions in software (art) practice.
 \newblock {\em Leonardo}, 51(5):530--530.
+
+\bibitem[Tanimoto, 1990]{tanimoto1990viva}
+Tanimoto, S.~L. (1990).
+\newblock Viva: A visual language for image processing.
+\newblock {\em Journal of Visual Languages \& Computing}, 1(2):127--139.
 
 \end{thebibliography}

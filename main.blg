@@ -3,48 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
 Database file #1: bibli.bib
-Warning--to sort, need author or key in toplapManifesto
-Warning--empty year in generativeManifesto
 Warning--empty journal in beiguelman2019museums
-You've used 39 entries,
+You've used 43 entries,
             1935 wiz_defined-function locations,
-            680 strings with 8777 characters,
-and the built_in function-call counts, 12876 in all, are:
-= -- 1275
-> -- 365
-< -- 40
-+ -- 117
-- -- 112
-* -- 911
-:= -- 2259
-add.period$ -- 116
-call.type$ -- 39
-change.case$ -- 240
-chr.to.int$ -- 38
-cite$ -- 43
-duplicate$ -- 592
-empty$ -- 998
-format.name$ -- 158
-if$ -- 2566
+            703 strings with 9342 characters,
+and the built_in function-call counts, 14395 in all, are:
+= -- 1421
+> -- 427
+< -- 44
++ -- 137
+- -- 132
+* -- 1035
+:= -- 2537
+add.period$ -- 128
+call.type$ -- 43
+change.case$ -- 268
+chr.to.int$ -- 42
+cite$ -- 44
+duplicate$ -- 654
+empty$ -- 1107
+format.name$ -- 185
+if$ -- 2858
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 43
-newline$ -- 195
-num.names$ -- 114
-pop$ -- 259
+missing$ -- 48
+newline$ -- 215
+num.names$ -- 129
+pop$ -- 287
 preamble$ -- 1
-purify$ -- 251
+purify$ -- 281
 quote$ -- 0
-skip$ -- 445
+skip$ -- 490
 stack$ -- 0
-substring$ -- 808
-swap$ -- 78
+substring$ -- 899
+swap$ -- 83
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 212
-warning$ -- 3
-while$ -- 109
+type$ -- 234
+warning$ -- 1
+while$ -- 123
 width$ -- 0
-write$ -- 480
-(There were 3 warnings)
+write$ -- 533
+(There was 1 warning)

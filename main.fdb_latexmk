@@ -1,16 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1768068653.89009 "main.aux" "main.bbl" "main" 1768068660.41311 0
-  "./bibli.bib" 1768067921.30712 28570 feb88b8a1a7267e6b9a225dc9315d81c ""
+["bibtex main"] 1768771932.91496 "main.aux" "main.bbl" "main" 1768774217.09833 0
+  "./bibli.bib" 1768764672.17063 29663 75e04f1e601c7a4456de0bb2ee6417de ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "main.aux" 1768068659.40302 10752 4fcfe067e1b98ad223e8a1881994b146 "pdflatex"
+  "main.aux" 1768774216.25236 10832 6a725999a48ad2755f186054b0b66a2d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1768068653.95846 "/home/mint/Documents/latex/main.tex" "main.pdf" "main" 1768068660.4134 0
+["pdflatex"] 1768774210.08617 "/home/mint/Documents/latex/main.tex" "main.pdf" "main" 1768774217.09885 0
   "/etc/texmf/web2c/texmf.cnf" 1759138591.33531 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1759256894.00519 31928 53243d3d86f7c9140eec97b6042d1755 ""
-  "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1759256892.94423 40112 88ec4a057c61ae9a7281be40516183e7 ""
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1759256902.62993 49076 0df8b1317432949b72a1e04b6e8f5526 ""
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk" 1759256899.45703 72264 33776d0d7df227a124e1792784bdb3dc ""
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk" 1759256895.13716 27692 29a65530fa38ea911e0587aa40e88276 ""
@@ -25,10 +24,9 @@
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk" 1759256896.20513 35180 41c9029129ff5bad347f208cce7f7008 ""
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk" 1759256891.81426 39096 9b3ec9c7e6b78e0d2fe2f59e949e1838 ""
   "/home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1440.600pk" 1759256898.40406 47440 359cad43e980ebd51786e3ceb97560c5 ""
-  "/home/mint/Documents/latex/main.tex" 1768068643.20324 92696 89276f16a7350f3f23b035e79fce09e7 ""
+  "/home/mint/Documents/latex/main.tex" 1768774209.43174 98699 4055ae0fe03961fa73100ebb27217c61 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
-  "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm" 1136768653 3584 ad49a18d8515beef6d92d4d3f197d0fd ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx2488.tfm" 1136768653 3584 0181dbc4d429c3ba4e30feba37b5df96 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/eccc1095.tfm" 1136768653 3072 1b1df026a15993ee98d265b49cf8d5f2 ""
@@ -156,11 +154,11 @@
   "graphics/unnamed.png" 1759155717.51253 2300102 93ec066f271431d4b7483712631f74de ""
   "graphics/vest.JPG" 1676071010 16544699 e3cd3f10a23b028791073db393dd852f ""
   "graphics/youtube.jpeg" 1763735729.26427 30565 3420422f6ba7133632edb37ce42e8293 ""
-  "main.aux" 1768068659.40302 10752 4fcfe067e1b98ad223e8a1881994b146 "pdflatex"
-  "main.bbl" 1768068653.94937 7500 ca00c4cbc408a80029e8e7cd62f3c871 "bibtex main"
-  "main.out" 1768068659.40602 3322 d6ef547a9589bea4af267961e008397c "pdflatex"
-  "main.tex" 1768068643.20324 92696 89276f16a7350f3f23b035e79fce09e7 ""
-  "main.toc" 1768068659.40702 1766 8296bb8e2eed30c6f5330fc3f606339e "pdflatex"
+  "main.aux" 1768774216.25236 10832 6a725999a48ad2755f186054b0b66a2d "pdflatex"
+  "main.bbl" 1768771933.03162 8342 651f6dd9710a78e235190e2c894db3a5 "bibtex main"
+  "main.out" 1768774216.25536 2944 a361fcb2974a647357aba66ff5bc40b5 "pdflatex"
+  "main.tex" 1768774209.43174 98699 4055ae0fe03961fa73100ebb27217c61 ""
+  "main.toc" 1768774216.25636 1491 dd881a385a6f5204b7612573613420d3 "pdflatex"
   "miau.png" 1761504770.97237 1739515 fe9e199bf0599c8579a7d4f662c72268 ""
   (generated)
   "main.aux"

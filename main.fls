@@ -190,7 +190,6 @@ INPUT ./graphics/vest.JPG
 INPUT ./graphics/vest.JPG
 INPUT ./graphics/vest.JPG
 INPUT ./graphics/vest.JPG
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
 INPUT ./graphics/listening.jpeg
 INPUT ./graphics/listening.jpeg
 INPUT ./graphics/listening.jpeg
@@ -202,14 +201,14 @@ INPUT ./graphics/nuevo.png
 INPUT ./graphics/nuevo.png
 INPUT ./graphics/nuevo.png
 INPUT ./graphics/nuevo.png
-INPUT ./graphics/synth.jpg
-INPUT ./graphics/synth.jpg
-INPUT ./graphics/synth.jpg
-INPUT ./graphics/synth.jpg
 INPUT ./graphics/screensynth.png
 INPUT ./graphics/screensynth.png
 INPUT ./graphics/screensynth.png
 INPUT ./graphics/screensynth.png
+INPUT ./graphics/synth.jpg
+INPUT ./graphics/synth.jpg
+INPUT ./graphics/synth.jpg
+INPUT ./graphics/synth.jpg
 INPUT ./graphics/synthcode.png
 INPUT ./graphics/synthcode.png
 INPUT ./graphics/synthcode.png
@@ -324,7 +323,6 @@ INPUT /home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600
 INPUT /home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk
 INPUT /home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk
 INPUT /home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk
-INPUT /home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
 INPUT /home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk
 INPUT /home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk
 INPUT /home/mint/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk
