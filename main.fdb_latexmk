@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1771436798.40221 "main.aux" "main.bbl" "main" 1771436840.42846 0
+["bibtex main"] 1772559581.24821 "main.aux" "main.bbl" "main" 1772559596.46043 0
   "./bibli.bib" 1771434656 30927 faed1c7f70114fd5f04c204f1f90e8ec ""
   "c:/texlive/2025/texmf-dist/bibtex/bst/base/apalike.bst" 1743282283 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "main.aux" 1771436838 11067 1ebc834069adca9de325a0b15090fb5a "pdflatex"
+  "main.aux" 1772559592 10244 cbaa8184a38800eaa9184e718a344ead "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1771436833.39622 "c:/Users/suki/latex/main.tex" "main.pdf" "main" 1771436840.42914 0
-  "c:/Users/suki/latex/main.tex" 1771436832 101392 bdd5a41ce3be29fd5aa6b90851a5a832 ""
+["pdflatex"] 1772559582.34609 "c:/Users/suki/latex/main.tex" "main.pdf" "main" 1772559596.46158 0
+  "c:/Users/suki/latex/main.tex" 1772559569 102335 f733227adf52f9b7dfb232fb3fa505a5 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1743282756 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1743283945 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1743283413 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -132,8 +132,6 @@
   "graphics/Overflow.png" 1770217269 635533 70f3745543000809571b5fcdeadea4c0 ""
   "graphics/TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png" 1770217269 1207413 62837372c668a8092789cf203a104850 ""
   "graphics/TOPLAP.jpeg" 1770217269 174803 7f71932dc3e0dbbd7c5249878eea82cd ""
-  "graphics/Transmit.png" 1770217269 182868 6194db68e4924816e174018251e3abf5 ""
-  "graphics/alexandra.png" 1770217269 340935 e571cb51f44a60d75b65c736838117c4 ""
   "graphics/algoscape.png" 1770217269 156580 3eeef70d40a17457c0694b2801d03d05 ""
   "graphics/amCode.png" 1770217269 3052260 e3f797587fdb65db88c78a971d9b91a5 ""
   "graphics/archivo.png" 1770217269 2094 758d749e88cb99a8be6efdcbea5028c2 ""
@@ -155,11 +153,11 @@
   "graphics/unnamed.png" 1770217269 2300102 9105d5c493bcf3e3f69e5b124ccf8bd0 ""
   "graphics/vest.JPG" 1770217269 16544699 441c164b520f9369f664d65c2e7eb245 ""
   "graphics/youtube.jpeg" 1770217269 30565 3420422f6ba7133632edb37ce42e8293 ""
-  "main.aux" 1771436838 11067 1ebc834069adca9de325a0b15090fb5a "pdflatex"
-  "main.bbl" 1771436799 8996 33b9e5587cb3da2aa1b8875d483daa01 "bibtex main"
-  "main.out" 1771436838 2944 a361fcb2974a647357aba66ff5bc40b5 "pdflatex"
-  "main.tex" 1771436832 101392 bdd5a41ce3be29fd5aa6b90851a5a832 ""
-  "main.toc" 1771436838 1491 dd881a385a6f5204b7612573613420d3 "pdflatex"
+  "main.aux" 1772559592 10244 cbaa8184a38800eaa9184e718a344ead "pdflatex"
+  "main.bbl" 1772559582 7869 deaa80a1b3931a0d55a333ce37b39be4 "bibtex main"
+  "main.out" 1772559592 2944 a361fcb2974a647357aba66ff5bc40b5 "pdflatex"
+  "main.tex" 1772559569 102335 f733227adf52f9b7dfb232fb3fa505a5 ""
+  "main.toc" 1772559592 1491 56b8d39ca3ff61c436d1a7fb1b2426eb "pdflatex"
   "miau.png" 1770217270 1739515 e2620ae742c728ab2951fc32ef1d6700 ""
   (generated)
   "main.aux"

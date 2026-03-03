@@ -4,45 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: apalike.bst
 Database file #1: bibli.bib
 Warning--empty journal in beiguelman2019museums
-You've used 46 entries,
+You've used 41 entries,
             1935 wiz_defined-function locations,
-            718 strings with 9795 characters,
-and the built_in function-call counts, 15484 in all, are:
-= -- 1530
-> -- 464
-< -- 47
-+ -- 149
-- -- 144
-* -- 1112
-:= -- 2727
-add.period$ -- 137
-call.type$ -- 46
-change.case$ -- 287
-chr.to.int$ -- 45
-cite$ -- 47
-duplicate$ -- 703
-empty$ -- 1182
-format.name$ -- 200
-if$ -- 3076
-int.to.chr$ -- 2
+            696 strings with 9000 characters,
+and the built_in function-call counts, 14090 in all, are:
+= -- 1395
+> -- 423
+< -- 41
++ -- 136
+- -- 132
+* -- 1021
+:= -- 2467
+add.period$ -- 122
+call.type$ -- 41
+change.case$ -- 258
+chr.to.int$ -- 41
+cite$ -- 42
+duplicate$ -- 637
+empty$ -- 1077
+format.name$ -- 181
+if$ -- 2806
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 51
-newline$ -- 230
-num.names$ -- 138
-pop$ -- 308
+missing$ -- 46
+newline$ -- 205
+num.names$ -- 123
+pop$ -- 276
 preamble$ -- 1
-purify$ -- 302
+purify$ -- 271
 quote$ -- 0
-skip$ -- 532
+skip$ -- 485
 stack$ -- 0
-substring$ -- 967
-swap$ -- 95
-text.length$ -- 8
+substring$ -- 907
+swap$ -- 91
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 250
+type$ -- 224
 warning$ -- 1
-while$ -- 132
+while$ -- 122
 width$ -- 0
-write$ -- 571
+write$ -- 510
 (There was 1 warning)

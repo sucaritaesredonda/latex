@@ -9,14 +9,14 @@
 \contentsline {subsection}{The grammar of performative coding}{11}{subsection*.4}%
 \contentsline {subsection}{Programming livenness}{15}{subsection*.5}%
 \contentsline {subsection}{Livecoding Intersections}{19}{subsection*.6}%
-\contentsline {section}{\numberline {V}Show your Screen}{23}{section.0.5}%
-\contentsline {subsection}{Alternative archive: Not dead but not alive}{23}{subsection*.7}%
-\contentsline {subsection}{Dusk of an electric forest}{25}{subsection*.8}%
+\contentsline {section}{\numberline {V}Show your Screen}{22}{section.0.5}%
+\contentsline {subsection}{Alternative archive: Not dead but not alive}{22}{subsection*.7}%
+\contentsline {subsection}{Dusk of an electric forest}{24}{subsection*.8}%
 \contentsline {subsection}{Empty Beginning}{29}{subsection*.9}%
-\contentsline {subsection}{Toplap Linz}{33}{subsection*.10}%
-\contentsline {subsection}{Art as a series of steps}{37}{subsection*.11}%
-\contentsline {section}{\numberline {VI}Conclusion}{38}{section.0.6}%
-\contentsline {section}{\numberline {VII}Appendices}{39}{section.0.7}%
-\contentsline {subsection}{First steps with Strudel}{39}{subsection*.12}%
-\contentsline {subsection}{I'm an open window}{41}{subsection*.13}%
-\contentsline {subsection}{Vanishing photographs }{43}{subsection*.14}%
+\contentsline {subsection}{Toplap Linz}{32}{subsection*.10}%
+\contentsline {subsection}{Art as a series of steps}{36}{subsection*.11}%
+\contentsline {section}{\numberline {VI}Conclusion}{37}{section.0.6}%
+\contentsline {section}{\numberline {VII}Appendices}{38}{section.0.7}%
+\contentsline {subsection}{First steps with Strudel}{38}{subsection*.12}%
+\contentsline {subsection}{I'm an open window}{40}{subsection*.13}%
+\contentsline {subsection}{Vanishing photographs }{42}{subsection*.14}%
