@@ -1,4 +1,5 @@
 \documentclass[12pt, twoside, a4paper]{report}
+
 \usepackage{listings}
 \usepackage{color}
 \usepackage{changepage}
@@ -8,7 +9,6 @@
 \usepackage{url}
 \def\UrlBreaks{\do\/\do-\do\.\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z\do\0\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9}
 \usepackage{xurl}
-
 
 \usepackage{caption}
 \usepackage[labelfont=bf]{caption}
@@ -38,6 +38,10 @@
 \usepackage{graphicx}
 \usepackage{float}           % Add this line for [H] specifier
 \usepackage[english]{babel}
+\usepackage[authoryear]{natbib}
+\bibliographystyle{apalike}
+
+
 \usepackage{epigraph}
 \usepackage{blindtext}
 \usepackage{graphicx}
@@ -50,9 +54,13 @@
 \selectlanguage{english}
 \setlength{\parskip}{0.9em} % or your preferred value
 \setlength{\parindent}{0.2pt}  % No indentation
+\usepackage{tocloft}
+\usepackage[nottoc]{tocbibind}
+\setlength{\cftchapnumwidth}{1em}
+\setlength{\cftsecnumwidth}{2em}
 
 
-
+\renewcommand{\thechapter}{\arabic{chapter}}
 
 \renewcommand{\epigraphsize}{\small}
 
@@ -60,8 +68,20 @@
 
 \renewcommand{\textflush}{flushright} \renewcommand{\sourceflush}{flushright}
 
-\renewcommand{\thesection}{\Roman{section}}
-\setcounter{secnumdepth}{1} % stop numbering at section level (subsections unnumbered)
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\setcounter{secnumdepth}{2} % stop numbering at section level (subsections unnumbered)
+
+\setcounter{tocdepth}{2} 
+
+
+\titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\thechapter.}{1em}{}
+\titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+
 \titleformat{\subsection}[hang]{\normalfont\bfseries}{}{0pt}{} % remove printed subsection label
 
 % use Arabic numerals for subsections
@@ -77,6 +97,7 @@
 }
 
 \pagenumbering{gobble}
+
 
 \begin{document}
 
@@ -100,7 +121,7 @@
   \Huge
   \textbf{Live coding as a performative act} \\
  \large
-  \textit{Real time in audiovisual live coding performances} \\
+  \textit{Real time in audiovisual live coding performance} \\
   
   % real time, improvisation, 
   % real time in computer performance, playfulness, communities, open source, political statement, liveness as a concept, liveness in live coding, liveness in the performative act of coding, liveness in the process of coding, liveness in the code itself, liveness in the software, liveness in the performance, liveness in the audience, liveness in the feedback loop between performer and audience, liveness in the feedback loop between performer and code, liveness in the feedback loop between code and audience.
@@ -153,11 +174,11 @@
 
 
 
-\section{Abstract}
+\chapter{Abstract}
 
-Live coding -as defined by \textit{Alex McLean}, one of the most relevant figures in the field- is the practice of constructing and
+Live coding -as defined by Alex McLean, one of the most relevant figures in the field- is the practice of constructing and
 interacting with algorithms during a performance. It aims to convey algorithmic thinking, real-time composition and networked collaborations to the
-audience.\cite{usermanual}
+audience \citep{usermanual}.
  A distinctive quality of improvisation is the temporal element, 
  which involves interacting with tools and the capacity to rethink rules and conditions.
   There is no concern on optimization and efficiency -features that typically characterize the technology industry-, 
@@ -179,22 +200,31 @@ algorithmic thinking, and real-time composition.
 
 \newpage
 
-\section{Acknowledgements}
+\chapter{Acknowledgements}
+
+Firstly, I would like to thank my supervisor, Professor Manuela Naveau, for her encouragement and guidance throughout the writing of this thesis, and for her invaluable feedback.  I consider myself fortunate to count on such committed supervision and insightful discussions that have significantly enriched this research.
+
+I could not have completed this Master's program without the incredible community of the Interface Cultures department. I am grateful to all my mentors and lecturers, and I am honoured to have had the opportunity to learn from them. I would also like to thank all my colleagues. It was inspiring to witness so much creativity and amazing projects throughout this journey. 
+
+I would like to express my special gratitude to Gorka Egino. It has been a pleasure to work with and collaborate with him. There has been so much joy, inspiration and collective experimentation. Our work together has been a significant part of the completion of this thesis. Thank you to everyone who has been part of the Toplap Linz community, attending the workshops, concerts and other events.  
+
+Finally, I would also like to thank Juan Suarez for his support and feedback, to my family and friends for their patience, emotional support and love.
 
 
 \newpage
 
-\section{Introduction}
+\chapter{Introduction}
+
 
 
 My interest in programming was a coincidence. I had finished my bachelor's 
 degree in fine arts and had mostly worked with "analog" techniques (which means that computer art was something foreign to me).
  Af  ter my time at the art academy, I found myself with the terrifying freedom of no longer being in an institution. 
- It was at that moment that I began working with \textit{Juana Prieto}, and the two of us started 
+ It was at that moment that I began working with Juana Prieto, and the two of us started 
  this journey into the field of creative coding.
 
 We had done our undergraduate studies together and had formed a friendship since then.
- \textit{Juana} had the idea to make a GIF movie for the web — the text would lead to new places, 
+ Juana had the idea to make a GIF movie for the web — the text would lead to new places, 
  a linear narrative that ultimately became a labyrinth of moving images and blinking text. 
  Neither of us had extensive knowledge of programming, but I joined the project because the idea presented itself as a challenge that combined things that intrigued me, like the relationship between image and text, where both are equally important.
 
@@ -204,13 +234,13 @@ labyrinths together. Those were months of discovery for both of us. We had recei
 
 From that moment on, programming stopped being an unattainable mystery reserved for engineers and computer scientists. I began to explore the potential of this language used to communicate with machines. While we were at the\textit{ Cinemateca in Bogotá}, we came across \textit{Toplap Bogotá}, a live coding community. \textit{RafroBeat} (who is also a member of \textit{Toplap}) was giving a workshop on \textit{Tidal Cycles} at the time, which marked the beginning of my journey with code as a performative act.
 
-The week after that workshop, \textit{Malitzin Cortés and Iván Abreu}, two Mexican artists who work with code, architecture,
+The week after that workshop, Malitzin Cortés and Iván Abreu, two Mexican artists who work with code, architecture,
  and expanded cinema, gave a workshop where we used film archives as a 
  base to create live coding performances. 
- That was my first experience performing in front of an audience, and the first time \textit{Juana} and I performed together.
+ That was my first experience performing in front of an audience, and the first time Juana and I performed together.
 
 Together, we created the collective \textit{Vestidas y Alborotadas (Clothed and Rowdy)} (Figure 1)
- and became active members of the \textit{Toplap} community. We performed numerous times in \textit{Bogotá}, \textit{Medellín}, and \textit{Manizales}. 
+ and became active members of the \textit{Toplap} community. We performed numerous times in Bogotá, Medellín, and Manizales. 
  Together, we questioned the presence of the body on stage. And from that question,
 In each performance, we embodied a different monster through the design of our costumes, 
 which were made from upcycled textiles. 
@@ -226,7 +256,7 @@ We didn't want to be perceived as "the girls" on stage in a predominantly mascul
   \begin{subfigure} {0.8\textwidth}
   \caption*{\textbf{Note:}\textit{Vestidas y Alborotadas} performing at \textit{Cinemateca} of Bogotá, 2022. Picture by: Gerson Polo}
   \end{subfigure}
-\end{figure}
+  \end{figure}
 
 In each performance of \textit{Vestidas y Alborotadas}, as well as wearing monster costumes, we created a series of images and videos of these monsters posing in different ways or in different locations around the city, either walking or standing still. We also liked to incorporate city sounds into our performances. Through these, we aimed to extend the actions of the monsters we embodied on stage. These monsters were a composition completed by visual and sonic elements, as well as our presence as these beings.
 
@@ -235,22 +265,21 @@ I found an exciting musical and artistic scene in the city.
 The art scene, both inside and outside the university, 
 thrilled me with its openness the spaces and the community are 
 genuinely willing to see and listen to what you do. Over time, 
-together with \textit{Gorka Egino} (also a student at \textit{Kunstuniversität Linz} and a livecoder), and with the support of the \textit{Noise Meetup Lab}, 
-we decided to create a live coding platform in \textit{Linz} called \textit{Toplap Linz}. 
+together with Gorka Egino (also a student at \textit{Kunstuniversität Linz} and a livecoder), and with the support of the \textit{Noise Meetup Lab}, 
+we decided to create a live coding platform in Linz called \textit{Toplap Linz}. 
 Through a series of workshops and jam sessions, 
 we aimed to build a space for sharing knowledge and fostering community.
 
-The creative or inventive capacity of coding resides in its more human side, in contrast to the process-optimization mindset we usually associate with code.\cite{GenerativeaRT} Here writing code is not about debugging but about expression and performativity of algorithmic thought.
+The creative or inventive capacity of coding resides in its more human side, in contrast to the process-optimization mindset we usually associate with code \citep{GenerativeaRT}. Here writing code is not about debugging but about expression and performativity of algorithmic thought.
  While it is a language that requires precision to be executed, its potential to expand the written word is unique.
 
 Live coding is a practice in which the programmer writes their own writing machine. These are open machines, supported by a community.
- There are always collaborations, rewritings, updates, and improvements. And as live coding, artist-programmer 
- \textit{Alex McLean} states: ``A program is not programmed to be used later,
- but is used by programming it.''\cite{meaningLife}.
+ There are always collaborations, rewritings, updates, and improvements. And as live coding, artist-programmer Alex McLean states: ``A program is not programmed to be used later,
+ but is used by programming it'' \citep{meaningLife}.
 
   But going back to the basics, what is live coding? As I will present it later 
   in more detail, one of the most common definitions is that "it is a practice of programming in front of an audience, where the code is executed in real time, 
-  and the performer interacts with the code as part of the performance".\cite{cats}
+  and the performer interacts with the code as part of the performance" \citep{cats}.
   This definition, however, does not encompass all the nuances and possibilities of this practice.
   
   We would have to go deeper into the unfolding of the code within the performative act,
@@ -263,7 +292,7 @@ Live coding is a practice in which the programmer writes their own writing machi
 
 \newpage
 
-\section{Coding liveness}
+\chapter{Coding liveness}
 
 This chapter focuses on providing an overview of live coding and what it
 means to keep code "alive" from technical and theoretical perspectives.
@@ -272,7 +301,7 @@ The second section will explore theoretical approaches to live coding that have 
 
 % hacerlo mas largo
 
-\subsection{Software art }
+\section{Software art }
 
 
 In order to understand live coding, it is first necessary to discuss software art and its evolution, as these two disciplines are closely related.  This artistic approach considers software beyond its practical tool definition, shifting the focus to the expressiveness of the medium itself. Works of art explore the materiality of software and computer networks. As media theorist Tilman Baumgärtel states:
@@ -282,33 +311,29 @@ computer but art that happens in the computer. Software is not
 programmed by artists, in order to produce autonomous work,
 but the software itself is the artwork. What is crucial here is not
 the result but the process triggered in the computer by the
-program  code. \cite [p.1--2]{baumgartel2001experimentelle}.
+program  code \citep [p.1--2]{baumgartel2001experimentelle}.
 \end{adjustwidth}
 
 
-The word \textit{software} in the field of arts first appeared in an exhibition called \textit{Software: Information Technology: Its New Meaning for Art}, curated by artist and critic Jack Burnham, at the Jewish Museum in New York between 1970-1971. According to Burnham, the exhibition took software out of the field of engineering and emphasized its relationship to systems, data, and processes in the representation of artistic expressions and ideas.
-\cite{katz1970software}
+The word \textit{software} in the field of arts first appeared in an exhibition called \textit{Software: Information Technology: Its New Meaning for Art}, curated by artist and critic Jack Burnham, at the Jewish Museum in New York between 1970-1971. According to Burnham, the exhibition took software out of the field of engineering and emphasized its relationship to systems, data, and processes in the representation of artistic expressions and ideas \citep{katz1970software}.
 
-Another example of how software art began to gain more presence in festivals and exhibitions was when \textit{Transmediale}\footnote{Transmediale is a Berlin-based festival and year-round project that draws out new connections between art, culture, and technology. It considers technology as being more than the digital world and the cultural as being more than what emerges from within institutionalized fields of production.} introduced "artistic software" as a new category in 2001.  Also, in 2003, \textit{Ars Electronica}, one of the biggest digital art festivals, focused its attention on code under the theme of \textit{Code—The Language of Our Time.} This theme was approached as both artistic and political expression, reflecting on topics such as privacy and aesthetics related to software. 
-\cite{broeckmann2006software}
+Another example of how software art began to gain more presence in festivals and exhibitions was when \textit{Transmediale}\footnote{Transmediale is a Berlin-based festival and year-round project that draws out new connections between art, culture, and technology. It considers technology as being more than the digital world and the cultural as being more than what emerges from within institutionalized fields of production.} introduced "artistic software" as a new category in 2001.  Also, in 2003, \textit{Ars Electronica}, one of the biggest digital art festivals, focused its attention on code under the theme of \textit{Code—The Language of Our Time.} This theme was approached as both artistic and political expression, reflecting on topics such as privacy and aesthetics related to software \citep{broeckmann2006software}.
 
 %Aclarar en que se relaciona software art con el código
-Artist-coder and researcher \textit{Soon Winnie} described the characteristics of 
-software art as "rules, languages, programmability, and the live conditions of execution processes" \cite{soon2018executing}. 
-These characteristics are also the main materialities that have been subjects of artistic experimentation, analysis from a sociological perspective, as in digital humanities, or technological development in the field of engineering. In the artistic field, software is not only a tool for producing autonomous works of art or expressions, but it is also "using code as an expression itself" (Andersen  Pold, 2004b).
-\cite{andersen2004software}
+Artist-coder and researcher Soon Winnie described the characteristics of 
+software art as "rules, languages, programmability, and the live conditions of execution processes" \citep{soon2018executing}. 
+These characteristics are also the main materialities that have been subjects of artistic experimentation, analysis from a sociological perspective, as in digital humanities, or technological development in the field of engineering. In the artistic field, software is not only a tool for producing autonomous works of art or expressions, but it is also "using code as an expression itself" \citep{andersen2004software}.
 
 %encuentra el lugar para definir algoritmo bien sea aqui o despues de la parte que habla de codigo
 
-According to the \textit{IEEE Standard Glossary of Software Engineering Terminology}, code is defined as: “Computer instructions and data definitions expressed in a programming language or in a form output by an assembler, compiler, or other translator.” \cite{ieee1983ieee} Computers are multilingual, and these languages enable communication between humans and machines. This has involved the development of human-readable, problem-oriented coding languages. Professor of Art and Computation Geoff Cox states the following about the two-dimensional nature of the code: “Code lies in its execution, not simply its written form. To fully appreciate it, we need to 'see' the code in order to grasp what we are experiencing and build an understanding of its actions.” \cite{cox2001aesthetics} As well as existing in written form, code exists as possible actions within a computer system. This makes it possible to see the different outputs generated by these written instructions and interactions with various machines, systems, networks, and databases.
+According to the \textit{IEEE Standard Glossary of Software Engineering Terminology}, code is defined as: “Computer instructions and data definitions expressed in a programming language or in a form output by an assembler, compiler, or other translator” \citep{ieee1983ieee}. Computers are multilingual, and these languages enable communication between humans and machines. This has involved the development of human-readable, problem-oriented coding languages. Professor of Art and Computation Geoff Cox states the following about the two-dimensional nature of the code: “Code lies in its execution, not simply its written form. To fully appreciate it, we need to 'see' the code in order to grasp what we are experiencing and build an understanding of its actions” \citep{cox2001aesthetics}. As well as existing in written form, code exists as possible actions within a computer system. This makes it possible to see the different outputs generated by these written instructions and interactions with various machines, systems, networks, and databases.
 
 \textit{The Book After the Book} is a net art piece that reflects on the expressiveness of code and
- the transformations of literature in the context of the internet. It was published by brazilian media artist \textit{Giselle Beiguelman} in 1999.  This work of art is a "new reading machine" in which knowledge is not 
+ the transformations of literature in the context of the internet. It was published by brazilian media artist Giselle Beiguelman in 1999.  This work of art is a "new reading machine" in which knowledge is not 
  organized as it was in the past, when librarians classified and created categories to arrange books within a 
  physical space. Rather, this space functions "as a node in a network." In this webpage, one can wander through
   hyperlinks to different bookshelves that compile lists of literary or philosophical texts, net art, and, 
-  in turn, it is a self-referential work that considers its own existence and its role in digital spaces. 
-\cite{oliver2019digital}
+  in turn, it is a self-referential work that considers its own existence and its role in digital spaces \citep{oliver2019digital}.
   
 In the section "Frictions" of The \textit{Book After the Book}, you can read this statement about the text behind the webpage, questioning its aesthetic nature and the specifics of this language hidden in the backend of this digital medium:
 
@@ -316,15 +341,14 @@ In the section "Frictions" of The \textit{Book After the Book}, you can read thi
 \begin{adjustwidth}{1.27cm}{1.27cm} Deep down, there on the back of the page, at the source, a situation is defined: the Internet
  is no more than a big text. But what happens when this text emerges, when it occupies the surface of the screen? 
  A strange passage is imposed: from screen to screen, the letter migrates, 
- it de-contextualises itself, posing language as an aesthetic problem. Given that, one asks: is this literature or not?  
-\cite{beiguelman2019museums}
+ it de-contextualises itself, posing language as an aesthetic problem. Given that, one asks: is this literature or not? \citep{beiguelman2019museums}.
 \end{adjustwidth}
 
- \textit{Beiguelman} addresses the different computational layers in which code is present, being invisible as written instructions but giving life to the functioning of the web. It also asks about the materiality of the code itself, its aesthetic dimensions, and the reading act in digital and hybrid spaces beyond the printed medium.
+ Beiguelman addresses the different computational layers in which code is present, being invisible as written instructions but giving life to the functioning of the web. It also asks about the materiality of the code itself, its aesthetic dimensions, and the reading act in digital and hybrid spaces beyond the printed medium.
 
  Some artists in the field of software art have become interested in the concept of liveness, 
- making use of "real-time computation, live data, and dynamic systems" \cite{soon2018executing}.  One work that uses real-time computation and takes the Internet Network as its main source is \textit{Listening Post} (2000-2001) 
- by statistician \textit{Mark Hansen} and sound artist \textit{Ben Rubin} (Figure 2). In this work, more than 200 small screens show fragments of text from thousands of Internet chat rooms, bulletin boards, and public forums. The text sequence begins with the phrases "I am," "I like," or "I love."  A voice synthesizer reads some of the texts appearing on the screens simultaneously.
+ making use of "real-time computation, live data, and dynamic systems" \citep{soon2018executing}.  One work that uses real-time computation and takes the Internet Network as its main source is \textit{Listening Post} (2000-2001) 
+ by statistician Mark Hansen and sound artist Ben Rubin (Figure 2). In this work, more than 200 small screens show fragments of text from thousands of Internet chat rooms, bulletin boards, and public forums. The text sequence begins with the phrases "I am," "I like," or "I love."  A voice synthesizer reads some of the texts appearing on the screens simultaneously.
 
 \begin{figure}[h]
   \centering
@@ -337,38 +361,36 @@ In the section "Frictions" of The \textit{Book After the Book}, you can read thi
 \end{figure}
 
  In this work, we encounter a system that operates autonomously. The running machine does not require human intervention 
- and creates a random composition of the data it incessantly collects. However, this autonomy is ultimately driven by human concepts and ideas. Performance studies scholar \textit{Philip Auslander} asks, "If Listening Post is a performance, who or what is the performer? 
- (…) Do machines perform?". \cite{auslander2005listening} This question is important for considering liveness beyond the human experience. It makes us consider technological processes that are hidden behind the work and its visual and sonic representation, such as data transmission, networking, and processing. 
+ and creates a random composition of the data it incessantly collects. However, this autonomy is ultimately driven by human concepts and ideas. Performance studies scholar Philip Auslander asks, "If Listening Post is a performance, who or what is the performer? 
+ (…) Do machines perform?" \citep{auslander2005listening}. This question is important for considering liveness beyond the human experience. It makes us consider technological processes that are hidden behind the work and its visual and sonic representation, such as data transmission, networking, and processing. 
  
-In the context of media art and technology, \textit{Auslander} defined "live" as a representation in which the feedback 
+In the context of media art and technology, Auslander defined "live" as a representation in which the feedback 
 given by the system or machine is almost immediate.
  Live is actually an effect of mediatization [...] it was the development of recording technologies that 
- made it possible to perceive existing representation as live \cite{auslander2022liveness}.  
+ made it possible to perceive existing representation as live \citep{auslander2022liveness}.  
  For example, in the case of \textit{Listening Post}, we have a multimedia representation of a source of dynamic data 
  (in this case, the flow of text collected from different sites on the internet). 
- Scholar \textit{Rita Raley} discusses \textit{Listening Post}, noting that this installation captures the sentiment of the virtual crowd with information and voices in constant change, with approximately 100,000 real-time messages. She points out that, even if there is actually a delay of one or two hours (meaning it is not entirely real-time), the sensation of immediacy in the process creates this illusion of liveness.
-  \cite{raley2009list}
+ Scholar Rita Raley discusses \textit{Listening Post}, noting that this installation captures the sentiment of the virtual crowd with information and voices in constant change, with approximately 100,000 real-time messages. She points out that, even if there is actually a delay of one or two hours (meaning it is not entirely real-time), the sensation of immediacy in the process creates this illusion of liveness \citep{raley2009list}.
 
 %Resaltar la relacion humano maquina, porque el feedback es importante 
-Live coding is at the intersection of software art and performative arts, where the concept of "live" is embedded in the software itself and the performative act. In general, one of the fundamental principles of \textit{livecoding} performances is live improvisation through coding. This is achieved by creating and manipulating algorithms in real time to produce the visual and auditory experience for the audience. This can be done either from scratch or by modifying pre-existing code in response to the specific context of the performance. \textit{Soon Winnie} defines an algorithm as: “a more abstract term that is not dependent on any specific programming language or syntax but describes a step-by-step procedure used to achieve certain tasks through computation.” \cite{soon2018executing}  The manipulation and conception of algorithms within this performative practice allow the performer to bring their creative ideas to life, solve any problems that may arise, or propose new ideas on stage. Another key element within \textit{livecoding} is demonstrating to the audience that what they are witnessing is being created live. This is why the performer's screen is usually projected, revealing everything, including mistakes. 
+Live coding is at the intersection of software art and performative arts, where the concept of "live" is embedded in the software itself and the performative act. In general, one of the fundamental principles of \textit{livecoding} performances is live improvisation through coding. This is achieved by creating and manipulating algorithms in real time to produce the visual and auditory experience for the audience. This can be done either from scratch or by modifying pre-existing code in response to the specific context of the performance. Soon Winnie defines an algorithm as: “a more abstract term that is not dependent on any specific programming language or syntax but describes a step-by-step procedure used to achieve certain tasks through computation” \citep{soon2018executing}.  The manipulation and conception of algorithms within this performative practice allow the performer to bring their creative ideas to life, solve any problems that may arise, or propose new ideas on stage. Another key element within \textit{livecoding} is demonstrating to the audience that what they are witnessing is being created live. This is why the performer's screen is usually projected, revealing everything, including mistakes. 
 
   The first live coding performances emerged in the early 21st century, primarily within the contexts of electronic music and digital arts. 
-The development of the practice was facilitated by programs focused on real-time audio processing. Software such as Miller Puckette’s Pure Data (developed in the 1990s) and James McCartney’s SuperCollider (originally released in 1996) could synthesise sound directly from algorithms. These programmes allow users to edit the code while the programme is running, enabling performative and improvisational experiences.
- \cite{usermanual}
+The development of the practice was facilitated by programs focused on real-time audio processing. Software such as Miller Puckette’s Pure Data (developed in the 1990s) and James McCartney’s SuperCollider (originally released in 1996) could synthesise sound directly from algorithms. These programmes allow users to edit the code while the programme is running, enabling performative and improvisational experiences \citep{usermanual}.
 
-% At its core, live coding is a form of real-time improvisation that uses programming as a creative medium. \cite{usermanual} 
+% At its core, live coding is a form of real-time improvisation that uses programming as a creative medium. \citep{usermanual} 
 
-The feedback loop between the artist and the program is a crucial element that allows for liveness in live coding performances. Artist and programmer  \textit{Alex McLean} identifies three main types of feedback in the experience of a live coding performance. \textit{Manipulation feedback},
+The feedback loop between the artist and the program is a crucial element that allows for liveness in live coding performances. Artist and programmer  Alex McLean identifies three main types of feedback in the experience of a live coding performance. \textit{Manipulation feedback},
  which occurs between the programmer and their written code. \textit{Performance feedback}, which occurs between the 
- programmer and the program output, such as sound. \textit{Social feedback}, which occurs between the audience and the programmer. \cite{mclean2011artist} \textit{McLean} expands on the concept of feedback, considering the elements surrounding the performance experience, such as the audience or sound and images generated by the performer. One implication of constant feedback between these elements is that they are constantly communicating with each other, so each element can affect or be affected by the experience or another element present in the performance. For example, the energy of the audience can influence the performer's decisions about the direction of the performance. Alternatively, a technical difficulty within the programme may require the performer to solve the problem quickly in order to maintain the performance's flow as much as possible, potentially changing some of the previously planned elements.
+ programmer and the program output, such as sound. \textit{Social feedback}, which occurs between the audience and the programmer \citep{mclean2011artist}. McLean expands on the concept of feedback, considering the elements surrounding the performance experience, such as the audience or sound and images generated by the performer. One implication of constant feedback between these elements is that they are constantly communicating with each other, so each element can affect or be affected by the experience or another element present in the performance. For example, the energy of the audience can influence the performer's decisions about the direction of the performance. Alternatively, a technical difficulty within the programme may require the performer to solve the problem quickly in order to maintain the performance's flow as much as possible, potentially changing some of the previously planned elements.
 
 %Media studies scholar \textit{Jay David Bolter} points out that procedurality is crucial to maintaining the feedback loop
  %between humans and machines. For instance, consider a search engine that receives input from a human user. 
  %These actions are then processed and a request and feedback are sent within the framework of how this tool is 
  %programmed. \textit{Bolter} refers to these processes that maintain the feedback loop between humans and machines as the 
-  %   \textit{performativity of digital media}. \cite{ekman2016ubiquitous}
+  %   \textit{performativity of digital media}. \citep{ekman2016ubiquitous}
 
-Another key factor that has shaped \textit{livecoding} as we know it today is that programming in contemporary software engineering has been reduced to a single phase. In \textit{livecoding} performances, different processes occur at the same time, with several commands running at once and constant code editing. Computer science scholar \textit{Steven L. Tanimoto} highlights the shift in computer programming from an edit-compile-link-run cycle to a single phase. Code runs continuously, even with various on-the-fly code edits. Additionally, \textit{Tanimoto} explains that the program must also be intuitive, enabling the programmer to understand what the program is doing and the next steps in the process \cite{tanimoto1990viva}. In this sense, liveness is based on the near-instant feedback between a programme and a programmer, and on the ability to run several processes simultaneously. This change that \textit{Tanimoto} mentions, where the programming processes are synthesised into one phase, is essential for maintaining a fluid performance in \textit{livecoding} performances. At the same time, it is better for the performer to have a simple notation system that enables them to respond quickly by typing new code in response to new demands or changes on stage. 
+Another key factor that has shaped \textit{livecoding} as we know it today is that programming in contemporary software engineering has been reduced to a single phase. In \textit{livecoding} performances, different processes occur at the same time, with several commands running at once and constant code editing. Computer science scholar Steven L. Tanimoto highlights the shift in computer programming from an edit-compile-link-run cycle to a single phase. Code runs continuously, even with various on-the-fly code edits. Additionally, Tanimoto explains that the program must also be intuitive, enabling the programmer to understand what the program is doing and the next steps in the process \citep{tanimoto1990viva}. In this sense, liveness is based on the near-instant feedback between a programme and a programmer, and on the ability to run several processes simultaneously. This change that Tanimoto mentions, where the programming processes are synthesised into one phase, is essential for maintaining a fluid performance in \textit{livecoding} performances. At the same time, it is better for the performer to have a simple notation system that enables them to respond quickly by typing new code in response to new demands or changes on stage. 
 
 \textit{Livecoding} builds on the legacy of software art and the technical developments of software engineering. These two disciplines have made this performative practice and its search for liveness possible. Practitioners often have scientific and/or artistic backgrounds, resulting in a diverse range of tools and artistic approaches being developed, conceptualised and studied by the \textit{livecoding} community.
 
@@ -377,7 +399,7 @@ Another key factor that has shaped \textit{livecoding} as we know it today is th
 %
 %\newpage
 
-\subsection{The grammar of performative coding}
+\section{The grammar of performative coding}
 
 %Now, I would like to mention some key points in consolidating the philosophy of live coding. How is it that there is a practice around the action of programming on stage?  
 
@@ -396,15 +418,14 @@ creation, maintenance, and conceptualization of the software. The division betwe
 the final product and the user cannot apply. This is the key point for diversity of
 approaches within the practice. It allows for different kinds of disciplinary intersections.
 
-Two key artists who helped establish live coding as a practice in the software and media art scene were software artist and musician \textit{Adrian Ward} and programmer and artist \textit{Alex McLean}. They became collaborators in the early 2000s while studying at the \textit{University of Plymouth} in the UK. They shared the same interest and desire for programming to be a field of creativity and exploration. At that time, in the early 2000s, \textit{Ward} won the Software Art Prize at \textit{Transmediale} in 2001 for his project \textit{AutoIllustrator} (2001), a semi-autonomous parody of \textit{Adobe Illustrator} that generates visuals and challenges notions of programmable creativity. The following year, \textit{McLean} won the same prize for \textit{Forkbomb.pl} (2002), a simple script that visualizes crashing the machine on which it is run.
+Two key artists who helped establish live coding as a practice in the software and media art scene were software artist and musician Adrian Ward and programmer and artist Alex McLean. They became collaborators in the early 2000s while studying at the \textit{University of Plymouth} in the UK. They shared the same interest and desire for programming to be a field of creativity and exploration. At that time, in the early 2000s, Ward won the Software Art Prize at \textit{Transmediale} in 2001 for his project \textit{AutoIllustrator} (2001), a semi-autonomous parody of \textit{Adobe Illustrator} that generates visuals and challenges notions of programmable creativity. The following year, McLean won the same prize for \textit{Forkbomb.pl} (2002), a simple script that visualizes crashing the machine on which it is run.
 
 %podrias hacer pies de pagina de cada artista mencionando sus trabajos más importantes aparte del que ya esta en el texto
 
 
-\textit{Ward} and \textit{McLean} explored the relationship between packaged and improvised software, which is why they were interested in creating their own software instead of using commercial, ready-to-use software. These explorations led to the formation of \textit{Slub}, an experimental live coding group founded in 2000. \textit{Slub} made their music exclusively from their own generative software and projected their screens so their audience could see their handmade interfaces. In September 2000, they presented \textit{The Generative Manifesto} at a \textit{Perl} community event held at the  \textit{Institute of Contemporary Arts (ICA)} in London. During the presentation, \textit{Ward} recited the manifesto while \textit{McLean} played a soundtrack of synthesized rhythms.
-\cite{history} This manifesto establishes the principles and guidelines of their generative software practice and, at the same time, outlines key points in the practice of live coding, such as real-time output, code as an expressive medium, and the importance of transparency in processes. 
+Ward and McLean explored the relationship between packaged and improvised software, which is why they were interested in creating their own software instead of using commercial, ready-to-use software. These explorations led to the formation of \textit{Slub}, an experimental live coding group founded in 2000. \textit{Slub} made their music exclusively from their own generative software and projected their screens so their audience could see their handmade interfaces. In September 2000, they presented \textit{The Generative Manifesto} at a \textit{Perl} community event held at the  \textit{Institute of Contemporary Arts (ICA)} in London. During the presentation, Ward recitepd the manifesto while McLean played a soundtrack of synthesized rhythms \citep{history}. This manifesto establishes the principles and guidelines of their generative software practice and, at the same time, outlines key points in the practice of live coding, such as real-time output, code as an expressive medium, and the importance of transparency in processes. 
 
-\textit{The Generative Manifesto} was the seed of later explorations. Over the years, more artists and developers embraced the idea of using the laptop as an expressive interface and worked to build environments that allow real-time output.\footnote{Another important factor that made live coding possible as we know it today was that laptops with powerful processors (CPUs), adequate memory (RAM), and capable graphics chips became more affordable for individuals. This made it possible for performers to start using laptops as creative tools in clubs and cultural venues} For example, five years later, \textit{McLean} developed \textit{Tidal Cycles}, a domain-specific language \footnote{Domain-Specific Languages (DSLs) are computer languages that are designed for specific applications} focused on generating and manipulating audiovisual patterns, incorporating some of the ideas from this early manifesto. The points from the Generative Manifesto were as follows:
+\textit{The Generative Manifesto} was the seed of later explorations. Over the years, more artists and developers embraced the idea of using the laptop as an expressive interface and worked to build environments that allow real-time output.\footnote{Another important factor that made live coding possible as we know it today was that laptops with powerful processors (CPUs), adequate memory (RAM), and capable graphics chips became more affordable for individuals. This made it possible for performers to start using laptops as creative tools in clubs and cultural venues} For example, five years later, McLean developed \textit{Tidal Cycles}, a domain-specific language \footnote{Domain-Specific Languages (DSLs) are computer languages that are designed for specific applications} focused on generating and manipulating audiovisual patterns, incorporating some of the ideas from this early manifesto. The points from the Generative Manifesto were as follows:
 
 \begin{adjustwidth}{1.27cm}{1.27cm}
 \begin{itemize}
@@ -415,7 +436,7 @@ Two key artists who helped establish live coding as a practice in the software a
 \item Open process, open minds—we have nothing to hide (code is unambiguous, it can never hide behind obscurity. We seek to abolish obscurity in the arts);
 \item  Only use software applications written by ourselves—software dictates output, we dictate software (authorship cannot be granted to those who have not authored!)
 
-\cite{generativeManifesto}
+\citep{generativeManifesto}.
 \end{itemize}
 
 \end{adjustwidth}
@@ -423,8 +444,8 @@ Two key artists who helped establish live coding as a practice in the software a
 
 From this \textit{Generative Manifesto}, it is important to note how certain clear principles are established regarding the software used. Real time is directly linked to the liveness of software and compositional processes. The design of creative tools is emphasized, embracing the do-it-yourself philosophy. The tools used must respond to the specific needs of the artist, not the other way around, where the artist must adapt to and constrain an external design. There is also an emphasis on openness, which involves being clear and transparent about processes, showing the public what the artist is building on stage.
 
-In February 2004, the \textit{Changing Grammars} symposium was convened by artist \textit{Renate Wieser} and musician \textit{Julian Rohrhuber} at the \textit{HfbK (Hochschule für Bildende Künste Hamburg)}. The symposium provided an opportunity for live coders and artists to discuss their practice and form a community around it.  The festival was politically engaged, concerned with code as art and live audio programming, and focused on open-source as a form of collective thinking. The festival's description reads, "Some computer languages allow changing a running process on the fly by rewriting the code that defines it. Applied to computer music, this means one can write sound compositions while they are playing." \cite{grammars}
- During this symposium, various collaborative live coding practices, as well as workshops and talks, were carried out, focusing on the writing of code as a possibility for musical composition. Among the live coders who participated in this festival were \textit{Adrian Ward}, \textit{Alex McLean}, \textit{Alberto de Campo}, and \textit{Nick Collins}.
+In February 2004, the \textit{Changing Grammars} symposium was convened by artist Renate Wieser and musician Julian Rohrhuber at the \textit{HfbK (Hochschule für Bildende Künste Hamburg)}. The symposium provided an opportunity for live coders and artists to discuss their practice and form a community around it.  The festival was politically engaged, concerned with code as art and live audio programming, and focused on open-source as a form of collective thinking. The festival's description reads, "Some computer languages allow changing a running process on the fly by rewriting the code that defines it. Applied to computer music, this means one can write sound compositions while they are playing" \citep{grammars}.
+ During this symposium, various collaborative live coding practices, as well as workshops and talks, were carried out, focusing on the writing of code as a possibility for musical composition. Among the live coders who participated in this festival were Adrian Ward, Alex McLean, Alberto de Campo, and Nick Collins.
 
 The \textit{Changing Grammar Symposium} also provided an opportunity to network and organize around live coding. \textit{Toplap} was formed during the symposium. The name is a play on words, switching the order of "laptop." The collective's full name is \textit{The Temporary Organization for the Promotion of Live Algorithm Programming}. At that time, the collective's main objectives were to create a public archive and connect artists and people interested in live coding. The collective's first actions were to create a wiki and a mailing list. They also started drafting the collective's manifesto, which is still a draft open to modifications. The manifesto served as a guide for creating methodologies within the practice and for establishing important principles to discuss at that time. 
 
@@ -455,7 +476,7 @@ We recognise continuums of interaction and profundity, but prefer:
    \item  Live coding may be accompanied by an impressive display of manual dexterity and the glorification of the typing interface.
     \item Performance involves continuums of interaction, covering perhaps the scope of controls with respect to the parameter space of the artwork, or gestural content, particularly directness of expressive detail. Whilst the traditional haptic rate timing deviations of expressivity in instrumental music are not approximated in code, why repeat the past? No doubt the writing of code and expression of thought will develop its own nuances and customs.
 \end{itemize} 
-\cite{history}
+\citep{history}.
 \end{adjustwidth}
 
 In the \textit{Toplap Manifesto}, we see that the process plays a privileged role in live coding, and that the call for transparency is also political. From there, the idea of starting from scratch became more prevalent as a form of expression. There is also a demand for the performative experience to be completely ephemeral and for no backups of the code to be made.
@@ -465,16 +486,15 @@ Currently, \textit{Toplap} is an umbrella organization that brings together nume
 The \textit{Generative Manifesto} and \textit{Toplap} have shaped and established certain structures that have significantly favored the development of live coding. For example, the idea of using self-created software has generated numerous live coding environments with different functionalities and approaches. When writing their own software, artists can more efficiently address their own interests and needs. The idea of transparency and openness has led to certain aesthetic and methodological choices, such as projecting the code and making it visible to the public, as well as starting from scratch. Prioritizing expressive algorithmic processes over final products leads to embracing error. The concept of a score shifts, and the compositional process takes place during the performance, so musical or visual pieces do not correspond to a representation and are the result of improvisation based on the ideas the performer develops on stage. The liveliness also resides in the software's ability to provide real-time output of the actions performed by the artist, and in the artist interacting dynamically with the software during the performance, giving protagonism to the conversation generated between the interface and the artist.
 
 
-\subsection{Programming livenness}
+\section{Programming livenness}
 
 
 Live coding employs \textit{Domain-Specific Languages (DSLs)}, defined as computer languages that are designed for specific applications. In the context of live coding, the objective of these languages is to enhance the performative aspect by facilitating more intuitive and expressive coding. In the domain of sound live coding, for instance, these languages possess the capacity to modify and combine incoming audio streams and/or stored samples through the written execution of lines of code that are readily comprehensible to individuals with a background in sound and music. 
-An illustrative example of this would be the naming of effects after sound-related terminology. This intuitive nature is particularly important for artists from non-programming or coding backgrounds.
-\cite{puckette2007theory}
+An illustrative example of this would be the naming of effects after sound-related terminology. This intuitive nature is particularly important for artists from non-programming or coding backgrounds \citep{puckette2007theory}.
 \footnote{For example, in the case of a distortion effect within a livecoding environment, the term 'distort' would most likely be used while coding.}
 
-In contradistinction to general-purpose programming, livecoding environments are oriented towards the specific domains of audio and visual patterns, with the purpose of creating and modifying performances in real time.\cite{Embed}
-It is also important to note that the notation employed in each environment is subject to variation, depending on the specific conceptual framework and programming languages that are used. For instance, \textit{Hydra} is a live coding environment for visuals that draws inspiration from analogue modular synthesizers. Using \textit{JavaScript}, it is browser-based. The notation system focuses on terminology related to visual representations. Functions such as \textit{.shape()} and \textit{.color()} have been employed to provide insight into their use. These functions are characterised by their interdependent sequence, meaning that the output of one process becomes the input of the next, as is the case with patching a physical synthesizer.\cite{jack2019hydra}
+In contradistinction to general-purpose programming, livecoding environments are oriented towards the specific domains of audio and visual patterns, with the purpose of creating and modifying performances in real time \citep{Embed}.
+It is also important to note that the notation employed in each environment is subject to variation, depending on the specific conceptual framework and programming languages that are used. For instance, \textit{Hydra} is a live coding environment for visuals that draws inspiration from analogue modular synthesizers. Using \textit{JavaScript}, it is browser-based. The notation system focuses on terminology related to visual representations. Functions such as \textit{.shape()} and \textit{.color()} have been employed to provide insight into their use. These functions are characterised by their interdependent sequence, meaning that the output of one process becomes the input of the next, as is the case with patching a physical synthesizer \citep{jack2019hydra}.
 
 
 
@@ -493,34 +513,33 @@ In the \textit{Map of Livecoding Environments Used in Some Linz Festivals and Ev
   \end{subfigure}
 \end{figure}
 
-Each notation defines the possibilities and experiments we could carry out. The limitations and specificities of each environment determine our creative approach.
-\cite{pattern} For instance, consider the visibility of each notation. If you are combining visual elements with wires or rewriting several lines of code, the intuitiveness of the notation is also important. This affects how we remember and bring together our thoughts on the stage.
+Each notation defines the possibilities and experiments we could carry out. The limitations and specificities of each environment determine our creative approach \citep{pattern}. For instance, consider the visibility of each notation. If you are combining visual elements with wires or rewriting several lines of code, the intuitiveness of the notation is also important. This affects how we remember and bring together our thoughts on the stage.\footnote{I have used different live coding environments and explored their possibilities. For me, text-based notations are easier to understand and perform. I found this kind of notation easier to manipulate live. In any case, patcher languages like Max/MSP, which is a visual language, have been useful to me when I want to use long tracks or audio in a performance. This is something that is really hard to do in Strudel or Tidal Cycles because they are based on really tiny repetitions to create rhythms. These live coding environments address specific demands.}
 
-As I mentioned before, \textit{Hydra} is a livecoding environment whose main outcome is video synthesis. \textit{Olivia Jack} created it and released it in 2019 as a collaborative networked livecoding visual tool. It is inspired by analog video synthesizers. \cite{jack2019hydra}  Video synthesizers take electronic signals, like voltages, and use them to create video. They work in modules, and each module has a standardized signal range. This means that you can connect the output of one module to the "voltage control" of any other module. These connections between modules 
-are called "patching."  \cite{furlong1983notes}
+As I mentioned before, \textit{Hydra} is a livecoding environment whose main outcome is video synthesis. Olivia Jack created it and released it in 2019 as a collaborative networked livecoding visual tool. It is inspired by analog video synthesizers \citep{jack2019hydra}.  Video synthesizers take electronic signals, like voltages, and use them to create video. They work in modules, and each module has a standardized signal range. This means that you can connect the output of one module to the "voltage control" of any other module. These connections between modules 
+are called "patching" \citep{furlong1983notes}.
 
 \begin{figure}[h]
   \centering
   \caption{\textit{Modules of the Visual Synth from Kunstuniversität}}
   \includegraphics[width=0.8\textwidth]{synth.jpg}
    \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Picture by \textit{Tina Frank.}}
+  \caption*{\textbf{Note:} Picture by Tina Frank.}
   \end{subfigure}
 \end{figure}
 
-In the summer of 2025, \textit{Tina Frank}, a designer, artist and
+In the summer of 2025, Tina Frank, a designer, artist and
 educator, started a class on analog video synthesizers at \textit{Kunstuniversität}. I took the class to experiment with the university's new acquisition, the video synthesizer, which arrived that semester (Figure 4). The synthesizer grew over the semester with new modules to experiment with. 
-This visual synthesizer has oscillators of different shapes that produce colors and geometries at certain frequencies. You can adjust these frequencies using MIDI or Control Voltage (CV). Some examples of CVs are waveshapers, ramps, and amplifiers.\cite{dreher2014history} 
+This visual synthesizer has oscillators of different shapes that produce colors and geometries at certain frequencies. You can adjust these frequencies using MIDI or Control Voltage (CV). Some examples of CVs are waveshapers, ramps, and amplifiers \citep{dreher2014history}. 
 
 A number of video synthesiser prototypes inspired by music synthesizers were developed in the late 1960s and 1970s. 
-For instance, in 1968, \textit{Eric Siegel}, a pioneer in the field, started working on the \textit{Processing Chrominance Synthesizer (PCS)}. 
+For instance, in 1968, Eric Siegel, a pioneer in the field, started working on the \textit{Processing Chrominance Synthesizer (PCS)}. 
 This was the first colouriser to separate black-and-white signals from cameras, videocassettes or broadcast signals, and add colour 
-to them.\cite{gibson2022live} Another notable example is the \textit{Rutt/Etra Scan Processor}, which was designed in 1973 by \textit{Steve Rutt, Bill Etra} and \textit{Louise Etra}. This is an analogue computer designed to manipulate the deviation signal that generates the raster scanning
-  in the cathode ray tube of the monitor in real time.\cite{etra1992rutt} \textit{Steina} and \textit{Woody Vasulka} pioneers in experimental video used 
-  \textit{Rutt/Etra Scan Processor} to expand the scope of their experiments with electronic imaging. In an interview, \textit{Woody Vasulka} talks about 
+to them \citep{gibson2022live}. Another notable example is the \textit{Rutt/Etra Scan Processor}, which was designed in 1973 by Steve Rutt, Bill Etra and Louise Etra. This is an analogue computer designed to manipulate the deviation signal that generates the raster scanning
+  in the cathode ray tube of the monitor in real time \citep{etra1992rutt}. Steina and Woody Vasulka pioneers in experimental video used 
+  \textit{Rutt/Etra Scan Processor} to expand the scope of their experiments with electronic imaging. In an interview, Woody Vasulka talks about 
   the reasons he started experimenting with video synthesis and the temporal aspects that distinguish this type of experimentation from 
   film and cinema. "Video has an immediacy and an aspect of time manipulation. The frame can be altered, as well as the color, keying, 
-  and feedback. All of these aspects elude the modalities of the filmic image." \cite{honeycuttdeep} One of the central themes of the \textit{Vasulkas'} work was the temporality and liveliness of the systems they used. They created performances and installations in which human interaction brought technological systems and human manipulation into dialogue. When it came to activating them, both parties had a degree of creative agency.
+  and feedback. All of these aspects elude the modalities of the filmic image" \citep{honeycuttdeep}. One of the central themes of the Vasulkas' work was the temporality and liveliness of the systems they used. They created performances and installations in which human interaction brought technological systems and human manipulation into dialogue. When it came to activating them, both parties had a degree of creative agency.
 
 \begin{figure}[h]
   \centering
@@ -528,11 +547,11 @@ to them.\cite{gibson2022live} Another notable example is the \textit{Rutt/Etra S
   \includegraphics[width=0.8\textwidth]{screensynth.png}
   \begin{subfigure} {1\textwidth}
   \caption*{\textbf{Note:} 
- Source: Screenshot of a patch by \textit{Sule Suarez}}
+ Source: Screenshot of a patch by Sule Suarez}
  \end{subfigure}
 \end{figure}
 
-When using an analog synthesizer, you have to plug in a source, which can be a shape, oscillation, or an external video source. Then, you can try effects like waveshapers and RGB signals. There's another way to alter the video signals: create feedback using your output as a source. You can also achieve this type of effects and feedback with \textit{Hydra}. At the \textit{Tina Frank´s} class I experimented with various modulations, ramps, and feedback patches on the analogue video synthesizer (Figure 5). This helped me also to understand the operations I perform with \textit{Hydra} in a more tactile way.\footnote{You can see a video of a patch I made in the Visual Synth class here: \includegraphics[height=20mm]{synthcode.png}}
+When using an analog synthesizer, you have to plug in a source, which can be a shape, oscillation, or an external video source. Then, you can try effects like waveshapers and RGB signals. There's another way to alter the video signals: create feedback using your output as a source. You can also achieve this type of effects and feedback with \textit{Hydra}. At the Tina Frank´s class I experimented with various modulations, ramps, and feedback patches on the analogue video synthesizer (Figure 5). This helped me also to understand the operations I perform with \textit{Hydra} in a more tactile way.\footnote{You can see a video of a patch I made in the Visual Synth class here: \includegraphics[height=20mm]{synthcode.png}}
 
 Let me explain in more detail how this feedback would in \textit{Hydra} notation. Take the following piece of code, for example:
 \[osc(10).thresh().invert(() => Math.sin(time)).out(o0)\]  
@@ -543,11 +562,11 @@ Now, I will take a modulation. Here, you must select a source again. It can be a
 
 If you try the code on the \textit{Hydra} website, you'll see that this small change of routing the output inside a modulation creates a loop that generates patterns like trails. Other results that can be achieved using feedback include fractals or infinite zooms.
 
-Another important live coding environment that is worth mentioning is \textit{Tidal Cycles}, which was developed by \textit{Alex McLean} during his PhD at \textit{Goldsmiths, University of London}, 
+Another important live coding environment that is worth mentioning is \textit{Tidal Cycles}, which was developed by Alex McLean during his PhD at \textit{Goldsmiths, University of London}, 
 between 2007 and 2011. 
 The idea behind this environment is based on patterns within sound. 
 It uses \textit{SuperDirt} as a framework to function as a sampler, and \textit{SuperCollider} to provide 
-backup functionality and audio processing.\cite{tidal2022} When you create a rhythm in \textit{Tidal Cycle}s, it repeats. You can divide the patterns into smaller sections of time, 
+backup functionality and audio processing \citep{tidal2022}. When you create a rhythm in \textit{Tidal Cycle}s, it repeats. You can divide the patterns into smaller sections of time, 
 but the structure is cyclical, not linear (Figure 6). One cycle follows another. This idea is especially good in some types of electronic music, 
 which are based on constant repetition. The program's library includes various drum machines, synthesizers, 
 and bass sounds that are commonly used in this genre.
@@ -561,31 +580,31 @@ and bass sounds that are commonly used in this genre.
   \end{subfigure}
 \end{figure}
 
-The interest of several live coding performers in bringing their practice to more mainstream venues, such as clubs and festivals, led to the creation of a format blending electronic music and algorithms. This type of event is known as an \textit{Algorave}; a term first coined by \textit{Alex McLean} and \textit{Nick Collins} in 2011.\cite{tidal} It seeks to bring together the cultures of rave parties\footnote{We can understand rave culture as the legacy of the 1980s movement that popularised genres such as drum and bass, techno and gabber, among others. This movement gradually gained popularity and evolved from a subculture into a global phenomenon. Today, nightclub culture remains closely tied to rave culture, with many musical genres that emerged in the 1980s continuing to play a central role.} and algorithmic music. \textit{Algoraves} provide a platform for performances and parties based exclusively on live coding electronic music.
+The interest of several live coding performers in bringing their practice to more mainstream venues, such as clubs and festivals, led to the creation of a format blending electronic music and algorithms. This type of event is known as an \textit{Algorave}; a term first coined by Alex McLean and Nick Collins in 2011 \citep{tidal}. It seeks to bring together the cultures of rave parties\footnote{We can understand rave culture as the legacy of the 1980s movement that popularised genres such as drum and bass, techno and gabber, among others. This movement gradually gained popularity and evolved from a subculture into a global phenomenon. Today, nightclub culture remains closely tied to rave culture, with many musical genres that emerged in the 1980s continuing to play a central role.} and algorithmic music. \textit{Algoraves} provide a platform for performances and parties based exclusively on live coding electronic music.
 
 
 
 In the summer of 2025, I started learning about and using \textit{Strudel}, a livecoding environment for sound. 
 \textit{Strudel} is a \textit{JavaScript} port of \textit{TidalCycles}. Although it is based on the same idea of 
-patterns and cycles, its notation is slightly different. \textit{Alex McLean} began working on this
+patterns and cycles, its notation is slightly different. Alex McLean began working on this
  port in 2022 and shared an open-source version of it on \textit{GitHub}. Two weeks after the port was
-  published, musician and developer \textit{Felix Ross} found the repository and contributed a \textit{REPL} (Read Eval Print-Loop)\footnote{A Read-Eval-Print Loop, or REPL, is a computer environment where user inputs are read and evaluated, and then the results are returned to the user. REPLs provide an interactive environment to explore tools available in specific environments or programming languages \cite{repl}} user interface and a scheduler the following day, enabling \textit{Strudel} to produce sound. After a year of development, \textit{Ross} and \textit{McLean} released the first version ready for wider public use.\cite{strudel}
+  published, musician and developer Felix Ross found the repository and contributed a \textit{REPL} (Read Eval Print-Loop)\footnote{A Read-Eval-Print Loop, or REPL, is a computer environment where user inputs are read and evaluated, and then the results are returned to the user. REPLs provide an interactive environment to explore tools available in specific environments or programming languages \citep{repl}} user interface and a scheduler the following day, enabling \textit{Strudel} to produce sound. After a year of development, Ross and McLean released the first version ready for wider public use \citep{strudel}.
 
-Since \textit{Strudel} was released, I've seen it become popular on social media platforms like \textit{Twitch, YouTube, Instagram,} and even \textit{TikTok}. Some artists with a strong social media presence, like Dj \textit{Dave} and \textit{Switch Angel}, have turned their attention to this environment to reach a broader audience. At the \textit{International Conference on Live Coding (ICLC 2024)} in Shanghai, China, \textit{Sarah Davis (Dj Dave)} gave a presentation titled \textit{Pop Live Coding Encounters: Reflections on Practice}, co-authored with \textit{Jack Armitage (Lil Data)} and \textit{Gus Lobban (Kero Kero Bonito)}. In it, they reflect on working with the expectations of non-live coders and what happens when a practice encounters pop. They also discuss their experiences communicating to the audience that the code they are seeing is not just an aesthetic choice, but actually what produces the audiovisual experience.\cite{davis}
+Since \textit{Strudel} was released, I've seen it become popular on social media platforms like \textit{Twitch, YouTube, Instagram,} and even \textit{TikTok}. Some artists with a strong social media presence, like \textit{Dj Dave} and \textit{Switch Angel}, have turned their attention to this environment to reach a broader audience. At the \textit{International Conference on Live Coding (ICLC 2024)} in Shanghai, China, Sarah Davis \textit{(Dj Dave)} gave a presentation titled \textit{Pop Live Coding Encounters: Reflections on Practice}, co-authored with Jack Armitage \textit{(Lil Data)} and Gus Lobban \textit{(Kero Kero Bonito)}. In it, they reflect on working with the expectations of non-live coders and what happens when a practice encounters pop. They also discuss their experiences communicating to the audience that the code they are seeing is not just an aesthetic choice, but actually what produces the audiovisual experience \citep{davis}.
 %Anyway, social media is a volatile place. 
 
 %I'm curious to see how this less niche approach to live coding will evolve through social media. For now, all I can say is that this has really encouraged me to try out more vocals or melodic structures in my performances. In a sense, I'm thinking maybe more pop.
 
 %\newpage
 
-\subsection{Livecoding Intersections}
+\section{Livecoding Intersections}
 
 In this section, I will mention some livecoding projects that explore the idea of \textit{liveness} from an intersectional perspective, bringing together different disciplines for experimentation.  These projects include research on choreography in digital spaces, experimental literary structures, and navigable, three-dimensional, multi-user spaces on the internet.
 
  %cambia el tono, no solo desde el deseo sino cómo estas referencias se vuelven importantes porque estan juntando varios elementos y los ponen en la dinamica interseccional
 
-The first project is \textit{Algorithmic Artscape} (Figure 7), a work-in-progress web platform developed by \textit{Joana Chicau}, a designer and researcher with a background in dance, and \textit{Celeste Betancur Gutiérrez}, an audiovisual software inventor, composer, and livecoder. The project was developed as part of the Tekhnē residency program in collaboration with TRAFO in Poland and Q-O2 in Belgium in 2024. \footnote{You can visit the web of Algorithmic Artscape here: \href{https://algorithmic-scape.art/}https://algorithmic-scape.art/}. 
-This website offers a variety of programming languages and tools for live coding of audio and visuals. There are buttons in the Navigator section that open pop-up windows with a dialog box for writing code in environments like \textit{Hydra, ChucK}, and \textit{Cqenze. Cqenze} is a mini-language designed by \textit{Celeste Betancur} for creating musical or color patterns that use implicit cyclic timing. There are also some AI features for generating sound. These tools include a machine learning model and a set of scores to inspire artistic creation, whether through the use of these tools or external sources, such as video and audio recordings, writing, dance, and photography. \cite{artscape} \footnote{I had the opportunity to learn about this project in a workshop at 2025 \textit{International Conference of Live Coding} in Barcelona, one of whose main venues was the \textit{UOC Universidad Abierta de Catalunya}. Other venues included concert halls such as \textit{Sala Beckett} and \textit{Laut}.
+The first project is \textit{Algorithmic Artscape} (Figure 7), a work-in-progress web platform developed by Joana Chicau, a designer and researcher with a background in dance, and Celeste Betancur Gutiérrez, an audiovisual software inventor, composer, and livecoder. The project was developed as part of the Tekhnē residency program in collaboration with TRAFO in Poland and Q-O2 in Belgium in 2024. \footnote{You can visit the web of Algorithmic Artscape here: \href{https://algorithmic-scape.art/}https://algorithmic-scape.art/}. 
+This website offers a variety of programming languages and tools for live coding of audio and visuals. There are buttons in the Navigator section that open pop-up windows with a dialog box for writing code in environments like \textit{Hydra, ChucK}, and \textit{Cqenze. Cqenze} is a mini-language designed by Celeste Betancur for creating musical or color patterns that use implicit cyclic timing. There are also some AI features for generating sound. These tools include a machine learning model and a set of scores to inspire artistic creation, whether through the use of these tools or external sources, such as video and audio recordings, writing, dance, and photography \citep{artscape}. \footnote{I had the opportunity to learn about this project in a workshop at 2025 \textit{International Conference of Live Coding} in Barcelona, one of whose main venues was the \textit{UOC Universidad Abierta de Catalunya}. Other venues included concert halls such as \textit{Sala Beckett} and \textit{Laut}.
 The theme in 2025 was liveness, and the main topics were \textit{Specialized Tools and DSLs, Live Coding Beyond Computers and Interfaces, Audio-Visual Live Coding, Speculative Futures, Communities and Artistic Practices}, and \textit{Collaborative Live Coding}}
 
 \begin{figure}[h]
@@ -600,17 +619,16 @@ The theme in 2025 was liveness, and the main topics were \textit{Specialized Too
 This project incorporates the body into the creative process in a web environment. When you open the \textit{Hydra} pop-up window, the webcam activates by default. You appear on the web, and therefore, you become an object that can be modified through code. Then, different scores appear in the center of the screen, such as "turn," "take a different direction," "reverse," "shift the attention towards something else," and "move." These scores work as activators between the interface and the performer, who can use this set of instructions to initiate an action.  
 These two artists have used this platform for performances in which the movement of the body and the web interface are directly related. The movement, visual, and sound scores are in constant change. Expanding the relationship between the laptop interface and the performer.
 
- This work explores the concept of the body and the choreographic possibilities that can be explored in web spaces, as well as their relationship to live coding as a form of writing that activates different meanings and physical signs. \textit{Joana Chicau} has conducted research on choreographic processes and their relationship to live coding. She defines the concept of "liveness" as it relates to the act of writing code and the connections it establishes with the body: 
+ This work explores the concept of the body and the choreographic possibilities that can be explored in web spaces, as well as their relationship to live coding as a form of writing that activates different meanings and physical signs. Joana Chicau has conducted research on choreographic processes and their relationship to live coding. She defines the concept of "liveness" as it relates to the act of writing code and the connections it establishes with the body: 
 
  \begin{adjustwidth}{1.27cm}{1.27cm}
 The liveness of code writing became a way to activate the choreographic-code, exposing various processes and dynamics of web computing while enhancing the physicality of the body—the body that is in constant friction between the constative (reality describing) and performative (reality producing). Engaging with different forms of choreographic
-thinking has been a way to bridge and enhance the somatic and semantic within coding. \cite{usermanual} \end{adjustwidth} 
+thinking has been a way to bridge and enhance the somatic and semantic within coding \citep{usermanual}. \end{adjustwidth} 
  
 In \textit{ Algorithmic Artscape}, the act of coding involves declaring and executing actions, where the presence of the body becomes more evident through different strategies within the webpage. The choreography here becomes a dynamic process of creation that, instead of being fixed, lends itself to improvisation, taking the different signs and inputs that the website itself provides. This work brings together choreography and digital spaces, offering a more physical relationship between humans and machines. This communication is no longer conveyed only through different programming languages, but also through the various gestures and movements that this interface can activate in the body.
 
 
-Another notable project is the \textit{Betablocker} live-coding system, which was introduced in a 2006 study by artist and scientist \textit{Till Bovermann} and researcher and game designer \textit{Dave Griffiths}. It combines live coding with computational processing. As \textit{Boverman} and \textit{Griffiths} state in their investigation(2014), \textit{Betablocker} brings to light many different strategies for presenting computation as tangible material by making computational processing as much a part of live coding as the code that describes it. \textit{Betablocker} features an imaginary central processing unit architecture designed specifically for live coding. It uses a byte code-level visualization and an icon-based assembler (Figure 8). The primary design focus of \textit{Betablocker} allows for easy modifications, enabling introspection by adding probes and customization by altering the instruction set. It is designed to be controlled by a gamepad, using the \textit{Fluxus} gaming engine. This translates the traditional way of using live coding, which is to create and modify code by typing on a keyboard.
-\cite{bovermann2014computation}
+Another notable project is the \textit{Betablocker} live-coding system, which was introduced in a 2006 study by artist and scientist Till Bovermann and researcher and game designer Dave Griffiths. It combines live coding with computational processing. As Boverman and Griffiths state in their investigation(2014), \textit{Betablocker} brings to light many different strategies for presenting computation as tangible material by making computational processing as much a part of live coding as the code that describes it. \textit{Betablocker} features an imaginary central processing unit architecture designed specifically for live coding. It uses a byte code-level visualization and an icon-based assembler (Figure 8). The primary design focus of \textit{Betablocker} allows for easy modifications, enabling introspection by adding probes and customization by altering the instruction set. It is designed to be controlled by a gamepad, using the \textit{Fluxus} gaming engine. This translates the traditional way of using live coding, which is to create and modify code by typing on a keyboard \citep{bovermann2014computation}.
 
 \begin{figure}[h]
   \centering
@@ -621,38 +639,36 @@ Another notable project is the \textit{Betablocker} live-coding system, which wa
   \end{subfigure}
 \end{figure}
 
-When \textit{Betablocker} is implemented on the stage, different blocks can be connected to create code and processes that modify and destroy each other within 256 bytes of memory. The machine's memory and processes are integral to the performance and these are projected to the public. This software allows you to visualize computational processes in a playful way while they are sonically translated. However, this is not evident to an audience unfamiliar with the conventions and set of instructions, which can lead to wide interpretations. On stage, a grid of blocks with different designs appears and disappears. In any case, from the perspective of an audience unfamiliar with the project, it can be inferred that the blocks that interact with each other and that the performance connects and disconnects are creating the audio input. In terms of its visual design and execution, \textit{Betablocker} is closer to the concept of an \textit{esoteric programming language} \footnote{For example, one can consider the \textit{esoteric programming language Piet}, which resembles the visual representation of \textit{Betablocker}. This language generates bitmaps resembling abstract paintings by \textit{Piet Mondrian}, and the code is executed by moving the cursor across a grid.}. These are unusual or weird languages in which the visual or conceptual aspect often takes prominence over the functional aspect.
+When \textit{Betablocker} is implemented on the stage, different blocks can be connected to create code and processes that modify and destroy each other within 256 bytes of memory. The machine's memory and processes are integral to the performance and these are projected to the public. This software allows you to visualize computational processes in a playful way while they are sonically translated. However, this is not evident to an audience unfamiliar with the conventions and set of instructions, which can lead to wide interpretations. On stage, a grid of blocks with different designs appears and disappears. In any case, from the perspective of an audience unfamiliar with the project, it can be inferred that the blocks that interact with each other and that the performance connects and disconnects are creating the audio input. In terms of its visual design and execution, \textit{Betablocker} is closer to the concept of an \textit{esoteric programming language} \footnote{For example, one can consider the \textit{esoteric programming language Piet}, which resembles the visual representation of \textit{Betablocker}. This language generates bitmaps resembling abstract paintings by Piet Mondrian, and the code is executed by moving the cursor across a grid.}. These are unusual or weird languages in which the visual or conceptual aspect often takes prominence over the functional aspect.
 
 \textit{Betablocker} challenges the traditional concept of a written programming language. Here, we encounter a visual language that employs graphic conventions associated with the computational processes of an imaginary computer. \textit{Betablocker} then assigns a sound representation to these processes. For instance, the computer's performance influences the audio output. If the memory becomes overloaded, some processes will terminate, affecting the sound. Another interesting aspect is how the performer interacts with the software: by connecting different blocks to create sound and by moving within a grid of blocks to create or remove them. This places improvisation in the playful aspect of the software rather than in the performer's ability to type code on stage. 
 
-Finally, another project worth mentioning is \textit{VERSNIZ}, which incorporates live coding within a multi-user virtual space accessible via a browser. This project was developed by the artist and computer programmer Damian Dziwis(2023). Different live coding environments can be incorporated into web-based applications, as demonstrated by the \textit{Algorithmic Artscape} project mentioned previously in this chapter. \textit{VERSNIZ} was built using the A-Frame framework, which was developed using JavaScript. This framework enables the creation of VR(virtual reality) and AR (augmented reality) \footnote{AR overlays digital elements onto the real world using cameras (e.g., smartphone apps), while VR completely immerses users in a simulated, artificial environment via a headset.\cite{ar}} environments and can be implemented using HTML syntax.\footnote{HTML and JavaScript are the two main components of web development. While HTML (Hypertext Markup Language) provides the static skeleton and content of a page, JavaScript (JS) acts as the "brain" or "muscles," adding logic, movement, and interactivity.\cite{java} } These \textit{livecoding} environments can also be hosted on websites by using this framework, which combines JavaScript and HTML.\cite{ver}
+Finally, another project worth mentioning is \textit{VERSNIZ}, which incorporates live coding within a multi-user virtual space accessible via a browser. This project was developed by the artist and computer programmer Damian Dziwis(2023). Different live coding environments can be incorporated into web-based applications, as demonstrated by the \textit{Algorithmic Artscape} project mentioned previously in this chapter. \textit{VERSNIZ} was built using the A-Frame framework, which was developed using JavaScript. This framework enables the creation of VR (virtual reality) and AR (augmented reality) \footnote{AR overlays digital elements onto the real world using cameras (e.g., smartphone apps), while VR completely immerses users in a simulated, artificial environment via a headset \citep{ar}.} environments and can be implemented using HTML syntax.\footnote{HTML and JavaScript are the two main components of web development. While HTML (Hypertext Markup Language) provides the static skeleton and content of a page, JavaScript (JS) acts as the "brain" or "muscles," adding logic, movement, and interactivity \citep{java}.} These \textit{livecoding} environments can also be hosted on websites by using this framework, which combines JavaScript and HTML \citep{ver}.
 
 \begin{figure}[h]
   \centering
-  \caption{\textit{
-Mnemonic Garden - Live Coding the Metaverse} }
+  \caption{\textit{Mnemonic Garden - Live Coding the Metaverse} }
   \includegraphics[width=0.8\textwidth]{graphics/Mnemonic Garden - Live Coding the Metaverse - YouTube - Google Chrome 22_04_2026 4_12_35 p. m..png}
   \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Performance by \textit{
-Damian Dziwis} using VERSNIZ at „die digitale“ festival, Düsseldorf, 2022. Source: https://www.youtube.com/watch?v=HJGbvXs45sk}
+  \caption*{\textbf{Note:} Performance by Damian Dziwis using VERSNIZ at „die digitale“ festival, Düsseldorf, 2022. Source: https://www.youtube.com/watch?v=HJGbvXs45sk}
   \end{subfigure}
 \end{figure}
 
 
-\textit{VERSNIZ} implements IBNIZ as a live coding component that serves as the basis for creating various visual and audio elements within this immersive, multi-user environment. IBNIZ, which stands for 'Ideally Bare Numeric Impression Gizmo', was created by developer and artist \textit{Ville-Matias Heikkilä}(2012).\cite{ibniz2} This programming language generates video and audio from very short strings of code and can be categorized as an esoteric programming language due to its minimalism. Since the creation of IBNIZ, various musical experiments have emerged from the use of this live coding language. Some time later, the term \textit{bytebeat} was coined to describe an experimental type of music made from (typically short) mathematical formulas that define waveforms as a function of time.\cite{ibniz} This genre is related to others such as chiptune or 8-bit. The use of virtual keyboards in VR is often limited to short texts due to the difficulty of using them with the available input devices. For this reason, IBNIZ is a good choice for a performing experience in this type of VR environment (Figure 9).\cite{ver}.
+\textit{VERSNIZ} implements IBNIZ as a live coding component that serves as the basis for creating various visual and audio elements within this immersive, multi-user environment. IBNIZ, which stands for 'Ideally Bare Numeric Impression Gizmo', was created by developer and artist Ville-Matias Heikkilä (2012) \citep{ibniz2}. This programming language generates video and audio from very short strings of code and can be categorized as an esoteric programming language due to its minimalism. Since the creation of IBNIZ, various musical experiments have emerged from the use of this live coding language. Some time later, the term \textit{bytebeat} was coined to describe an experimental type of music made from (typically short) mathematical formulas that define waveforms as a function of time \citep{ibniz}. This genre is related to others such as chiptune or 8-bit. The use of virtual keyboards in VR is often limited to short texts due to the difficulty of using them with the available input devices. For this reason, IBNIZ is a good choice for a performing experience in this type of VR environment (see fig.9) \citep{ver}.
 
 
-In the \textit{VERSNIZ} environment, live coding objects can be moved and modified in space. This allows multiple objects to interact during the performance. These live coding objects enable the creation of visual forms, animation, and music. This composes both the space and the performative experience.\cite{ver} Creating a performance in this type of virtual environment makes it possible to hold events in physical places and in the virtual realm. \textit{VERSNIZ} is an innovative project that makes use of immersive VR environments, allowing not only for audiovisual output to be considered, but also for the construction of the performance space itself, which is only possible in this type of virtual environment.
+In the \textit{VERSNIZ} environment, live coding objects can be moved and modified in space. This allows multiple objects to interact during the performance. These live coding objects enable the creation of visual forms, animation, and music. This composes both the space and the performative experience \citep{ver}. Creating a performance in this type of virtual environment makes it possible to hold events in physical places and in the virtual realm. \textit{VERSNIZ} is an innovative project that makes use of immersive VR environments, allowing not only for audiovisual output to be considered, but also for the construction of the performance space itself, which is only possible in this type of virtual environment.
 
 
 As mentioned in the previous projects, different strategies have been employed in which code is embedded in interfaces that challenge the role of the body in computer-based performances. For example, in \textit{Algorithm Artscape}, several programming languages interpellate the performer to create different gestures with the body and with the code. This means that the role of the body is not limited to moving the cursor on the screen, but also involves a gestural and physical interaction with the interface that expands it. In the case of \textit{VERSNIZ}, the body, when in a VR environment, becomes an extension of itself in this immersive reality. The body is contained within a virtual space that can be explored in different directions and which is created and modified by 3D objects and live coding components. This allows both the performer and the audience to inhabit this virtual space, either within the VR environment with the headset or through a projection in which one can observe how the performer creates their space.
 
-These projects aim to create more experimental programming languages and more dynamic ways to activate them. This approach offers varied ways of conceiving code and performance, combining elements of software development with elements of live arts, sound and visual arts. The development of these types of projects generates diverse research in which code is not necessarily linked to the optimisation of programs, allowing different intersections between disciplines and collaborations between artists, developers and scientists who want to explore the different facets that technology can have from a sensitive approach. For example, computational processes can be transferred to a set of conventions that are then translated into audio, which can generate different sound compositions, as we saw in the Betablocker project. These operations generate expressiveness in technological elements to which a creative role is not usually assigned.  These collaborative and open investigations counterbalance many technology industries where the development of devices and programs is carried out with a high degree of secrecy and control over the results. The mentioned projects demonstrate a greater degree of uncertainty and openness to reappropriations and collaborations, such as the VERSNIZ project, which uses IBNIZ, an earlier livecoding language, to create its implementation in the VR world. These types of operations demonstrate an active community that builds on existing research to generate new interpretations and create and explore in various directions, allowing autonomy regarding the tools involved.
+These projects aim to create more experimental programming languages and more dynamic ways to activate them. This approach offers varied ways of conceiving code and performance, combining elements of software development with elements of live arts, sound and visual arts. The development of these types of projects generates diverse research in which code is not necessarily linked to the optimization of programs, allowing different intersections between disciplines and collaborations between artists, developers and scientists who want to explore the different facets that technology can have from a sensitive approach. For example, computational processes can be transferred to a set of conventions that are then translated into audio, which can generate different sound compositions, as we saw in the Betablocker project. These operations generate expressiveness in technological elements to which a creative role is not usually assigned.  These collaborative and open investigations counterbalance many technology industries where the development of devices and programs is carried out with a high degree of secrecy and control over the results. The mentioned projects demonstrate a greater degree of uncertainty and openness to reappropriations and collaborations, such as the VERSNIZ project, which uses IBNIZ, an earlier livecoding language, to create its implementation in the VR world. These types of operations demonstrate an active community that builds on existing research to generate new interpretations and create and explore in various directions, allowing autonomy regarding the tools involved.
 
 
 \newpage
 
-\section{Show your Screen}
+\chapter{Show your Screen}
 
 I will talk about some of my own performances and those I have taken part in. I will identify the different working methods and discoveries that appeared during the process. I would also like to explore the different qualities of time in various performance modes and address the live aspect of \textit{livecoding}, considering its potential for experimentation. I would also like to talk about the importance of community in \textit{livecoding} and how this can lead to new approaches to time and performance.
 
@@ -663,7 +679,7 @@ when there is more than one performer on stage.
 
 Before a performance, I spend time rehearsing and planning what I want to do, the sounds I am going to use, and the images or textures that will be on stage. This process is similar to painting: you prepare a canvas, select a color palette, and choose a motif. However, other experiences within the practice escape this type of prior ideation and are subject to the moment itself and the unpredictability of the people and elements involved in the performance. Examples include jam sessions, collective performances, and 'from scratch' performances.
 
-\subsection{Alternative archive: Not dead but not alive}
+\section{Alternative archive: Not dead but not alive}
 
 To create a more complete documentation of the performances I will mention in this thesis, I examined my own files and live coding sessions. In these files, I found sound recordings and code excerpts that I created using \textit{Hydra} to generate visuals. My intention is to recreate some of the essence of these performances, even if only in part.   I have also been thinking lately about how to create an archive of something that is so difficult to archive, such as a performance, where the emotional, spatial and temporal qualities can never be reproduced as they were at the moment they occurred. This archive is meant to provide additional material to help you better imagine what happened in those performances. Even if it cannot be an exact reproduction of the complete experience, you can gain an insight into the processes.
 
@@ -688,26 +704,26 @@ In the middle you can find \textit{City Landscapes}. On the the left is the elec
 There is a button in the top right corner for finding more information. 
 In the middle, you can activate the sound. In the top left corner, 
 there is a button that shows the code for the visual. My idea is that you will understand this text better,
-and you will also have the opportunity to experiment with the code that I am sharing with you. In the best-case scenario, it may also inspire you to see how it works and give you the opportunity to modify it.
+and you will also have the opportunity to experiment with the code that I am sharing with you. In the best-case scenario, it may also inspire you to see how it works and give you the opportunity to modify it (Figure 10).
 
 
 I’m aware that this documentation is incomplete; it only captures a precise moment from the whole event, like a photograph. Here, I focused on performance practices, which have an intricate relationship with time and the ephemeral. This makes archiving challenging.
 
-As the performer artist \textit{Stuart Brisley} (2008, as cited in \textit{Bamford}, 2014) points to the temporal paradox on performance:
+As the performer artist Stuart Brisley (2008, as cited in Bamford, 2014) points to the temporal paradox on performance:
  \begin{adjustwidth}{1.27cm}{1.27cm}The issue is not one of the ephemeral versus the permanent. Nothing is forever. 
  It is the question of the relative durations of the impermanent.
  A performance has qualities of singular, irreducible, unrepresentable 
- but still the event will be repeated in thought, record and memory.\cite{bamford2014working}
+ but still the event will be repeated in thought, record and memory \citep{bamford2014working}.
  \end{adjustwidth}
 
 Understanding of performance lives in two instances:
- one where the event unfolds and brings different senses and meanings to everyone present, and another where a sense of knowing is built through revision. This understanding can only be grasped by inhabiting the specific qualities of duration and time. The second instance is the after-moment, where revision occurs and a sense of knowing and reflection is built.\cite{performrepeat}
+ one where the event unfolds and brings different senses and meanings to everyone present, and another where a sense of knowing is built through revision. This understanding can only be grasped by inhabiting the specific qualities of duration and time. The second instance is the after-moment, where revision occurs and a sense of knowing and reflection is built \citep{performrepeat}.
 
 So, think of this section as a small journal of processes. Here, the grammar is a fragment of code running inside this page. 
 
 
 
-\subsection{Dusk of an electric forest}
+\section{Dusk of an electric forest}
 \vspace{.5cm}
 
 \textit{Dusk of an Electric Forest} was a performance piece that I created for the \textit{Sonic Fever} event at the \textit{Ars Electronica Campus} in 2024.  The call for submissions for that edition invited reflection on questions such as:
@@ -723,10 +739,10 @@ So, think of this section as a small journal of processes. Here, the grammar is 
   \item How can music alter narratives and adapt to the constantly shifting ecosystem in which it is created? Is it possible to change the listener's attention into a shared space and an imaginative space? 
   \item Can we decentralize the human realm, amplifying the voices of non-human agents?
 \end{itemize}
-\cite{kunst}
+\citep{kunst}.
 \end{adjustwidth}
 
-When conceptualising the performance, I took the sounds of a hyper-technological society as my starting point: noise, the incessant hum of construction, machines that shake the ground, the saturation of cities and silence, the decline or absence of other species. These factors have all shaped the identity of the current era, \textit{the Anthropocene}, which is characterised by human activity and its environment impact. The concept of human expansion and growth has led to a constant state of emergency. We are suffering the consequences of our own actions, and paradoxically, our surroundings become quieter amid our own noise in these environments that we have modified.\footnote{You can see the video documentation of the performance here:\includegraphics[height=20mm]{frame.png}}For the performance, I took inspiration from some of the concepts of acoustic ecology of the author \textit{Bernie Krause}, as well as from feminist and decolonial theory, which incorporates Latin American mythology and new spiritualities, as set out by the author and philosopher \textit{Gloria Anzaldúa}. In this performance, the visuals and sound engage in a constant dialogue that begins with a mass of noise and interference accompanied by grainy, saturated images; Throughout the performance, both the sound and the visuals gradually evolve until they become more defined; the sound grows more rhythmic, insect sounds emerge, and a snake appears in the visuals, which was chosen for its archetypal symbolism of change and renewal.
+When conceptualizing the performance, I took the sounds of a hyper-technological society as my starting point: noise, the incessant hum of construction, machines that shake the ground, the saturation of cities and silence, the decline or absence of other species. All of these factors have shaped the identity of the current era, \textit{the Anthropocene}, which is characterized by human activity and its impact on the environment. The concept of human expansion and growth has led to a constant state of emergency. We are suffering the consequences of our own actions, and paradoxically, our surroundings become quieter amid our own noise in these environments that we have modified.\footnote{You can see the video documentation of the performance here:\includegraphics[height=20mm]{frame.png}}For the performance, I took inspiration from some of the concepts of acoustic ecology of the author Bernie Krause, as well as from feminist and decolonial theory, which incorporates Latin American mythology and new spiritualities, as set out by the author and philosopher Gloria Anzaldúa. In this performance, the visuals and sound engage in a constant dialogue that begins with a mass of noise and interference accompanied by grainy, saturated images; throughout the performance, both the sound and the visuals gradually evolve until they become more defined; the sound grows more rhythmic, insect sounds emerge, and a snake appears in the visuals, which was chosen for its archetypal symbolism of change and renewal.
 
 \begin{figure}[h]
   \centering 
@@ -739,20 +755,20 @@ When conceptualising the performance, I took the sounds of a hyper-technological
 \end{figure}
 
 
-For this performance, I was influenced by the work of \textit{Bernie Krause} on biophony and soundscapes. 
+For this performance, I was influenced by the work of Bernie Krause on biophony and soundscapes. 
 In the late 1960s, he began researching and documenting the sounds of natural ecosystems around the world. 
 His archive includes ecosystems that have since been wiped out by human activity. 
 He has collected over 5,000 hours of recordings from natural environments, 
-including at least 15,000 terrestrial and marine species from around the world \cite{ribac2016bernie}. Krause coined the term \textit{Animal Orchestra} to describe the sonic diversity of different species, which produce sounds across a wide range of frequencies and pitches, much like the interplay of various musical instruments in an orchestra (figure 11). Krause and scientist Stuart Gage developed the acoustic niche hypothesis, which posits that living beings that share an ecosystem
- evolve to produce sounds with different rhythms and tones so as not to interfere with each other \cite{krause2016wild}. 
+including at least 15,000 terrestrial and marine species from around the world \citep{ribac2016bernie}. Krause coined the term \textit{Animal Orchestra} to describe the sonic diversity of different species, which produce sounds across a wide range of frequencies and pitches, much like the interplay of various musical instruments in an orchestra (figure 11). Krause and scientist Stuart Gage developed the acoustic niche hypothesis, which posits that living beings that share an ecosystem
+ evolve to produce sounds with different rhythms and tones so as not to interfere with each other \citep{krause2016wild}. 
  This is important for finding mates, food, and water.
   It is a harmonious system in which different species coexist alongside their diverse sounds, which are astonishingly beautiful. 
 
-Listening to \textit{Bernie's} early recordings from the 1970s instantly evokes a sense of nostalgia for a distant,
+Listening to Bernie's early recordings from the 1970s instantly evokes a sense of nostalgia for a distant,
   highly diverse world that is far removed from city life. Although many ecosystems remain intact, many are under threat.  The sound of cars or air traffic makes it difficult for many species to hear each other, leaving them vulnerable to predators or making it difficult for them to mate. And as for us, our noise pollution is often unbearable. While cities may have an interesting soundscape, rapid growth or change leads to noise becoming predominant.
 
 
-\textit{Krause} made his first sound recording of \textit{Sugarloaf State Park} in \textit{Sonoma Valley, California}, 
+Krause made his first sound recording of \textit{Sugarloaf State Park} in Sonoma Valley, California, 
 with the intention of documenting the environment near his home. From then on, he regularly 
 recorded that park. In 2011, the area suffered a severe drought that lasted for years.
  As can be seen in Figure 12 , the spectrogram shows how the soundscape gradually falls silent: 
@@ -765,7 +781,7 @@ recorded that park. In 2011, the area suffered a severe drought that lasted for 
     \caption{\textit{Spectrogram of the soundscape}}
   \includegraphics[width=0.8\textwidth]{specto.png}
 \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Spectrogram of the soundscape of Sugarloaf State Park, California, from 2011 to 2017. By \textit{Bernie Krause}. Source: https://flypaper.soundfly.com/wp-content/uploads/2017/12/Screen-Shot-2017-02-23-at-6.52.45-PM.png}
+  \caption*{\textbf{Note:} Spectrogram of the soundscape of Sugarloaf State Park, California, from 2011 to 2017. By Bernie Krause. Source: https://flypaper.soundfly.com/wp-content/uploads/2017/12/Screen-Shot-2017-02-23-at-6.52.45-PM.png}
   \end{subfigure}
 \end{figure}
 
@@ -781,12 +797,12 @@ in line with the sound.
    \caption{\textit{Hydra visual from Dusk of an Electric Forest.}}
   \includegraphics[width=0.8\textwidth]{unnamed.png}
  \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Screenshot by \textit{Sule Suarez}}
+  \caption*{\textbf{Note:} Screenshot by Sule Suarez}
   \end{subfigure}
 \end{figure}
 
 Drawing inspiration from the mythical figure of the snake woman or the goddess \textit{Coatlicue}, 
-as described by \textit{Gloria Anzaldúa} in \textit{Borderlands: The Frontier, the new mestiza}, this animal embodies both destruction and fertility, and is resistance itself \cite{anzaldua2021borderlands}. \footnote{ In pre-Hispanic cosmogony, the snake acts as a guide between life and death. For instance, there is the legend of \textit{Bachué}, the woman who founded the villages of the \textit{Bogotá} savannah. Once her children were ready for her departure, she plunged into the river, transformed into a snake, and disappeared without a trace.} At some point in the performance, the snake appears and moves through the hyper-glitched cartographies that made up the main composition of the visuals until that point. The snake falls and approaches the audience with its mouth open and fangs exposed, appearing and disappearing in a loop.
+as described by Gloria Anzaldúa in \textit{Borderlands: The Frontier, the new mestiza}, this animal embodies both destruction and fertility, and is resistance itself \citep{anzaldua2021borderlands}. \footnote{ In pre-Hispanic cosmogony, the snake acts as a guide between life and death. For instance, there is the legend of \textit{Bachué}, the woman who founded the villages of the Bogotá savannah. Once her children were ready for her departure, she plunged into the river, transformed into a snake, and disappeared without a trace.} At some point in the performance, the snake appears and moves through the hyper-glitched cartographies that made up the main composition of the visuals until that point. The snake falls and approaches the audience with its mouth open and fangs exposed, appearing and disappearing in a loop.
 
 %además de los simbolos de fertilidad y abundancia,  la serpiente en culturas prehispanicas actua como un simbolo entre la vida y la muerte.(sugerencia por la repeticion de la palabra fertilidad)
 
@@ -798,12 +814,12 @@ Just as snakes shed their skin, we are constantly changing and leaving behind th
    \caption{\textit{Picture from Dusk of an Electric Forest performance}}
   \includegraphics[width=0.8\textwidth]{snake.jpeg}
  \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Photo by \textit{Flavia Somarriba}}
+  \caption*{\textbf{Note:} Photo by Flavia Somarriba}
   \end{subfigure}
 \end{figure}
 
-For me, \textit{Anzaldua} has been a key figure in feminism and philosophy. In her writing, she reimagines \textit{Mexican} and \textit{Chicano} \footnote{Chicano, identifier for people of Mexican descent born in the United States. The term came into popular use by Mexican Americans as a symbol of pride during the Chicano Movement of the 1960s.
-The Chicano community created a strong political and cultural presence in response to years of social oppression and discrimination in a predominantly Caucasian American society \cite{chicano}} spirituality from the perspective of historical and political violence and domination. She is also a key figure when it comes to identity issues related to mestizaje and borders. \textit{Gloria Anzaldua} explores forms of resistance by critically and constantly reconfiguring our identity formations and ontological categories, with the aim of achieving positive social change and global justice. Another key aspect of this performance was considering symbols that resist Western homogenization and colonial processes. We should ask ourselves what we can learn from cosmogonies that seem so distant to us, how identity can be built from miscegenation, mixtures, and exchanges, and how we can update our own worldviews. Although we are aware of the environmental emergency in which we live, it seems that our relationship with accelerated change remains unchanged. Perhaps in the future, we will either become a homogeneous mass of noise or make room for other elements to emerge more organically.
+For me, Anzaldua has been a key figure in feminism and philosophy. In her writing, she reimagines Mexican and Chicano \footnote{Chicano, identifier for people of Mexican descent born in the United States. The term came into popular use by Mexican Americans as a symbol of pride during the Chicano Movement of the 1960s.
+The Chicano community created a strong political and cultural presence in response to years of social oppression and discrimination in a predominantly Caucasian American society \citep{chicano}.} spirituality from the perspective of historical and political violence and domination. She is also a key figure when it comes to identity issues related to mestizaje and borders. Gloria Anzaldua explores forms of resistance by critically and constantly reconfiguring our identity formations and ontological categories, with the aim of achieving positive social change and global justice. Another key aspect of this performance was considering symbols that resist Western homogenization and colonial processes. We should ask ourselves what we can learn from cosmogonies that seem so distant to us, how identity can be built from miscegenation, mixtures, and exchanges, and how we can update our own worldviews. Although we are aware of the environmental emergency in which we live, it seems that our relationship with accelerated change remains unchanged. Perhaps in the future, we will either become a homogeneous mass of noise or make room for other elements to emerge more organically.
 
 For this performance, I aimed to transform the chaotic sounds of the \textit{Anthropocene} into repetitive, rhythmic noise by turning them into grainy, elongated and distorted sounds. I selected sounds that typically accompany urban growth, such as construction work, alarms, and machinery. These sounds are very prevalent today. Take, for instance, the construction of increasingly tall towers, which often takes precedence over architectural and landscape conservation. This maintains a city in a state of constant change and noise, resulting from constant urban renewal. Despite all this noise, other small animals, such as insects and birds, can still be heard, finding a place in our fast-paced way of life. But how can we reverse the silence of the Anthropocene when it is spreading and dominating other species and natural cycles? Perhaps one day, humans will no longer have the desire to spread without limits and our sounds will become diverse once again. 
 
@@ -814,7 +830,7 @@ For this performance, I aimed to transform the chaotic sounds of the \textit{Ant
    \caption{\textit{Dusk of an Electric Forest.}}
   \includegraphics[width=0.8\textwidth]{codigo.png}
  \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Hydra code. Screenshot by \textit{Sule Suarez}}
+  \caption*{\textbf{Note:} Hydra code. Screenshot by Sule Suarez}
   \end{subfigure}
 \end{figure}
 
@@ -829,25 +845,25 @@ This tool is an interface between various components, such as external sample li
 %en cuanto a tydal cycles al ser uno de los programas mas populares dentro de la comunodad de live coding, tiene mucho soporte de la comunidad y es más facil aprenderlo en espacio como talletres y foros en linea.sin embargo la curva de aprendizaje puede tomar mas tiempo pues se necesita entender su funcionamiento, su instalación no es tan sencilla, y como se conecta con otras librerias y su audio en Engine que es supercolider. tiene una documentación extensa y su pagina brinda tutoriales detallados de uso.
 %(es una interconexuion dentro de varios componentes )
 
-\subsection{Empty Beginning}
+\section{Empty Beginning}
 
 %The 'from scratch' approach is playful and embraces error. There is no pre-established order, and a musical composition is created in real time. Starting with a 'blank sheet', the performance itself then develops. At the same time, the audience participates and witnesses the performer developing their ideas, with algorithms serving as the primary notation. Audience members do not need to be familiar with programming to enjoy the performance.
 
-The "from scratch" approach is playful and embraces error. Since there is no pre-established order, a musical composition is created in real time. Starting with a "blank sheet," the performance develops organically. At the same time, the audience participates by witnessing the performer develop their ideas. Algorithms serve as the primary notation. Audience members do not need to be familiar with programming to enjoy the performance. The visible code reveals artistic thought 'in action', embedded in the materiality and mediality of the performance itself \cite{melete}.
+The "from scratch" approach is playful and embraces error. Since there is no pre-established order, a musical composition is created in real time. Starting with a "blank sheet," the performance develops organically. At the same time, the audience participates by witnessing the performer develop their ideas. Algorithms serve as the primary notation. Audience members do not need to be familiar with programming to enjoy the performance. The visible code reveals artistic thought 'in action', embedded in the materiality and mediality of the performance itself \citep{melete}.
 
 For me, the first few minutes of a performance 'from scratch' can be overwhelming, with that initial silence and an audience that is both expectant and sometimes confused. Then movement appears on the screen: the performer begins to write, and from that moment on, the performance starts in earnest. The live coder continues to write, and as the text transforms, so do the sounds and images.
 
-During my live coding practice, the presence of a collective and a community that organises events, innovates in the field, experiments and teaches has been crucial. As I mentioned earlier, my first experience with live coding was through \textit{Toplap Bogotá}. This collective is one of the local Toplap nodes that exist worldwide. Toplap se ha caracterizado por querer crear comunidades descentralizadas con autonomia. There is the possibility that new nodes can be created anywhere with the goal of sharing knowledge and live coding practices. It is this philosophy of openness and sharing that motivates me and sound artist and creative coder Gorka Egino to start a local Toplap node in Linz. Our biggest motivation was to create a platform that would bring together people with similar interests in computer music, visuals, and programming.  We wanted to create a community with which to learn and create, and to enable alternative spaces for collective experimentation. 
+During my live coding practice, the presence of a collective and a community that organises events, innovates in the field, experiments and teaches has been crucial. As I mentioned earlier, my first experience with live coding was through \textit{Toplap Bogotá}. This collective is one of the local Toplap nodes that exist worldwide. Toplap has been known for its commitment to creating decentralized, autonomous communities. There is the possibility that new nodes can be created anywhere with the goal of sharing knowledge and live coding practices. It is this philosophy of openness and sharing that motivates me and sound artist and creative coder Gorka Egino to start a local Toplap node in Linz. Our biggest motivation was to create a platform that would bring together people with similar interests in computer music, visuals, and programming.  We wanted to create a community with which to learn and create, and to enable alternative spaces for collective experimentation. 
 
 %This collective is one of the local nodes that exist worldwide from Toplap, there is the possibilitty that new nodes can be created in any place with the goal of sharing knowledge and practice live coding/ comunidades descentralizadas. This phylosophy that bring a lot of openness to the practice motivate me to start a local node of Toplap in Linz/ corregir poner mas sobre motivaciones
 
 
 %As I mentioned already earlier \textit{Toplap} is a collective founded in Hamburg in 2004 that has been dedicated to promoting and practising live coding ever since. \textit{Toplap} has expanded worldwide in the form of local nodes that organise events, workshops, concerts and meetings. Anyone can start a new \textit{Toplap} node.% sugerencia: ESCRIBIR MAS SOBRE LAS MOTIVACIONES QUE TE LLEVARON A INICIAR TOP LAP LINZ EJ: this is why I initiated with... TOPLAP Linz
 
-This global live coding community organises events that seek to connect artists from different parts of the world. Numerous online events are broadcast live, including \textit{Live coderA \footnote{Live CoderA is a group of women and non-binary people who have come together to share knowledge and experience through live coding.  This collective organises various events, including workshops, concerts and streamings, where the protagonists are women and non-binary people.}, Toplap Solstice\footnote{The TOPLAP Solstice Stream brings together over 100 live coders, each of whom contributes a 15-minute live performance to the online event.}} and \textit{SuperCollider meetups \footnote{SuperCollider meetups showcase projects, class libraries, instruments and artistic practices that feature the SuperCollider audio programming environment.}}. %nota a pie de pagina mencionando qué es cada uno.
-The most important event is the \textit{International Conference of Live Coding}, which is organised every year in a different location, bringing together performers and academics to share their research and artistic projects.
+This global live coding community organizes events that seek to connect artists from different parts of the world. Numerous online events are broadcast live, including \textit{Live coderA \footnote{Live CoderA is a group of women and non-binary people who have come together to share knowledge and experience through live coding.  This collective organises various events, including workshops, concerts and streamings, where the protagonists are women and non-binary people.}, Toplap Solstice\footnote{The TOPLAP Solstice Stream brings together over 100 live coders, each of whom contributes a 15-minute live performance to the online event.}} and \textit{SuperCollider meetups \footnote{SuperCollider meetups showcase projects, class libraries, instruments and artistic practices that feature the SuperCollider audio programming environment.}}. %nota a pie de pagina mencionando qué es cada uno.
+The most important event is the \textit{International Conference of Live Coding}, which is organized every year in a different location, bringing together performers and academics to share their research and artistic projects.
 
-When \textit{Gorka Egino} and I participated in the \textit{Toplap Solstice} in December 2024, we were in different locations. For this performance, we decided not to have any prior ideas or plans for our session. I was in charge of the sound, while \textit{Gorka} was in charge of the visuals. We used \textit{Flok}, a collaborative, web-based live coding editor that allows several people to connect to a session via the same link.
+When Gorka Egino and I participated in the \textit{Toplap Solstice} in December 2024 (Figure 16), we were in different locations. For this performance, we decided not to have any prior ideas or plans for our session. I was in charge of the sound, while Gorka was in charge of the visuals. We used \textit{Flok}, a collaborative, web-based live coding editor that allows several people to connect to a session via the same link.
 
 
 \begin{figure}[h]
@@ -855,7 +871,7 @@ When \textit{Gorka Egino} and I participated in the \textit{Toplap Solstice} in 
    \caption{\textit{Toplap Solstice Performance}}
   \includegraphics[width=0.8\textwidth]{TOPLAP Solstice Stream December 2024 - CAT__DOG (SULE + GORKA) - 2024-12-21 22_45 - YouTube - Brave 24_07_2025 14_41_43.png}
  \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:}  Screenshot of the YouTube recording of the performance by \textit{Sule Suarez} and \textit{Gorka Egino} at Toplap Solstice, December 2024.}
+  \caption*{\textbf{Note:}  Screenshot of the YouTube recording of the performance by Sule Suarez and Gorka Egino at Toplap Solstice, December 2024.}
   \end{subfigure}
 \end{figure}
 
@@ -865,14 +881,14 @@ This type of event is an interesting format for those who are new to or curious 
 
 A variety of musical genres are also showcased, ranging from the most experimental (noise and ambient) to the more conventional (techno, jazz and cumbia). \textit{Toplap Solstice} events last 40 hours continuously in winter, enabling people in different time zones to connect and watch performances.
 
-Another performance I would like to mention is my participation in the 2024 \textit{AMRO Festival} in \textit{Linz}. For this set,
+Another performance I would like to mention is my participation in the 2024 \textit{AMRO Festival} in Linz. For this set,
  I used the \textit{Algorave} format, which has also brought live coding to more mainstream venues such as clubs and discos. 
  While the sounds may be diverse, the ultimate goal is to dance and have fun.
 
 \textit{AMRO (Art Meets Radical Openness)} is a festival,
  platform and community that celebrates art, hacktivism and open cultures. 
  Since 2008, it has been organised by \textit{servus.at} in collaboration with the 
- \textit{Department of Time Based Media} at the \textit{University of Art} in \textit{Linz} \cite{AMRO}.
+ \textit{Department of Time Based Media} at the \textit{University of Art} in Linz \citep{AMRO}.
   The event brings together artists, activists, developers, researchers and hacktivists. 
   Workshops, talks, performances and an exhibition covered topics such as community building in digital and physical spaces, 
   ethical uses and critical AI analysis, open tools, free and open-source software, and the environmental impact of nowadays technology.
@@ -883,12 +899,12 @@ Another performance I would like to mention is my participation in the 2024 \tex
   \includegraphics[width=0.8\textwidth]{Amro-2024-DayThree-sule-MART_DSF7282-small (1).png}
   \begin{subfigure} {0.8\textwidth}
   \caption*{\textbf{Note:} 
-  Performance at \textit{AMRO Festival 2024. City Landscapes} by \textit{Sule Suarez Leguizamon}. Photo by \textit{Martin Bruner}}
+  Performance at \textit{AMRO Festival 2024. City Landscapes} by Sule Suarez Leguizamon. Photo by Martin Bruner}
   \end{subfigure}
 \end{figure}
 
 
-I titled my performance \textit{City Landscapes} (Figure 16), for which I planned to perform a live-coded techno set using my visual archive of different cities, recorded with my \textit{Samsung PL20} compact digital camera. I have had this camera since the early 2000s and its resolution is lower than that of many current digital devices. When recording video, it produces noticeable texture and pixelation, and the colours can appear pastel depending on the lighting conditions. I created a sequence using some clips I took with this camera, which I then used for the visuals during the performance. Within the \textit{Hydra} environment, I modified this sequence using code, which allowed me to create modulations and experiment with time, textures and colours.
+I titled my performance \textit{City Landscapes} (Figure 17), for which I planned to perform a live-coded techno set using my visual archive of different cities, recorded with my \textit{Samsung PL20} compact digital camera. I have had this camera since the early 2000s and its resolution is lower than that of many current digital devices. When recording video, it produces noticeable texture and pixelation, and the colours can appear pastel depending on the lighting conditions. I created a sequence using some clips I took with this camera, which I then used for the visuals during the performance. Within the \textit{Hydra} environment, I modified this sequence using code, which allowed me to create modulations and experiment with time, textures and colours.
 
 For this performance, I primarily used samples from the \textit{SuperCollider Tidal Cycles} sample library. This library contains sounds from iconic drum machines, such as the \textit{Roland TR-808} and \textit{TR-909}, which I used in \textit{City Landscapes}. I created a sequence of drum rhythms, a fast bass line and kicks with reverb, as well as claps and snare. I recorded myself saying short phrases, divided them into small parts, sped them up and randomised them to fit the composition.
 It was minimalist techno, retaining the essential elements to make people dance and creating some polyrhythms so that it wasn't monotonous.
@@ -902,34 +918,23 @@ In this performance, improvisation did not start from scratch: sounds and images
    \caption{\textit{Visual and sound code from AMRO Festival performance.}}
   \includegraphics[width=0.8\textwidth]{amCode.png}
   \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Screenshot by \textit{Sule Suarez}}
+  \caption*{\textbf{Note:} Screenshot by Sule Suarez}
   \end{subfigure}
 \end{figure}
 
 
-During the festival, I had the opportunity to meet other live coders, including \textit{Timo Hoogland (NL)} and \textit{Lina Bautista (CO)} (also known as \textit{Linalab}). They performed together with \textit{Flok} (a collaborative live coding editor), and \textit{Mercury} (a language for the live coding of algorithmic electronic music performances), and also led a collaborative music workshop. I also met \textit{Rémi Georges (FR)}, whose performance incorporated family archives and live coding, and \textit{Martin Gius (AT)}, who ran a \textit{Networked Improvisation} workshop in \textit{Tidal Cycles} and led a live coding improvisation session, connecting people in \textit{Linz} on the day of the event with members of \textit{Toplap Vienna}. This session provided me with ideas on how to create a live coding session with lots of participants, bearing in mind that this can often descend into chaos, but there are still ways to mediate the participants experience.
+During the festival, I had the opportunity to meet other live coders, including Timo Hoogland (NL) and Lina Bautista (CO) (also known as \textit{Linalab}). They performed together with \textit{Flok} (a collaborative live coding editor), and \textit{Mercury} (a language for the live coding of algorithmic electronic music performances), and also led a collaborative music workshop. I also met Rémi Georges (FR), whose performance incorporated family archives and live coding, and Martin Gius (AT), who ran a \textit{Networked Improvisation} workshop in \textit{Tidal Cycles} and led a live coding improvisation session, connecting people in Linz on the day of the event with members of \textit{Toplap Vienna}. This session provided me with ideas on how to create a live coding session with lots of participants, bearing in mind that this can often descend into chaos, but there are still ways to mediate the participants experience.
 
-\subsection{Toplap Linz}
+\section{Toplap Linz}
 
-In June 2024, I had the opportunity to teach a workshop on \textit{Tidal Cycles} with the \textit{NoiseMeetup} collective. 
-This was my first time teaching a workshop on this tool, and I invited \textit{Gorka Egino} to collaborate with me. 
+In June 2024, I had the opportunity to teach a workshop on \textit{Tidal Cycles} with the \textit{Noise Meetup} collective. 
+This was my first time teaching a workshop on this tool, and I invited Gorka Egino to collaborate with me. 
 We used \textit{Flok.cc} to connect all the participants to the same platform. First, we provided an introduction, covering how the tool works, how to create initial sounds and how to generate compositions using code. The second part consisted of playing together using \textit{Flok}. From that first experience, we learned that in order to start a jam, certain rules must
  be established, as having more than 15 people play together on the same interface 
  can quickly lead to chaos. This workshop also led to the creation of \textit{Toplap Linz}.
 
 Since \textit{Toplap Linz} is a \textit{Toplap} node located in Linz, Austria. It was founded on 2024 as part of the broader international \textit{Toplap} community to explore and promote live coding practices. It is aligned with the open-source philosophy and one of its core pillars are being inclusive and accessible. As a result of the creation of \textit{Toplap Linz}, we also started organising meetings to answer questions, share knowledge and try new things. However, these meetings were not as well received, so after a few attempts, we began to wonder if our reach was limited, or if the invitations were ambiguous or unappealing.
 
-Some time later, in collaboration with \textit{Noise Meetup}, we held a second two-day workshop. We repeated the workshop and jam format, and this time, as well as teaching \textit{Tidal Cycles}, we included \textit{Hydra}. This event was held at DH5. We dedicated the first day to workshops and the second to a computer jam. This iteration attracted a significantly larger number of participants, who provided highly positive feedback, contributing to the overall success of the event - writing code and having fun by the end. 
-
-This time, we made sure to install \textit{Tidal Cycles} on the computers of those attending for the first time, despite knowing it would be time-consuming and potentially cumbersome. We felt it was important for people to have the tool ready to use outside the workshop, in other contexts. We also wanted to provide a space for group installation, as this process can be confusing if you don't have experience with operating system command applications. Our goal was to make the experience as enjoyable as possible from the outset.
-
-Then, we got down to business and shared a \textit{Flok.cc} session where everyone could connect at the same time and review the code.
- We also created a cheatsheet for \textit{Tidal Cycles} and \textit{Hydra} with guidelines to help participants start exploring the tool. 
- It's a simple guide offering an overview of the possibilities of these two environments 
- for experimenting with sound and visuals, respectively (see fig. 20).
-From my experience of learning to use different software,
- I have personally found it quite useful to be able to follow the process on my own computer. 
- This allows you to interact more effectively with the tools when someone explains something in a masterclass.
 
 \begin{figure}[h]
   \centering
@@ -940,7 +945,32 @@ From my experience of learning to use different software,
   \end{subfigure}
 \end{figure}
 
-On the second day of the workshop, we devoted ourselves solely to computer jam sessions. We timed each session, starting with five minutes, then moving on to ten, twenty and thirty minutes. In the longer sessions, we worked with themes. For instance, in one session, we used the symbol \textit{520}, which is used in China to say 'I love you'. The visuals and sound were often humorous and corny. In another session, someone suggested using horses. Interesting things happened in this dynamic and we were all able to collaborate. Sometimes, after a jam, questions arose about how to create a particular rhythm or apply an effect to the visuals. We realised that, in the jam dynamic, people dared to try more complex things.
+Some time later, in collaboration with \textit{Noise Meetup}, we held a second two-day workshop (Figure 19). We repeated the workshop and jam format, and this time, as well as teaching \textit{Tidal Cycles}, we included \textit{Hydra}. This event was held at DH5. We dedicated the first day to workshops and the second to a computer jam. This iteration attracted a significantly larger number of participants, who provided highly positive feedback, contributing to the overall success of the event - writing code and having fun by the end. 
+
+This time, we made sure to install \textit{Tidal Cycles} on the computers of those attending for the first time, despite knowing it would be time-consuming and potentially cumbersome. We felt it was important for people to have the tool ready to use outside the workshop, in other contexts. We also wanted to provide a space for group installation, as this process can be confusing if you don't have experience with operating system command applications. Our goal was to make the experience as enjoyable as possible from the outset.
+
+Then, we got down to business and shared a \textit{Flok.cc} session where everyone could connect at the same time and review the code.
+ We also created a cheatsheet for \textit{Tidal Cycles} and \textit{Hydra} with guidelines to help participants start exploring the tool. 
+ It's a simple guide offering an overview of the possibilities of these two environments 
+ for experimenting with sound and visuals, respectively (Figure 20).
+From my experience of learning to use different software,
+ I have personally found it quite useful to be able to follow the process on my own computer. 
+ This allows you to interact more effectively with the tools when someone explains something in a masterclass.
+
+
+
+
+\begin{figure}[h]
+  \centering
+   \caption{\textit{Tidal Cheatsheet}}
+  \includegraphics[width=0.9\textwidth]{cheatsheet (1)_page-0001.jpg}
+ \begin{subfigure} {0.8\textwidth}
+  \caption*{\textbf{Note:} \textit{Tidal Cheatsheet} by \textit{Toplap Linz}. 2025}
+  \end{subfigure}
+\end{figure}
+
+
+On the second day of the workshop, we devoted ourselves solely to computer jam sessions (Figure 21). We timed each session, starting with five minutes, then moving on to ten, twenty and thirty minutes. In the longer sessions, we worked with themes. For instance, in one session, we used the symbol \textit{520}, which is used in China to say 'I love you'. The visuals and sound were often humorous and corny. In another session, someone suggested using horses. Interesting things happened in this dynamic and we were all able to collaborate. Sometimes, after a jam, questions arose about how to create a particular rhythm or apply an effect to the visuals. We realised that, in the jam dynamic, people dared to try more complex things.
  
 As a general rule, we decided not to copy code from sources outside our \textit{Flok} page, such as the official website or online tutorials. There were two main reasons for this. The first is that it is difficult to predict the result of mixing pieces of code that are not understood — it may not work at all. The second is that if you join someone else's code to yours, it will most likely break and stop working. Therefore, we focused on the process of crafting the code, adopting a slower but more deliberate approach to ideation and elaboration. We always started from scratch and developed the jam together.
 
@@ -955,13 +985,13 @@ These pauses are useful for taking a step back and observing what is happening w
   \caption{\textit{Toplap Linz meeting}}
   \includegraphics[width=0.4\textwidth]{TOPLAP.jpeg}
   \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Picture from ?\textit{Toplap Linz} meeting, March 2025. Photo by \textit{Mascha Ilish}}
+  \caption*{\textbf{Note:} Picture from \textit{Toplap Linz} meeting, March 2025. Photo by Mascha Ilish}
   \end{subfigure}
 \end{figure}
 
 This experience makes the idea of starting from scratch and programming on the fly feel even more real. Jam sessions with others greatly increase the level of spontaneity, as it's impossible to predict what each person will contribute to the performance. This is enjoyable and enables you to connect with others by creating a shared audiovisual experience. The absence of control enables you to achieve the unexpected. Ideas are conceived and carried out almost simultaneously.
 
-Some time after this workshop, we collaborated with \textit{Servus.at, Stadtwerkstatt Linz}, and \textit{Ljudmila (Ljubljana)} to organize a satellite event taking place in Linz for the \textit{ICLC International Conference of Live Coding}, which was held in Barcelona from May 27 to 30, 2025. We invited live coders who were traveling to the \textit{ICLC} event and making some stops along the way to give concerts. Some members of \textit{Toplap} participated: \textit{Te-En Chen, map(h) collective (Sule Suarez and Gorka Egino), Confirm Humanity (Cecilia Bojanik)}, and incredible live coders visited us: \textit{c-robo(EU), Blaz Pavlica (SVL)}, and \textit{Shelly Knotts (AR)}.
+Some time after this workshop, we collaborated with \textit{Servus.at, Stadtwerkstatt Linz}, and \textit{Ljudmila (Ljubljana)} to organize a satellite event taking place in Linz for the \textit{ICLC International Conference of Live Coding}, which was held in Barcelona from May 27 to 30, 2025 (Figure 22). We invited live coders who were traveling to the \textit{ICLC} event and making some stops along the way to give concerts. Some members of \textit{Toplap} participated: \textit{Te-En Chen, map(h) collective} (Sule Suarez and Gorka Egino), \textit{Confirm Humanity} (Cecilia Bojanik), and incredible live coders visited us: \textit{c-robo(EU), Blaz Pavlica} (SVL), and \textit{Shelly Knotts} (AR).
 
 %\begin{figure}[H]
  % \centering
@@ -969,27 +999,20 @@ Some time after this workshop, we collaborated with \textit{Servus.at, Stadtwerk
   %\caption{Hydra Cheatsheet, Toplap Linz. 2025}
 %\end{figure}
 
-\begin{figure}[h]
-  \centering
-   \caption{\textit{Tidal Cheatsheet}}
-  \includegraphics[width=0.9\textwidth]{cheatsheet (1)_page-0001.jpg}
- \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} \textit{Tidal Cheatsheet} by \textit{Toplap Linz}. 2025}
-  \end{subfigure}
-\end{figure}
 
 It was a night where we all collaborated. The guest live coders only planned to do audio, so the performers and members of \textit{Toplap Linz} did the visuals for those who only planned to do a sound intervention. In my experience at these types of events that are solely focused on live coding, everyone is attentive to technical support, open to helping other artists if they need a cable, an interface, or if the interfaces crash and troubleshooting is required.
 
-It was a night full of a variety of rhythms and tools. Everyone was using different live coding environments and software, such as \textit{Supercollider, Strudel, TidalCycles}, and \textit{C-robo} also made a connection between a live coding interface and \textit{Ableton}, which is a DAW (Digital Audio Workstation). It is interesting to learn about different notations and their own possibilities in terms of expressiveness and complexity.
+It was a night full of a variety of rhythms and tools. Everyone was using different live coding environments and software, such as \textit{Supercollider, Strudel, TidalCycles}, and \textit{C-robo} also made a connection between a live coding interface and \textit{Ableton}, which is a \textit{DAW (Digital Audio Workstation)}. It is interesting to learn about different notations and their own possibilities in terms of expressiveness and complexity.
 
 Each artist has a specific background and different approaches to the same medium. When you are a spectator at a live coding performance, a whole particular construction of thought is revealed. A meticulous construction of algorithms that create sounds and images and are displayed to the public. It is a work of technological crafting, it takes time to develop, and the changes are gradual and depend on the direction decided by the artist and the temporal space of the performance.
 
 \begin{figure}[h]
   \centering
-   \caption{\textit{Algorave 2025}}
+   \caption{\textit{Algorave Linz 2025: satellite event for the
+ICLC International Conference of Live Coding}}
   \includegraphics[width=0.8\textwidth]{rave.jpg}
   \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Organized by \textit{Toplap Linz}. 2025. Photo by \textit{Linaá Pulido}}
+  \caption*{\textbf{Note:} Organized by \textit{Toplap Linz}. 2025. Photo by Liná Pulido}
   \end{subfigure}
 \end{figure}
 
@@ -997,37 +1020,67 @@ People from the audience approached us after the performance to ask if we were d
 
 
 \newpage
-\section{Conclusion}
+\chapter{Conclusion}
 
-$Resume tus principales argumentos y reflexiones (¿Qué nos revela el live coding sobre la computación? ¿Qué cuestiona de las narrativas dominantes sobre la tecnología? ¿Cómo redefine los conceptos de autoría, agencia o control?
-Explica cómo tu trabajo artístico y tus talleres han contribuido a esto (conciencia crítica): transparencia frente a opacidad / participación frente a pericia / proceso frente a producto / apertura frente a sistemas propietarios
-Indica proyectos e ideas futuros: preguntas abiertas, nuevas obras e ideas basadas en lo que has hecho hasta ahora, posibles ampliaciones (p. ej., educación, IA, informática feminista, performance colectiva, contextos no occidentales)
-Termina con una frase de cierre contundente (Qué NO incluir: nuevos argumentos, nueva bibliografía, análisis detallados, detalles técnicos, etc.)
-Traducción realizada con la versión gratuita del traductor DeepL.com$
-
-
-In this thesis, I have traced a journey through experiences in the practice of live coding, exploring different methodologies for conceptualization and realization, and working with varying degrees of improvisation, planning, and execution. This has also been a personal journey to understand what brings a practice such as programming to life and what happens when it encounters the performative arts.
+%Resume tus principales argumentos y reflexiones (¿Qué nos revela el live coding sobre la computación? ¿Qué cuestiona de las narrativas dominantes sobre la tecnología? ¿Cómo redefine los conceptos de autoría, agencia o control?
+%Explica cómo tu trabajo artístico y tus talleres han contribuido a esto (conciencia crítica): transparencia frente a opacidad / participación frente a pericia / proceso frente a producto / apertura frente a sistemas propietarios
+%Indica proyectos e ideas futuros: preguntas abiertas, nuevas obras e ideas basadas en lo que has hecho hasta ahora, posibles ampliaciones (p. ej., educación, IA, informática feminista, performance colectiva, contextos no occidentales)
+%Termina con una frase de cierre contundente (Qué NO incluir: nuevos argumentos, nueva bibliografía, análisis detallados, detalles técnicos, etc.)
 
 
 
-For me, live coding as a performative practice is a field of experimentation. I invite the audience to observe how I build what they are hearing and seeing, activating their gaze so they become witnesses to constant decision‑making. They can perceive doubt, errors, skill, and audacity as they emerge. In this context, the computer contains the body, and the body extends the computer. In this exercise of response and interaction, the body is not passive before the interface; it is the body that dynamically activates it.
+In this thesis, I have traced a journey through experiences in the practice of live coding, exploring different methodologies for conceptualization and realization, and working with varying degrees of improvisation, planning, and execution. This has also been a personal journey to understand what brings a practice such as programming to life and what happens when it encounters the performative arts. For me, live coding as a performative practice is a field of experimentation. I invite the audience to observe how I build what they are hearing and seeing, activating their gaze so they become witnesses to constant decision‑making. They can perceive doubt, errors, skill, and audacity as they emerge. In this context, the computer contains the body, and the body extends the computer. In this exercise of response and interaction, the body is not passive before the interface; it is the body that dynamically activates it.
 
-//another chapter about liveness
-
-I have used different live coding environments and explored their possibilities. For me, text-based notations are easier to understand and perform. I found this kind of notation easier to manipulate live. In any case, patcher languages like Max/MSP, which is a visual language, have been useful to me when I want to use long tracks or audio in a performance. This is something that is really hard to do in Strudel or Tidal Cycles because they are based on really tiny repetitions to create rhythms. These live coding environments address specific demands. For example, they need to be clear and concise so that you don't panic when writing complicated functions on stage. 
-
-For me, Hydra has been one of the most fascinating environments in my practice. It's intuitive, and you can do a lot with simple things, but it can also get really complex if you want. You can embed Hydra in other environments, such as Strudel, P5.js, and Mercury, among others. This can be useful and practical for performative practices. Furthermore, it can be used for web design because it is easy to implement on web pages.   
+Live coding reveals the expressive capacity of programming languages, which, at the core of their functionality, are a communicative bridge between machine and human. This expressive capacity translates into performative experiences in which audio or visuals are generated from code writing. This shifts the act of programming to other realms where the need for efficiency within a computer program is no longer necessary, and programming becomes an act of conversation and collaborative creation with the program itself. In this sense, programming within live coding is not the search for the most correct and effective line of code, or the search for errors to make specific functions work within the program. In the case of live coding, programming becomes an exploration of expressiveness within the language itself, which makes the approach experimental, allowing for error, doubt and constant re-elaboration of ideas and code. The process becomes an essential part of the performance, so the public is invited to witness how the performance unfolds. Usually, the performer's screen is projected, and the code that runs the program and its respective outcome are on one interface.  This allows the audience to understand the changes made at the visual or sonic level, and more importantly, that it is the  ideas from the artist that allow this performative construction.
 
 
-In my own practice, there has been ambivalence in terms of score, choreography, and improvisation. In some cases, such as my performance Dusk of an Electric Forest, there is a concept and a prior curation of images and sounds, the code is constructed from an established frame, and there is more or less an idea of different moments in the performance. However, even in this type of experience, the performance is not limited to the mechanical act of activating and deactivating lines of code. It involves working with a limited color palette, but with several parameters that remain open and escape any planning. 
+In live coding, there is ambivalence regarding score, choreography, and improvisation. There are different approaches to performance methodologies that have been established within the community, such as the "from scratch" methodology, in which improvisation is given precedence over planning. In this methodology, the artist starts with a blank screen, allowing the flow of the performance to be defined by the moment and the conditions of that specific space. These include the location, the audience, the sound or visual qualities. In other cases, there is a plan for the performance itself. Often, it begins with pre-written code. This provides a clearer idea of how the performance will develop. However, even with this methodology, maintaining the code allows for improvisation and unexpected outcomes. In some cases, such as in my performance Dusk of an Electric Forest, there is a concept, as well as prior curation of images and sounds. The code is constructed from an established outline, and there is a general idea of the different sections of the performance. Nevertheless, the performance is not limited to the mechanical act of activating and deactivating lines of code. It involves working with a limited color palette and several open parameters that escape planning. 
 
-Although in Dusk of an Electric Forest, I had rehearsed different effects, rhythms, and patterns. When the moment of the performance arrived, things were different. Things that I thought would work suddenly didn't sound as I expected. Adrift, I had to find new ways to construct the sensations I wanted to convey and discard some pre-established ideas. A space of uncertainty opens up, and being flexible is the key to enjoying and constructing the performance. Conditions change radically when you try or practice something alone, without an audience, and when you face the stage. Things look and sound different on speakers than on headphones, or on a computer screen and a projector. The acoustic and visual conditions are totally different, which means you have to be able to adapt.
+% El proceso se vuelve parte esencial del performance, por lo cual se invita al publico a ser testigo de ver como el performance  is unforlding. Normalmente la pantalla del performer esta proyecta y el codigo que corre el programa y su respectivo outcome estan en una sola interfaz.  Esto permite entender los cambios que se hacen a nivel visual o sonoro, y aun mas importante que son las ideas del artista lo que permiten esta constrccion performatica
+%i The audience is invited to witness the unfolding of the performance and the screen from the artist is normally projected. Esto implica que los procesos son una parte central del acto performativo y se convierte en parte de la obra de arte. Mostrar a la audiencia la pantalla es dejar a la vista los proceso de pensamiento del artista y la capacidad de elaborar a traves de un
+
+%hablar como lo siguiente hace constrante a las narrativas dominantes // opennes vs propietary systems
+Another important aspect of live coding philosophy is the demand for transparency regarding the software being developed, as well as the resulting artistic work and performance practice. This implies openness to the elements that make live coding possible. The software used for this practice is open source and subject to modifications and contributions from the community. This software can also serve as the basis or inspiration for new tools, as in the case of \textit{Strudel}, which was an adaptation for the web of \textit{Tidal Cycles}, which is designed for improvisation and composing music. These tools may also be implemented in other projects. For example, \textit{VERSNIZ} uses \textit{IBNIZ} to create live coding performances with audiovisuals in virtual and multi-user spaces. This approach to technology allows us to envision more human dynamics regarding computing and software, where programs are designed from the heart of a community seeking autonomy in its artistic practices. This particularity contrasts with proprietary systems, in which the division between user and product is completely defined. In live coding, this type of boundary is blurred, and software becomes another excuse to expand individual and collective creativity.  
+
+A key aspect of the live coding community is its emphasis on keeping learning and experimentation open and accessible. This fosters the development of platforms for collective experimentation based on decentralized communities interested in sharing knowledge. An example of these communities are the various \textit{Toplap} nodes located around the world. Through my experience co-founding \textit{Toplap Linz}, I was able to experience collective creation processes and spaces for learning together. The idea of founding a \textit{Toplap Linz} node was mainly to bring together people with similar creative interests in computer music or VJing, making it possible for them to connect, exchange ideas, collaborate on projects, and facilitate spaces where knowledge and skills could be shared. \textit{Toplap Linz} has organized workshops, events, and performances and established connections with cultural spaces in the local Linz scene. The collective remains always open, welcoming new collaborations and members.
+
+
+Finally, to talk about real-time performance in the context of live coding, it is important to highlight the different methodologies that allow audiovisual composition through improvisation. The pursuit of autonomy in the software used for this artistic practice is achieved by using software created for and by the community, which is open source and maintained by the community. In addition, there is the decentralized construction of communities that seek to generate platforms for collective creation and the exchange of knowledge. These elements make the practice dynamic and alive, so that when we think of real time, it becomes a set of practices and political statements that constantly dialog to maintain the \textit{liveness} of the code within the performative practice and the community around it.
+
+
+
+% En mi experiencia co fundando Toplap Linz pude experimentar procesos de creacion colectiva y espacios para el aprendizaje conjunto. La idea de fundar un nodo de Toplap Linz fue principalmente para que distintas personas con intereses creativos similares al rededor de computer music o vjing pudieran conectar, intercambiar ideas, hacer projectos y facilitar espacios donde existria un comprtir de conocimientos y habilidades
+
+
+% hace mas humana mas libre la computacion? que revela el livecoding?
+%proceso vs producto
+%proyectos e ideas 
+
+%Esto tiene que ver con authorship control
+
+%// agencia autoria y control (reescribir) cambiar el orden de las ideas tipos de 
+
+
+
+
+% formas participativas del performance 
+
+%
+
+%pie de pagina :V
+%I have used different live coding environments and explored their possibilities. For me, text-based notations are easier to understand and perform. I found this kind of notation easier to manipulate live. In any case, patcher languages like Max/MSP, which is a visual language, have been useful to me when I want to use long tracks or audio in a performance. This is something that is really hard to do in Strudel or Tidal Cycles because they are based on really tiny repetitions to create rhythms. These live coding environments address specific demands. 
+
+%For example, they need to be clear and concise so that you don't panic when writing complicated functions on stage. For me, Hydra has been one of the most fascinating environments in my practice. It's intuitive, and you can do a lot with simple things, but it can also get really complex if you want. You can embed Hydra in other environments, such as Strudel, P5.js, and Mercury, among others. This can be useful and practical for performative practices. Furthermore, it can be used for web design because it is easy to implement on web pages.   
+
+
+%Although in Dusk of an Electric Forest, I had rehearsed different effects, rhythms, and patterns. When the moment of the performance arrived, things were different. Things that I thought would work suddenly didn't sound as I expected. Adrift, I had to find new ways to construct the sensations I wanted to convey and discard some pre-established ideas. A space of uncertainty opens up, and being flexible is the key to enjoying and constructing the performance. Conditions change radically when you try or practice something alone, without an audience, and when you face the stage. Things look and sound different on speakers than on headphones, or on a computer screen and a projector. The acoustic and visual conditions are totally different, which*** means you have to be able to adapt.
 
 
 \newpage    
-\section{Appendices}
 
-\subsection{First steps with Strudel}
+\chapter{Appendices}
+
+\section{First steps with Strudel}
 
 In the first chapter, \textit{Considerations about Coding Liveness}, I mention the \textit{Strudel} live coding environment, which was released in 2022. It is a port of \textit{Tidal Cycles}, the tool I have primarily used until now. \textit{Strudel}, is based on the idea of music patterns, but with the advantage that it can be used on the web. This motivated us at \textit{Toplap Linz} to organize a \textit{Strudel} workshop and start experimenting with and learning what is possible with this live coding environment.
 
@@ -1036,33 +1089,33 @@ In the first chapter, \textit{Considerations about Coding Liveness}, I mention t
   \caption{\textit{Jam session from Strudel}}
   \includegraphics[width=0.8\textwidth]{jam.png}
     \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Screenshot of jam session from Strudel workshop, 2024. by \textit{Sule Suarez}}
+  \caption*{\textbf{Note:} Screenshot of jam session from Strudel workshop, 2024. by Sule Suarez}
   \end{subfigure}
 \end{figure}
 
 The \textit{Strudel} workshop took place on October 26, 2025, at the \textit{Servus Clubraum} in the \textit{Stadwerkstatt}. Unlike the \textit{Tidal Cycles} workshops, where most people were unaware of this tool, we found that at least half of the attendees were already familiar with \textit{Strudel} thanks to social media. There was a certain enthusiasm regarding the workshop among the participants, as well as several questions about how to use \textit{Strudel} within a DAW (Digital Audio Workstation) like \textit{Ableton}, how to record the sound of their own compositions and how to achieve certain effects typical of a DJ console. 
 \footnote{You can watch the recording from the jam session here: \href{https://www.youtube.com/watch?v=ktrOHSm9Fl8}{Web link}}
 
-This workshop was hands-on from the beginning, which made the overall experience quite dynamic. We concluded the workshop with a 30-minute jam that felt shorter. It was very fun. In \textit{Strudel} you need to be careful when creating collaborative jams because, when several people are connected at the same time, it is easy to saturate the system by receiving incomplete code that will result in an error. This happens because the participants will compile the code at different times, and it is only possible to compile the entire code block, not line by line. Different notations allow us to create different things and require different methodologies.
+This workshop was hands-on from the beginning, which made the overall experience quite dynamic. We concluded the workshop with a 30-minute jam that felt shorter (Figure 23). It was very fun. In \textit{Strudel} you need to be careful when creating collaborative jams because, when several people are connected at the same time, it is easy to saturate the system by receiving incomplete code that will result in an error. This happens because the participants will compile the code at different times, and it is only possible to compile the entire code block, not line by line. Different notations allow us to create different things and require different methodologies.
 
 \begin{figure}[h]
   \centering
-  \caption{ \textit{ Overflow Performance}}
+  \caption{ \textit{Overflow Performance}}
   \includegraphics[width=0.8\textwidth]{Overflow.png}
   \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Screenshot of  recording performance at \textit{Overflow} concert, 2024. By \textit{Sule Suarez}}
+  \caption*{\textbf{Note:} Screenshot of  recording performance at \textit{Overflow} concert, 2024. By Sule Suarez}
   \end{subfigure}
 \end{figure}
 
- %For now, I am excited to start experimenting with Strudel and follow the evolution of the tool, as well as share knowledge and learn with others, as in this workshop. 
+ %For now, I am excitepd to start experimenting with Strudel and follow the evolution of the tool, as well as share knowledge and learn with others, as in this workshop. 
 
-We decided to organize a concert at the end of the year with \textit{Toplap Linz}, in which several artists performed with different live coding environments, as well as with other techniques such as tactile-activated sound artifacts and video feedback. The event was called \textit{Overflow} and took place on November 30, 2025, at DH5. At this event, we invited performers to imagine how the interface could be embodied, how the body could be manifested through something as rigid as a computer, and how uncertainty could be transformed into experimentation. As stated in the following event text fragment:  “Show us your thoughts. We want to participate. We want to feel united with you. We want to feel your doubts, your uncertainty, your decisions. Let all of this overflow from your person, spill beyond the margins of the stage, and flood the room." \cite{over}
+We decided to organize a concert at the end of the year with \textit{Toplap Linz}, in which several artists performed with different live coding environments, as well as with other techniques such as tactile-activated sound artifacts and video feedback. The event was called \textit{Overflow} and took place on November 30, 2025, at DH5. At this event, we invited performers to imagine how the interface could be embodied, how the body could be manifested through something as rigid as a computer, and how uncertainty could be transformed into experimentation. As stated in the following event text fragment:  “Show us your thoughts. We want to participate. We want to feel united with you. We want to feel your doubts, your uncertainty, your decisions. Let all of this overflow from your person, spill beyond the margins of the stage, and flood the room" \citep{over}.
 \footnote{You can visit the website from \textit{Overflow} which was designed by Gorka Egino. The text for the event was written by me and Gorka Egino: \href{https://overflow.toplaplinz.org/}{Web link}}
 
-In this event, I participated with \textit{Gorka Egino} in a collaborative performance in which we used \textit{Strudel} and \textit{Hydra}. For this performance, I created a video sequence of an abandoned glasshouse. The images show various traces of abandonment, such as the wasp nest, empty planters with withered plants, overgrown walls, moss adhering to the beams, and a rusty fan. \footnote{You can watch the recording from our Overflow performance here: \href{https://www.youtube.com/watch?v=eFHBLHorUzM}{Web link}} Both the sound and the images gave the sensation of a saturated melancholy. Despite having many colors and bright sounds, there is a sense of loss of a previous state behind it. During the performance, the image was accumulating different layers of color and getting distorted. Progressively, the original image became almost unrecognizable.
+In this event, I participated with Gorka Egino in a collaborative performance in which we used \textit{Strudel} and \textit{Hydra} (Figure 24). For this performance, I created a video sequence of an abandoned glasshouse. The images show various traces of abandonment, such as the wasp nest, empty planters with withered plants, overgrown walls, moss adhering to the beams, and a rusty fan. \footnote{You can watch the recording from our Overflow performance here: \href{https://www.youtube.com/watch?v=eFHBLHorUzM}{Web link}} Both the sound and the images gave the sensation of a saturated melancholy. Despite having many colors and bright sounds, there is a sense of loss of a previous state behind it. During the performance, the image was accumulating different layers of color and getting distorted. Progressively, the original image became almost unrecognizable.
 This was the second time I used \textit{Strudel} on stage, and one thing I like is that the setup is simpler. One drawback is that it depends on a good internet connection and having enough RAM (Random Access Memory) to run the program in the browser. In any case, it is a tool that is more user-friendly for beginners and, as it grows in popularity through social media, one can find different tutorials or sets of people showing how to use the tool on the internet. It is also an accessible tool that has generated interest among artists and programmers, resulting in valuable contributions such as fixing bugs, creating additional features, and improving the documentation.
 
-\subsection{I'm an open window}
+\section{I'm an open window}
 
 As I mentioned in the introduction, my first experience with programming was through net art and creating static web pages. During my master's program in Interface Cultures, 
 I had the opportunity to develop a visual poem for the web called \textit{I'm an Open Window}, which I presented at the \textit{Ars Electronica 
@@ -1074,11 +1127,11 @@ Festival} in the exhibition \textit{Entangled Homes} by \textit{FIFTITU\%}.
    \caption{\textit{I'm an open window}}
   \includegraphics[width=0.8\textwidth]{drop.png}
  \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:}Screenshot of \textit{I'm an open window}, 2024. by \textit{Sule Suarez}}
+  \caption*{\textbf{Note:} Screenshot of \textit{I'm an open window}, 2024. by Sule Suarez}
   \end{subfigure}
 \end{figure}
 
-\textit{I’m an open window} is based on hyperlinks and GIFs, where the images are part of a photographic archive, in which ruin, city landscapes, and desolate homes are part of this narrative.
+\textit{I’m an open window} is based on hyperlinks and GIFs, where the images are part of a photographic archive, in which ruin, city landscapes, and desolate homes are part of this narrative (Figure 25).
 This is a journey of rupture and grief, but also the possibility of
 rebuilding and becoming stronger. It reflects the desire to cut ties of dependency and the need to establish healthier relationships. In this work, the text serves as a hyperlink between different parts of the work and is also an object that changes over time. For example, it fades out periodically or disappears completely after a certain amount of time.  In this artwork, the text is a dynamic element to which plasticity is given through different alterations in time and animation.  The text and image create a circular narrative in which both elements enter into dialogue to create metaphors about the feeling of abandonment and the possibility of self-determination and change.
 
@@ -1187,24 +1240,24 @@ Taking myself from the ashes\\
 I will become a mountain.
 \end{center}
 
-\subsection{Vanishing photographs }
+\section{Vanishing photographs }
 
 %In my participation of \textit{Sankt interface} %define Sankt 
 
-I participated in \textit{Sankt Interface 2024}, an art exhibition and celebration organizated by \textit{Interfaces Cultures}, in wich students can showcase projects based on the idea of subverting the mouse and keyboard interface. The event also features guest speakers and offers a program of concerts and DJs sets. I did a camera in which the image is never stable and with even little movements will start to blur and vanish, in every click you freeze a different moment, but it will tend to disappear.
+I participated in \textit{Sankt Interface 2024}, an art exhibition and celebration organizated by \textit{Interfaces Cultures}, in wich students can showcase projects based on the idea of subverting the mouse and keyboard interface. The event also features guest speakers and offers a program of concerts and DJs sets. I did a camera in which the image is never stable and with even little movements will start to blur and vanish, in every click you freeze a different moment, but it will tend to disappear (Figure 26).
 
 \begin{figure}[htbp]
   \centering
   \caption{\textit{Vanishing photographs}}
   \includegraphics[width=0.8\textwidth]{Camila_Scholz_Sankt2024 (17).JPG}
   \begin{subfigure} {0.8\textwidth}
-  \caption*{\textbf{Note:} Picture of \textit{Vanishing photographs, Sankt Interface Festival 2024}, Linz. Photo by \textit{Camila Scholz}}
+  \caption*{\textbf{Note:} Picture of \textit{Vanishing photographs, Sankt Interface Festival 2024}, Linz. Photo by Camila Scholz}
   \end{subfigure}
 \end{figure}
 
-I thought for this work on the difficulties of archiving and how memory is something that we can not rely entirely. In a era where images are hyper abundant, we value then less, somethings the photos that we take re forgotten in  a cloud or even worse just existing in pur celphone with the threaten of disappear if something happen to that device.
+For this work I thought about the difficulties of archiving and how memory is something that we cannot rely on entirely. In an era where images are hyper abundant, we value then less, things the photos that we take are forgotten in  a cloud or even worse just exist in our cell phone with the threat of disappearance if something happens to that device.
 
-I would like to reference \textit{Susan Sontag's} famous take on photography and its relationship with mortality and ephemerality: All photographs are memento mori. To take a photograph is to participate in another person’s (or thing’s) mortality, vulnerability, mutability. Precisely by slicing out this moment and freezing it, all photographs testify to time’s relentless melt.\cite{sontag2021photography}
+I would like to reference Susan Sontag's famous take on photography and its relationship with mortality and ephemerality: All photographs are memento mori. To take a photograph is to participate in another person’s (or thing’s) mortality, vulnerability, mutability. Precisely by slicing out this moment and freezing it, all photographs testify to time’s relentless melt \citep{sontag2021photography}.
 
 For this project, I worked with a toy camera that I found on the street. It's a nostalgic object that was transformed into a mouse and regained its symbolic function of capturing images. This artifact is capable of freezing time and then also allows you to see how time resists being captured and the image finally vanish.
 
@@ -1213,12 +1266,15 @@ The computer is another element that acts as a mirror; one can only capture an i
 On the computer, a \textit{JavaScript} code is running within the \textit{Hydra} web. There are two mouse interactions: the first freezes the image when clicked, and the second modulates the image when the mouse moves from side to side, producing the vanishing effect.
 \footnote{You can visit the code sketch here: \href{https://hydra.ojack.xyz/?sketch_id=WhNSNFruQ8Uy11d8}{Web link} }
 
+\section{Artificial Intelligence (AI) Usage Declaration}
+
+I acknowledge the use of \textit{Deepl} and \textit{Grammarly} for grammar checking and language editing assistance.  I have reviewed and revised all content. I take full responsibility for the accuracy and originality of the work.
+
 \newpage
 
-\bibliographystyle{apalike}
 \bibliography{bibli}
 
-%\nocite{*}
-%\printbibliography
+%\nocitep{*}
+%printbibliography
 
 \end{document}
